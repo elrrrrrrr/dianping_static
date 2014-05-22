@@ -6,6 +6,8 @@
 body {
   _position: relative;
   _overflow: hidden;
+  
+  
 }
 .floating .inner {
   width: 1000px;
@@ -18,7 +20,7 @@ body {
   height: 212px;
   margin-left: 1020px;
   z-index: 100;
-  background: url("img/floating-tab.png") no-repeat;
+  background: url("img/floating-tab.png") no-repeat center top ;
 }
 .floating .inner > .floating-tab {
   position: fixed;
@@ -232,10 +234,10 @@ legend {
   height: 100%;
 }
 .header {
-  min-width: 1600px;
+  min-width: 1000px;
 }
 .footer-static {
-  min-width: 1600px;
+  min-width: 1000px;
   padding: 20px 0;
   text-align: center;
   background-color: #ffffff;
@@ -266,9 +268,7 @@ legend {
 .footer-static p a:hover {
   color: #C00;
 }
-body {
-  min-width: 1340px;
-}
+
 .main-content {
   font-family: "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
 }
@@ -854,31 +854,44 @@ body {
   cursor: pointer;
 }
 
-.content {
-  width: 1600px;
-  height:850px;
-  background: url('../img/bg.jpg') no-repeat; 
+.yonghe-content {
+  min-width: 1000px;
+  height: 800px;
+  background: url('../img/bg.jpg') center top no-repeat; 
+  margin: 0 auto;
 }
 
+.yonghe-main{
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
 .role-link {
   position: absolute;
-  left: 310px;
-  top: 128px;
+  left: 10px;
+  top: 97px;
   width: 200px;
   height: 50px;
   background: url('../img/role-link.jpg') no-repeat;
+  cursor: pointer;
 }
 
+
+.alert-box {
+
+}
 .overlay {
   position: fixed;
   height: 100%;
   width: 100%;
   background-color: #000000;
   opacity: 0.7;
+  left: 0;
+  top:0;
 }
 .alert-view{
   position: absolute;
-  left: 390px;
+  left: 105px;
   top: 210px;
   width: 800px;
   height: 430px;
@@ -891,15 +904,15 @@ body {
   min-height: 40px;
 }
 
-.alert-view img{
+.alert-corner{
   display: block;
   float:right;
   cursor: pointer;
 }
 
+
 .role-intro{
   margin: 0 auto;
-  margin-top:40px;
   width: 667px;
   height: 347px;
 }
@@ -911,7 +924,6 @@ body {
   font-size: 25px;
   line-height: 30px;
   height: 30px;
-  display: none;
 }
 .city-chose p{
   display: inline-block;
@@ -992,22 +1004,123 @@ body {
   cursor: pointer;
 }
 
-.city-fail ul li {
-  width: 380px;
-  height: 380px;
-  display: inline-block;
-  box-sizing: content-box;
-}
+
 
 .city-fail-content {
   width: 400px;
   height:380px;
-  background-color: red;
+  display: inline-block;
+  padding-left: 20px;
+  box-sizing:border-box;
 }
 
-.city-fail ul li img {
+.city-fail-img {
+  margin-top: 20.1px;
+  margin-right: 20px;
   width: 320px;
   border: 10px solid #4f4f4f;
-  line-height: 380px;
-  float: right;
+  display: inline-block;
+}
+
+.p1{
+  margin-top: 60px;
+  font-size: 25px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.p2{
+  text-align: center;
+  margin-top: 60px;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.game-result{
+  padding: 0 150px;
+}
+
+.p3{
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 37px;
+}
+
+.p4{
+  font-size: 20px;
+  line-height: 2.74em;
+}
+
+.game-reult-ul li {
+  
+  display: inline-block;
+}
+
+.game-reult-ul li:last-child{
+  height: 30px;
+  width: 80px;
+  text-align: center;
+  line-height: 30px;
+  background-color: #e9e9e9;
+  border: 1px solid #929292;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+.game-result img{
+  display: block;
+  margin: 0 auto;
+}
+
+.game-over {
+  padding: 0 170px;
+  padding-top:100px;
+}
+
+.game-over-title{
+  font-size: 30px;
+  line-height: 52px;
+  text-align: center;
+}
+.game-over-content{
+  text-align: center;
+  font-size: 18px;
+  line-height: 52px;
+}
+
+.game-over-ul {
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 34px;
+}
+
+.game-over-ul li{
+  display: inline-block;
+  line-height: 50px;
+  height: 50px;
+  width: 200px;
+  text-align: center;
+  background-color: #7da914;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.event-link {
+  position: relative;
+}
+.event-link img{
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: 270px;
+  left: 320px;
+  cursor: pointer;
+}
+
+object{
+  margin: 0 auto;
+  margin-top: 240px;
 }
