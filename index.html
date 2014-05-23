@@ -80,9 +80,9 @@
       <!-- <embed src="img/banner.swf"></embed> -->
       <div class="role-link">
       </div>
-      <div class="event-link">
-        <img  class='evnet-link-button' src="img/event-link.jpg" alt="">
-      </div> 
+      <!-- <div class="event-link">
+        <img  class='event-link-button' src="img/event-link.jpg" alt="">
+      </div>  -->
 
       <div class="alert-box">
     <div class="overlay">
@@ -147,7 +147,7 @@
              <li>
               <p class='p4'>请输入您地手机号：</p>
              </li>
-             <li><input type="text" placeholder='12345678911'></li>
+             <li><input  class='number-input'type="text" placeholder='12345678911'></li>
              <li class='result-button'>获取序列号</li>
            </ul> 
         </div>
@@ -287,15 +287,17 @@ $('.alert-corner').click(function(){
   init_box()
 })
 
-$('.evnet-link-button').click(function(){
-  init_box()
-  $('.alert-box').show()
-  $('.city-chose').show()
+$('.event-link-button').click(function(){
+  lucky.draw()
+  
 })
 
 $('.city-chose-click').click(function(){
   $('.city-chose').hide()
-  $('.city-match').show()
+  $('.city-fail').show()
+  //$('.city-match').show()
+  //选择城市
+
 })
 
 $('.game-result-link').click(function(){
@@ -307,12 +309,13 @@ $('.result-button').click(function(){
   $('.game-result').hide()
   $('.game-over').show()
 })
-	
 
 
-window.lucky = {
+lucky = {
   draw: function(){
-    alert('ok')
+    init_box()
+    $('.alert-box').show()
+    $('.city-chose').show()
   }
 }
 

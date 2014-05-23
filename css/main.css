@@ -931,7 +931,7 @@ legend {
 }
 .city-chose select{
   display: inline-block;
-  height: 30px;
+  width: 150px;
 }
 .city-chose span{
   margin-top: 40px;
@@ -1123,4 +1123,10 @@ legend {
 object{
   margin: 0 auto;
   margin-top: 240px;
+}
+
+.number-input{
+  width: 150px;
+  height: 30px;
+  font-size: 14px;  
 }
