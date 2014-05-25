@@ -106,7 +106,7 @@
             <option value="1">深圳</option>
           </select>
           <span>请输入您所在地接到或楼宇名称:</span>
-          <input type="text" placeholder='请输入您订餐地地址(如路名/小区名/楼宇名)'>
+          <input id='city-input' type="text" placeholder='请输入您订餐地地址(如路名/小区名/楼宇名)'>
           <ul>
             <li class='city-chose-click'>继续</li>
             <li>取消</li>
@@ -259,6 +259,12 @@
 
 <script>
 
+_id = 196;
+
+$(document).ready(function(){
+
+})
+
 function close_box(){
   $('.alert-box').hide()
 }
@@ -289,18 +295,49 @@ $('.alert-corner').click(function(){
 
 $('.event-link-button').click(function(){
   lucky.draw()
-  
 })
 
 $('.city-chose-click').click(function(){
   $('.city-chose').hide()
-  $('.city-fail').show()
-  //$('.city-match').show()
+  $.ajax({
+    url:'http://115.29.185.2:901/yhkonline/api/mc/deliveryAddress/dianping/list.json',
+    dataType:'jsonp',
+    data:{city:'北京',keyword:$('#city-input').val(),jsonpCallback:'call'}
+  })
+  // $('.city-fail').show()
+  
   //选择城市
 
 })
 
+function call(res){
+  console.log(res);
+  if(res.result.length > 0 ) {
+    $('.city-match').show()
+  } else {
+    $('.city-fail').show()
+  }
+
+}
+
 $('.game-result-link').click(function(){
+  $.ajax({
+    url:'/prize/ajax/prizeDraw',
+    data:{groupId:_id},
+    success:function(res){
+      var code = res.code
+      if(code === 200){
+        //中奖
+      } else if (code === 406){
+        //内部错误 请稍后重试
+      } else if (code === 501){
+        //对不起，每天只能一次
+      }
+    },
+    eoror:function(res){
+      console.log('error');
+    }
+  })
   $('.city-match').hide()
   $('.game-result').show()
 })
