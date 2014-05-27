@@ -193,7 +193,7 @@
   padding: 0 20px 20px;
 }
 .block2 {
-  background: ##fffcf5 top left repeat;
+  background: #fffcf5 top left repeat;
   height: 1170px;
 }
 .block2 .block-title,
@@ -203,16 +203,18 @@
 }
 .deal-box {
   width: 940px;
+  box-sizing: border-box;
   margin: 0 auto;
+  border: 1px solid #ece9e7;
+
 }
 .deal-box li {
   float: left;
-  margin: 4px;
-  /*_margin: 4px 2px;*/
-  
-  width: 420px;
-  height: 320px;
-  padding: 10px;
+  display: inline-block;
+  width: 50%;
+  box-sizing: border-box;
+  border-right: 1px solid #ece9e7;
+  border-bottom: 1px solid #ece9e7;
   background-color: #fff;
 }
 
@@ -478,7 +480,10 @@
 }
 
 .shop-intro{
-  height: 180px;
+  /*width: 470px;*/
+  overflow: hidden;
+  padding: 15px;
+  border-bottom: 1px solid #ece9e7;
 }
 .shop-img{
   width: 182px;
@@ -490,6 +495,7 @@
   color:#221815;
   font-family: 微软雅黑;
   padding-left: 13px;
+  padding-right: 13px;
   width: 223px;
   float: left;
 }
@@ -499,6 +505,7 @@
 }
 
 .shop-des{
+  display: block;
   font-size: 14px;
   line-height: 27px;
 }
