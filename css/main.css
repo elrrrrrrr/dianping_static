@@ -863,6 +863,7 @@ legend {
 
 .yonghe-main{
   width: 1000px;
+  height: 1000px;
   margin: 0 auto;
   position: relative;
 }
@@ -1129,4 +1130,25 @@ object{
   width: 150px;
   height: 30px;
   font-size: 14px;  
+  position: absolute;
+  top:775px;
+  left:200px;
+}
+
+.yonghe-inner{
+  width: 100%;
+  height: 1000px;
+  min-width: 1000px;
+  background: url('../img/inner.jpg') center no-repeat;
+}
+
+.number-button{
+  display: block;
+  width: 100px;
+  height: 50px;
+  background: url('../img/number-button.png') center no-repeat;
+  position: absolute;
+  top:767px;
+  left:370px;
+  cursor: pointer;
 }

@@ -21,7 +21,7 @@
 
     pageTracker._trackPageview('/dp_/market/kw_140521_minisite');
   </script>
-  <title>永和大王</title>
+  <title>酷威</title>
 </head>
 <body>
 
@@ -51,134 +51,20 @@
 </div>
 
 
-<div class="yonghe-content">
-	<div class="yonghe-main">
-    <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1000" height="400">
-    <param name="movie" value="img/banner.swf" />
-    <param name="quality" value="high" />
-    <param name="wmode" value="transparent" />
-    <param name="swfversion" value="9.0.45.0" />
-    <!-- 此 param 标签提示使用 Flash Player 6.0 r65 和更高版本的用户下载最新版本的 Flash Player。如果您不想让用户看到该提示，请将其删除。 -->
-    <param name="expressinstall" value="Scripts/expressInstall.swf" />
-    <!-- 下一个对象标签用于非 IE 浏览器。所以使用 IECC 将其从 IE 隐藏。 -->
-    <!--[if !IE]>-->
-    <object type="application/x-shockwave-flash" data="img/banner.swf" width="1000" height="400">
-      <!--<![endif]-->
-      <param name="quality" value="high" />
-      <param name="wmode" value="transparent" />
-      <param name="swfversion" value="9.0.45.0" />
-      <param name="expressinstall" value="Scripts/expressInstall.swf" />
-      <!-- 浏览器将以下替代内容显示给使用 Flash Player 6.0 和更低版本的用户。 -->
-      <div>
-        <h4>此页面上的内容需要较新版本的 Adobe Flash Player。</h4>
-        <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="获取 Adobe Flash Player" width="112" height="33" /></a></p>
-      </div>
-      <!--[if !IE]>-->
-    </object>
-    <!--<![endif]-->
-  </object>
-      <!-- <embed src="img/banner.swf"></embed> -->
-      <div class="role-link">
-      </div>
-      <!-- <div class="event-link">
-        <img  class='event-link-button' src="img/event-link.jpg" alt="">
-      </div>  -->
-
-      <div class="alert-box">
-    <div class="overlay">
-    </div>
-
-    
-    <div class="alert-view">
-      <div class="alert-header">
-        <img src="img/close.jpg" class='alert-corner' alt="">  
-      </div>
-      <div class="alert-content">
-        <div class="role-intro">
-          <img src="img/role-intro-content.jpg" alt="">
-        </div>  
-
-        <div class="city-chose">
-          <p>城市：</p>
-          <select >
-            <option value="1">北京</option>
-            <option value="1">上海</option>
-            <option value="1">深圳</option>
-          </select>
-          <span>请输入您所在地接到或楼宇名称:</span>
-          <input id='city-input' type="text" placeholder='请输入您订餐地地址(如路名/小区名/楼宇名)'>
-          <ul>
-            <li class='city-chose-click'>继续</li>
-            <li>取消</li>
-          </ul>
-        </div>
+<div class="content">
+	<div class="role-link">
+	</div>
+	<div class="event-link">
+		
+	</div>
+	<div class="alert-box">
+		<div class="overlay">
+		</div>
 
 
-        <div class="city-match">
-          <div class="city-match-content">
-            <span>恭喜您在大王送餐范围</span>  
-            <span>
-              <img src="img/city-match.jpg" alt="">
-            </span>   
-          </div>
-          <ul>
-            <li class='game-result-link'>马上抽 ></li>
-          </ul>
-        </div>
+	</div>
 
-        <div class="city-fail">
-          <div class='city-fail-content'>
-            <p class='p1'>
-              <i></i>
-              好伤心，<br>
-              您不再我们地外送送餐范围内
-            </p>
-            <p class='p2'>永和大王为您提供了专享地堂食优惠券，<br>
-              拍照留下吧，到永和大王餐厅展示即可使用哟！
-            </p>
-          </div>
-          <img class='city-fail-img' src="img/city-fail.jpg" alt="">
-        </div>
-        
-        <div class="game-result">
-          <img src="img/result.jpg" alt="">
-          <p class='p3'>获得永和大王价值67元双享餐网络订餐专享抵用券</p>
-          <ul style='padding-left:20px;' class='game-reult-ul' >
-             <li>
-              <p class='p4'>请输入您地手机号：</p>
-             </li>
-             <li><input  class='number-input'type="text" placeholder='12345678911'></li>
-             <li class='result-button'>获取序列号</li>
-           </ul> 
-        </div>
-
-        <div class="game-over">
-          <p class='game-over-title'>序列号发送成功</p>
-          <p class='game-over-content'>序列号已发送到<span>123445678911</span>，请注意查收</p>
-          <ul class='game-over-ul'>
-            <li>立即去大王送使用</li>
-          </ul>
-        </div>
-
-
-      </div>
-      
-
-
-    </div>
-
-  </div> 
-
-
-
-
-  </div>
-  
-    
-  
 </div>
-
-
 
 <div class="footer-static">
   <ul>
@@ -258,105 +144,11 @@
 </script>
 
 <script>
-
-_id = 196;
-
 $(document).ready(function(){
-
-})
-
-function close_box(){
-  $('.alert-box').hide()
-}
-
-function init_box(){
-  $('.role-intro').hide()
-  $('.city-chose').hide()
+	$('.role-intro').hide()
   $('.city-match').hide()
-  $('.city-fail').hide()
-  $('.game-result').hide()
-  $('.game-over').hide()
-}
-
-$(document).ready(function(){
-  close_box();  
-  init_box();
 })
-
-$('.role-link').click(function(){
-  $('.alert-box').show()
-  $('.role-intro').show()
-})
-
-$('.alert-corner').click(function(){
-  close_box()
-  init_box()
-})
-
-$('.event-link-button').click(function(){
-  lucky.draw()
-})
-
-$('.city-chose-click').click(function(){
-  $('.city-chose').hide()
-  $.ajax({
-    url:'http://115.29.185.2:901/yhkonline/api/mc/deliveryAddress/dianping/list.json',
-    dataType:'jsonp',
-    data:{city:'北京',keyword:$('#city-input').val(),jsonpCallback:'call'}
-  })
-  // $('.city-fail').show()
-  
-  //选择城市
-
-})
-
-function call(res){
-  console.log(res);
-  if(res.result.length > 0 ) {
-    $('.city-match').show()
-  } else {
-    $('.city-fail').show()
-  }
-
-}
-
-$('.game-result-link').click(function(){
-  $.ajax({
-    url:'/prize/ajax/prizeDraw',
-    data:{groupId:_id},
-    success:function(res){
-      var code = res.code
-      if(code === 200){
-        //中奖
-      } else if (code === 406){
-        //内部错误 请稍后重试
-      } else if (code === 501){
-        //对不起，每天只能一次
-      }
-    },
-    eoror:function(res){
-      console.log('error');
-    }
-  })
-  $('.city-match').hide()
-  $('.game-result').show()
-})
-
-$('.result-button').click(function(){
-  $('.game-result').hide()
-  $('.game-over').show()
-})
-
-
-lucky = {
-  draw: function(){
-    init_box()
-    $('.alert-box').show()
-    $('.city-chose').show()
-  }
-}
-
-
+	
 </script>
 
 </body></html>
