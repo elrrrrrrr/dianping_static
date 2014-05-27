@@ -859,8 +859,8 @@ body {
 .content {
   width: 100%;
   min-width: 960px;
-  height:850px;
-  background: url('../img/bg.jpg') no-repeat; 
+  min-height:850px;
+  background: url('../img/bg.jpg') center repeat-y; 
 }
 
 .role-link {
@@ -1013,4 +1013,72 @@ body {
   border: 10px solid #4f4f4f;
   line-height: 380px;
   float: right;
+}
+
+.banner{
+  background: url('../img/title.jpg') center no-repeat;
+  height: 360px;
+}
+
+.main-ul{
+  width: 900px;
+  min-height: 800px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+  overflow: hidden;
+}
+.main-ul >li{
+  background: white;
+  display: inline-block;
+  width: 440px;
+  height: 475px;
+  float: left;
+  margin-bottom: 20px;
+  border: 1px solid #e4e4e4;
+}
+
+.main-ul >li:nth-of-type(even){
+  float: right;
+}
+
+.shop-pic{
+  display: block;
+  width: 440px;
+}
+
+.shop-name{
+  display: block;
+  text-align: center;
+  margin-top: 24px;
+  font-size: 24px;
+  line-height: 1.2em;
+}
+
+.button-ul {
+  margin-top:20px;
+  padding:8px;
+}
+.button-ul >li{
+  display: inline-block;
+  width: 138px;
+  height: 110px;
+  
+}
+.promotions{
+  background: url('../img/buttons.png');
+  background-position: -9px -3px ;
+  background-size: 138px 107px no-repeat;
+}
+
+.coupon{
+  background: url('../img/buttons.png');
+  background-position: 150px -3px ;
+  background-size: 138px 107px no-repeat;
+}
+
+.group{
+  background: url('../img/buttons.png');
+  background-position: 293px -3px ;
+  background-size: 138px 107px no-repeat;
 }
