@@ -4,8 +4,7 @@
  * Time: 下午6:43
  */
 var Global = {
-    LOGGED: true,
-    CHANCE: 1
+    LOGGED: false
 };
 
 jQuery(function($){
@@ -46,6 +45,9 @@ jQuery(function($){
 
 jQuery(function($){
 
+    var info = {};//存储用户信息
+
+
     //弹框定位
     function overlayShadow(){
         var boxCenter = $('.pop-layer-result'),
@@ -81,19 +83,23 @@ jQuery(function($){
         };
     }
 
+    //设置九宫格
     var PrizeInfo = {},
         grid = new $.Grid({
         gridSize: 148,
         gap: 5,
-        imgGroup:['chibanwu','cooked','shibanjie','tanyue','wanyu','youle','noprize1','noprize2','noprize3'],
+        imgGroup:['chibanwu','cooked','shibanjie','tanyue','wanyu','youle','mizi','hanlinxuan','noprize1'],
         imgPath:'images/grid/'
     });
-
+    //生产九宫格
     grid.listen('showWindow', function () {
-        popupLayerPrize(PrizeInfo);
+        popupLayerPrize(PrizeInfo.msg);
     });
+    //抽奖事件
     grid.bindCustomEvents(function(){
-            switch (PrizeInfo.rank) {
+        switch(PrizeInfo.code){
+            case 200:
+                switch (PrizeInfo.msg.prize.rank) {
                 case 1: //中奖
                     grid.prizeImage = 'tanyue';
                     break;
@@ -112,26 +118,40 @@ jQuery(function($){
                 case 6:
                     grid.prizeImage = 'wanyu';
                     break;
+                case 7:
+                    grid.prizeImage = 'mizi';
+                    break;
+                case 8:
+                    grid.prizeImage = 'hanlinxuan';
+                    break;
                 default://没中奖
                     grid.prizeImage = randomString([
-                        'noprize1',
-                        'noprize2',
-                        'noprize3'
+                        'noprize1'
                         ]);
                     break;
-            }
-    }, function () {
-        fresh_info(PrizeInfo);
-    });
-
-    function fresh_info(prizeInfo) {
-        if (prizeInfo){
-            Global.CHANCE = prizeInfo.remain;
+                }
+            break;
+            default:
+                grid.prizeImage = randomString([
+                    'noprize1'
+                    ]);
+            break;
         }
+    });
+    // function () {
+    //     fresh_info(PrizeInfo);
+    // });
 
-        $('#chance').find('span').text(Global.CHANCE);
-    }
+    //刷新剩余次数
+    // function fresh_info(prizeInfo) {
+    //     if (prizeInfo){
+    //         Global.CHANCE = prizeInfo.remain;
+    //     }
 
+    //     $('#chance').find('span').text(Global.CHANCE);
+    // }
+
+    //生成抽奖相关按钮
     function popupLayerEnter() {
         var overlay = $('.float-layer'),
 
@@ -139,17 +159,12 @@ jQuery(function($){
             activeButton = $('<a class="btn" href="javascript:void(0);"></a>');
 
         if (Global.LOGGED) {
-            if (Global.CHANCE) {
-                box.addClass('ready');
+            box.addClass('ready');
 
-                activeButton.on('click', function () {
-                    box.remove();
-                    getNewPrize();
-                }).appendTo(box);
-            }
-            else{
-                box.addClass('no-chance');
-            }
+            activeButton.on('click', function () {
+                box.remove();
+                getNewPrize();
+            }).appendTo(box);
         }
         else {
             box.addClass('login');
@@ -158,134 +173,196 @@ jQuery(function($){
                 if(window.DP){
                     $.login();
                 }
-                // else if (/51ping/.test(window.location.host)) {
-                //     window.location = 'http://t.51ping.com/login?redir=' + encodeURIComponent(window.location.href);
-                // }
+
                 else {
-                    window.location = 'http://t.dianping.com/login?redir=' + encodeURIComponent(window.location.href);
+                    window.location = 'http://www.dianping.com/login';
                 }
                 return false;
             }).appendTo(box);
         }
         box.appendTo(overlay);
     }
+    function popupLayerEnter2(){
+        var overlay = $('.float-layer'),
 
+            box = $('<div class="pop-layer-button"></div>'),
+            activeButton = $('<a class="btn" href="javascript:void(0);"></a>');
+
+        box.addClass('no-chance');
+        box.appendTo(overlay);
+    }
+
+    //随机数
     function randomString(strs) {
         return strs[Math.floor(Math.random() * strs.length)];
     }
 
-    function popupLayerPrize(prizeInfo) {
+    //中奖弹框
+    function popupLayerPrize() {
 
         var overlay = $('.float-layer'),
             box = $('<div class="pop-layer-result"></div>'),
             title = $('<p class="popup-title"></p>'),
             text = $('<p class="popup-text"></p>'),
             closeButton = $('<a class="close-button" title="关闭" href="javascript:void(0);"></a>'),
+            pushMobileNum = $('<a class="btn" id="content-message-btn" href="javascript:void(0);">提交</a>'),
             shareGroup = $('<div class="btn-group"></div>'),
             shareSina = $('<a class="btn btn-shareSina" href="javascript:void(0);">小伙伴快来！</a>');
             // shareWeixin = $('<a class="btn btn-shareWeixin" href="javascript:void(0);">分享到朋友圈</a>'),
             // info = $('<p class="popup-info">* 您还可以分享此活动链接，获得一次额外抽红包的机会。</p>');
 
-        switch (prizeInfo.rank) {
-            case 1: //中奖
-                title.html('恭喜你获得<br />' + prizeInfo.prizeName + '!');
-                text.html('请提供您的联系方式，以便我们发送中奖信息。')
+            switch(PrizeInfo.code){
+                case 200:
+                    switch (PrizeInfo.msg.prize.rank) {
+                        case 1: //中奖
+                        case 2: 
+                        case 3: 
+                        case 4: 
+                        case 5: 
+                        case 6:
+                        case 7:
+                        case 8:
+                            title.html('恭喜你获得<br /><span>' + PrizeInfo.msg.prize.prizeName + '!</span>');
+                            text.html(
+                                '<p class="tips">请提供您的联系方式，以便我们发送中奖信息。</p>' +
+                                '<label for="" class="mobile-text"><span>手机：</span>'+
+                                '<input id="mobileText" type="text" class="mobile-input" maxlength="11">'+
+                                '</label>'
+                                );
+
+                            title.appendTo(box);
+                            text.appendTo(box);
+                            closeButton.one('click', function(){
+                                popupLayerEnter();
+                                grid.initPrizeView();
+                                box.remove();
+                                $('.overlay').hide();
+                            }).appendTo(box);
+                            pushMobileNum.appendTo(box);
+                            box.addClass(grid.prizeImage).appendTo('body');
+
+                            $('#content-message-btn').unbind('click').on('click', function(e){
+                                e.stopPropagation();
+                                
+                                var mobileNo = $('#mobileText').val(),
+                                    mobileWarning = $('#warning');
+                                    mobileNoReg = /\d+/;
+                                if(mobileNo.length === 11 && mobileNoReg.test(mobileNo) && mobileNo.charAt(0) === '1'){
+                                    SendMessage( mobileNo, PrizeInfo.msg.recordId); //发短信
+                                }else{
+                                    alert('输入有误，请重新输入。');
+                                }
+                            });
+                            break;
+                        default://没中奖
+                            title.html('客官，明儿再来啊！');
+                            text.html('将活动讯息同步到您的新浪微博，<br />让小伙伴们一起来吧！');
+
+                            title.appendTo(box);
+                            text.appendTo(box);
+                            closeButton.one('click', function(){
+                                popupLayerEnter();
+                                grid.initPrizeView();
+                                box.remove();
+                                $('.overlay').hide();
+                            }).appendTo(box);
+                            shareSina.on('click', function () {
+                            }).appendTo(shareGroup);
+                            shareGroup.appendTo(box);
+                            box.addClass(grid.prizeImage).appendTo('body');
+                            break;
+                    }
+                    overlayShadow();
                 break;
-            case 2: //中奖
-                title.html('恭喜你！抽中' + prizeInfo.prizeName + '元门票红包！');
-                text.html(randomString([
-                    '面额小了点，再试试！',
-                    '这点钱打酱油都不够，再试试！',
-                    '小小零花钱，再接再励！',
-                    '人品很赞哦！',
-                    '人品不错哦！',
-                    '幸运女神正关注着您！',
-                    '人品这么好，可以去买彩票了！',
-                    '您已经被幸运女神看中了，小心会有艳遇哦！'
-                ]))
+                default:
+                    popupLayerEnter2();
                 break;
-            case 3: //中奖
-                title.html('恭喜你！抽中<span>20元</span>途家网礼品券！');
-                text.html('在途家网预订酒店就可使用哦！');
-                break;
-            default://没中奖
-                if(Global.CHANCE){
-                    title.html('客官，明儿再来啊！');
-                    text.html('将活动讯息同步到您的新浪微博，<br />让小伙伴们一起来吧！');
-                }
-                else{
-                    title.html('客官，明儿再来啊！');
-                    text.html('将活动讯息同步到您的新浪微博，<br />让小伙伴们一起来吧！');
-                }
-                break;
-        }
-
-
-        title.appendTo(box);
-        text.appendTo(box);
-
-        closeButton.one('click', function(){
-            popupLayerEnter();
-            grid.initPrizeView();
-            box.remove();
-            $('.overlay').hide();
-        }).appendTo(box);
-
-
-        shareSina.on('click', function () {
-        }).appendTo(shareGroup);
-
-        // shareWeixin.on('click', function () {
-        //     var template =
-        //         '<div class="popup-info">' +
-        //             '<div class="popup-title">微信分享扫一扫</div>' +
-        //             '<div class="popup-qr-code"></div>' +
-        //             '<div class="popup-instruction"></div>' +
-        //         '</div>';
-        //     $.popup.setPopup({
-        //         domString: template
-        //     }, true);
-        // }).appendTo(shareGroup);
-
-        shareGroup.appendTo(box);
-        // info.appendTo(box);
-
-        box.addClass(grid.prizeImage).appendTo('body');
-        overlayShadow();
-        Close();
+            }
     }
 
+    //ajax获取奖品信息
     function getNewPrize() {
         $.ajax({
             url: '/prize/ajax/prizeDraw',
-            data: {groupId: 166},
+            data: {groupId: 168},
             // url: '',
             success: function (response) {
                 switch (response.code) {
                     case 200:
-                        PrizeInfo = response.msg;
+                        PrizeInfo = response;
                         break;
-                    default :
+                    default:
                         PrizeInfo = {status : 0, remain: 0};
                         break;
                 }
-
                 grid.trigger('gridReady');
             }
         });
     }
 
-    function getInfo(){
-        if (Global.LOGGED) {
-            //TODO: 获取剩余次数并更新页面内容
-            fresh_info();
-        }
-        else{
-            $('#chance').text('登录后查看');
-        }
+    //登录
+    function Login(){
+        $.ajax({
+            url: '/ajax/json/account/info',
+            data: {r: Number(new Date())},
+            cache: false,
+            async: false,
+            success:function(rsp){
+                userMobile = rsp.msg.mobile
+            }
+        })
+        .done(function(rsp){
+            var code = rsp.code;
+            switch(code){
+                case 200:
+                    var msg = rsp.msg;
+                    info.uid = msg.id;
+                    info.username = msg.name;
+                    info.mobile = msg.mobile;
+                    Global.LOGGED = 1;
+                break;
+                case 403:
+
+                break;
+                default:
+                break;
+            }
+        })
+        .fail(function(rsp){
+
+            // popup login redirect
+            toLogin();
+            Overlay();
+        });
+    }
+
+    //发送短信
+    function SendMessage(mobileNo, recordId){
+        $.ajax({
+            type: 'POST',
+            dataType: 'json',
+            url: '/prize/ajax/userInfo',
+            data: { recordId: recordId, mobileNo: mobileNo}
+        })
+        .done(function(rsp){
+            //发送成功提示
+           $('.close-button').trigger('click');
+            alert('发送成功！');
+        })
+        .fail(function(){
+            //发送失败提示
+            alert('对不起，发送失败！');
+        });
     }
 
 
-    getInfo();
+    $(document).on('click','.btn-shareSina', function(){
+        var url = encodeURIComponent(location.href),
+        pic = encodeURIComponent('http://event.dianping.com/market/dashanghai/images/grid/noprize3.png'),
+        title = encodeURIComponent('#大众点评#大上海时代广场美食大联盟，吃货福利，万券齐发！300元现金券乖乖等你中！谁戳谁知道哟！'),
+        address = 'http://service.weibo.com/share/share.php?appkey=1392673069&url=' + url + '&title=' + title;
+        window.open(address, '_blank');
+    });
+    Login();
     popupLayerEnter();
 });
