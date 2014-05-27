@@ -232,10 +232,12 @@ legend {
   height: 100%;
 }
 .header {
-  min-width: 1600px;
+  width: 100%;
+  min-width: 960px;
 }
 .footer-static {
-  min-width: 1600px;
+  min-width: 960px;
+  width: 100%;
   padding: 20px 0;
   text-align: center;
   background-color: #ffffff;
@@ -855,7 +857,8 @@ body {
 }
 
 .content {
-  width: 1600px;
+  width: 100%;
+  min-width: 960px;
   height:850px;
   background: url('../img/bg.jpg') no-repeat; 
 }
