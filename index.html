@@ -54,23 +54,30 @@
   <div class="yonghe-main">
     <input type="text" class="number-input">  
     <p class="number-button"></p>
+    <img src="img/net1.jpg" alt="" class='ticket net1'>
+    <img src="img/net2.jpg" alt="" class='ticket net2'>
+    <img src="img/net3.jpg" alt="" class='ticket net3'>
+    <img src="img/net4.jpg" alt="" class='right-ticket'>
      <div class="alert-box">
-    <div class="overlay">
-    </div>
-    <div class="alert-view">
+        <div class="overlay"></div>
+        <div class="alert-view">
       <div class="alert-header">
         <img src="img/close.png" class='alert-corner' alt="">  
       </div>
       <div class="alert-content">
         <p></p>
-        <span>立即去大王送使用</span>
+        <a href="http://www.4000979797.com" target="_blank">
+          <span>立即去大王送使用</span>
+        </a>
+        
       </div>
-    </div>
-  </div> 
+        </div>
+    </div> 
   </div>
 </div>
 <div class="yonghe-content" style='display: none' id='home'>
 	<div class="yonghe-main">
+    <a href="#">
     <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1000" height="400">
     <param name="movie" value="img/banner.swf" />
     <param name="quality" value="high" />
@@ -95,13 +102,19 @@
     </object>
     <!--<![endif]-->
   </object>
+  </a>
       <div class="role-link">
       </div>
-  
-
-
-
-
+   <div class="alert-box" id='role-box'>
+        <div class="overlay"></div>
+        <div class="alert-view">
+      <div class="alert-header">
+        <img src="img/close.png" class='alert-corner' alt="">  
+      </div>
+      <div class="alert-content">
+      </div>
+        </div>
+  </div> 
   </div>
   
     
@@ -213,36 +226,8 @@ $('.alert-corner').click(function(){
   init_box()
 })
 
-$('.event-link-button').click(function(){
-  lucky.draw()
-})
-
-
-$('.game-result-link').click(function(){
-  $.ajax({
-    url:'/prize/ajax/prizeDraw',
-    data:{groupId:_id},
-    success:function(res){
-      var code = res.code
-      if(code === 200){
-        //中奖
-      } else if (code === 406){
-        //内部错误 请稍后重试
-      } else if (code === 501){
-        //对不起，每天只能一次
-      }
-    },
-    eoror:function(res){
-      console.log('error');
-    }
-  })
-  $('.city-match').hide()
-  $('.game-result').show()
-})
-
-$('.result-button').click(function(){
-  $('.game-result').hide()
-  $('.game-over').show()
+$('.role-link').click(function(){
+  $('#role-box').show()
 })
 
 
