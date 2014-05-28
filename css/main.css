@@ -856,24 +856,26 @@ legend {
 
 .yonghe-content {
   min-width: 1000px;
-  height: 800px;
+  height: 850px;
   background: url('../img/bg.jpg') center top no-repeat; 
   margin: 0 auto;
 }
 
+
+
 .yonghe-main{
   width: 1000px;
-  height: 1000px;
+  /*height: 1000px;*/
   margin: 0 auto;
   position: relative;
 }
 .role-link {
   position: absolute;
   left: 10px;
-  top: 97px;
+  top: 95px;
   width: 200px;
-  height: 50px;
-  background: url('../img/role-link.jpg') no-repeat;
+  height: 60px;
+  background: url('../img/role-link.png') no-repeat;
   cursor: pointer;
 }
 
@@ -896,7 +898,7 @@ legend {
   top: 210px;
   width: 800px;
   height: 430px;
-  background-color: #ffffff;
+  background: url('../img/pop.jpg') center no-repeat;
   z-index: 8888;
 }
 
@@ -911,6 +913,25 @@ legend {
   cursor: pointer;
 }
 
+.alert-content{
+  text-align: center;
+  margin-top: 166px;
+  font-family: 微软雅黑;
+  font-size: 20px;
+}
+
+.alert-content span{
+  display: block;
+  width: 196px;
+  height: 47px;
+  margin: 0 auto;
+  margin-top: 82px;
+  background: #e60027;
+  line-height: 47px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
 
 .role-intro{
   margin: 0 auto;
@@ -1137,9 +1158,9 @@ object{
 
 .yonghe-inner{
   width: 100%;
-  height: 1000px;
+  height: 900px;
   min-width: 1000px;
-  background: url('../img/inner.jpg') center no-repeat;
+  background: url('../img/inner.jpg') top center no-repeat;
 }
 
 .number-button{

@@ -21,7 +21,7 @@
 
     pageTracker._trackPageview('/dp_/market/kw_140521_minisite');
   </script>
-  <title>酷威</title>
+  <title>永和大王</title>
 </head>
 <body>
 
@@ -50,21 +50,65 @@
   </div>
 </div>
 
-
-<div class="content">
-	<div class="role-link">
-	</div>
-	<div class="event-link">
-		
-	</div>
-	<div class="alert-box">
-		<div class="overlay">
-		</div>
-
-
-	</div>
-
+<div class="yonghe-inner" id='inner'>
+  <div class="yonghe-main">
+    <input type="text" class="number-input">  
+    <p class="number-button"></p>
+     <div class="alert-box">
+    <div class="overlay">
+    </div>
+    <div class="alert-view">
+      <div class="alert-header">
+        <img src="img/close.png" class='alert-corner' alt="">  
+      </div>
+      <div class="alert-content">
+        <p></p>
+        <span>立即去大王送使用</span>
+      </div>
+    </div>
+  </div> 
+  </div>
 </div>
+<div class="yonghe-content" style='display: none' id='home'>
+	<div class="yonghe-main">
+    <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1000" height="400">
+    <param name="movie" value="img/banner.swf" />
+    <param name="quality" value="high" />
+    <param name="wmode" value="transparent" />
+    <param name="swfversion" value="9.0.45.0" />
+    <!-- 此 param 标签提示使用 Flash Player 6.0 r65 和更高版本的用户下载最新版本的 Flash Player。如果您不想让用户看到该提示，请将其删除。 -->
+    <param name="expressinstall" value="Scripts/expressInstall.swf" />
+    <!-- 下一个对象标签用于非 IE 浏览器。所以使用 IECC 将其从 IE 隐藏。 -->
+    <!--[if !IE]>-->
+    <object type="application/x-shockwave-flash" data="img/banner.swf" width="1000" height="400">
+      <!--<![endif]-->
+      <param name="quality" value="high" />
+      <param name="wmode" value="transparent" />
+      <param name="swfversion" value="9.0.45.0" />
+      <param name="expressinstall" value="Scripts/expressInstall.swf" />
+      <!-- 浏览器将以下替代内容显示给使用 Flash Player 6.0 和更低版本的用户。 -->
+      <div>
+        <h4>此页面上的内容需要较新版本的 Adobe Flash Player。</h4>
+        <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="获取 Adobe Flash Player" width="112" height="33" /></a></p>
+      </div>
+      <!--[if !IE]>-->
+    </object>
+    <!--<![endif]-->
+  </object>
+      <div class="role-link">
+      </div>
+  
+
+
+
+
+  </div>
+  
+    
+  
+</div>
+
+
 
 <div class="footer-static">
   <ul>
@@ -144,11 +188,73 @@
 </script>
 
 <script>
-$(document).ready(function(){
-	$('.role-intro').hide()
-  $('.city-match').hide()
+
+_id = 196;
+
+
+
+function close_box(){
+  $('.alert-box').hide()
+}
+
+$('.number-button').click(function(){
+  $('.alert-content p').html('序列号已发送到'+$('.number-input').val()+'，请注意查收')
+  $('.alert-box').show();
 })
-	
+
+$(document).ready(function(){
+  close_box();  
+  $('#inner').hide();
+  $('#home').show();
+})
+
+$('.alert-corner').click(function(){
+  close_box()
+  init_box()
+})
+
+$('.event-link-button').click(function(){
+  lucky.draw()
+})
+
+
+$('.game-result-link').click(function(){
+  $.ajax({
+    url:'/prize/ajax/prizeDraw',
+    data:{groupId:_id},
+    success:function(res){
+      var code = res.code
+      if(code === 200){
+        //中奖
+      } else if (code === 406){
+        //内部错误 请稍后重试
+      } else if (code === 501){
+        //对不起，每天只能一次
+      }
+    },
+    eoror:function(res){
+      console.log('error');
+    }
+  })
+  $('.city-match').hide()
+  $('.game-result').show()
+})
+
+$('.result-button').click(function(){
+  $('.game-result').hide()
+  $('.game-over').show()
+})
+
+
+lucky = {
+  draw: function(){
+    $('#home').hide();
+    $('#inner').show();
+    //ajax
+  }
+}
+
+
 </script>
 
 </body></html>
