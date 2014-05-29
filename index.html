@@ -53,7 +53,9 @@
 <div class="yonghe-inner" id='inner'>
   <div class="yonghe-main">
     <input type="text" class="number-input">  
-    <p class="number-button"></p>
+    <p class="number-button">
+      
+    </p>
     <img src="img/net1.jpg" alt="" class='ticket net1'>
     <img src="img/net2.jpg" alt="" class='ticket net2'>
     <img src="img/net3.jpg" alt="" class='ticket net3'>
@@ -211,7 +213,7 @@ function close_box(){
 }
 
 $('.number-button').click(function(){
-  $('.alert-content p').html('序列号已发送到'+$('.number-input').val()+'，请注意查收')
+  $('.alert-content p').html('编码已发送到'+$('.number-input').val()+'，请注意查收')
   $('.alert-box').show();
 })
 
