@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="http://t2.dpfile.com/t/cssnew/g.base.min.css">
   <link rel="stylesheet" href="css/main.css">
   <script src='js/jquery.min.js'></script>
+  <script src='js/underscore.js'></script>
+  <script src='js/data.js'></script>
   <script type="text/javascript" async="" src="js/ga2.js"></script><script>
     var _gaq = [
       ['_setAccount', 'UA-464026-1'],
@@ -21,7 +23,44 @@
 
     pageTracker._trackPageview('/dp_/market/kw_140521_minisite');
   </script>
-  <title>酷威</title>
+    
+  <script type='text/template'id= "template">
+    
+    
+    <%if( window.type == '0'){%>
+      <div class="content meijia-content">
+      <div class="banner meijia-banner"></div>
+    <%}%>
+    <%if( window.type == '1'){%>
+      <div class="content hair-content">
+      <div class="banner hair-banner"></div>
+    <%}%>
+    <%if( window.type == '2'){%>
+      <div class="content bea-content">
+      <div class="banner bea-banner"></div>
+    <%}%>
+    <%if( window.type == '3'){%>
+      <div class="content mishi-content">
+      <div class="banner mishi-banner"></div>
+    <%}%>
+<ul class="main-ul">
+    
+    <%_.each(window.storeList,function(e){%>
+        <li>
+        <img class='shop-pic' src="<%=e.img%>" alt="">
+        <p class='shop-name'><%=e.name%></p>
+            <ul class="button-ul">
+                <li class=' buttons-<%=window.type%> promotions'><a href="<%=e.promotion%>" target="_blank"></a></li>
+                <li class=' buttons-<%=window.type%> coupon' ><a href="<%=e.coupon%>" target="_blank"></a></li>
+                <li class=' buttons-<%=window.type%> group'><a href='<%=e.link%>' target="_blank"></a></li>
+            </ul>
+        </li>
+    <%})%>
+    
+  </ul>
+  </div>  
+  </script>
+  <title>美容美甲</title>
 </head>
 <body>
 
@@ -29,7 +68,6 @@
   <div class="t-bn menu_zindex">
     <div class="inner Fix">
       <span class="tagline">爱生活，爱点评！</span>
-
       <div class="Right">
         <a href="http://www.dianping.com/">点评网首页</a>
         <span class="sep">|</span>
@@ -50,51 +88,82 @@
   </div>
 </div>
 
-
-<div class="content">
-  <div class="banner"></div>
-  <ul class="main-ul">
-    <li>
-      <img class='shop-pic' src="img/1.jpg" alt="">
-      <p class='shop-name'>安娜美甲沙龙</p>
-      <ul class="button-ul">
-        <li class='promotions'></li>
-        <li class='coupon' ></li>
-        <li class='group'></li>
-      </ul>
-    </li>
+<div class="main-content">
+  <div class="content mishi-content">
+      <div class="banner mishi-banner"></div>
     
-    <li>
-      <img class='shop-pic' src="img/1.jpg" alt="">
-      <p class='shop-name'>安娜美甲沙龙</p>
-      <ul class="button-ul">
-        <li class='promotions'></li>
-        <li class='coupon' ></li>
-        <li class='group'></li>
-      </ul>
-    </li>
-
-    <li>
-      <img class='shop-pic' src="img/1.jpg" alt="">
-      <p class='shop-name'>安娜美甲沙龙</p>
-      <ul class="button-ul">
-        <li class='promotions'></li>
-        <li class='coupon' ></li>
-        <li class='group'></li>
-      </ul>
-    </li>
-
-    <li>
-      <img class='shop-pic' src="img/1.jpg" alt="">
-      <p class='shop-name'>安娜美甲沙龙</p>
-      <ul class="button-ul">
-        <li class='promotions'></li>
-        <li class='coupon' ></li>
-        <li class='group'></li>
-      </ul>
-    </li>
+<ul class="main-ul">
+    
+        <li>
+        <div class="coursel">
+          <img class="shop-pic" src="img/1.jpg" alt="">  
+          <img class="shop-pic" src="img/1.jpg" alt="">  
+        </div>
+        <p class="shop-name">MeliaTokyo魅力东京造型</p>
+            <ul class="button-ul">
+                <li class=" buttons-3 promotions"><a href="http://www.dianping.com/promo/214182?source=1" target="_blank"></a></li>
+                <li class=" buttons-3 coupon"><a href="http://t.dianping.com/deal/2171608" target="_blank"></a></li>
+                <li class=" buttons-3 group"><a href="http://www.dianping.com/shop/6057548" target="_blank"></a></li>
+            </ul>
+        </li>
+    
+        <li>
+        <img class="shop-pic" src="img/2.jpg" alt="">
+        <p class="shop-name">香格俪莱(时代店)</p>
+            <ul class="button-ul">
+                <li class=" buttons-3 promotions"><a href="http://www.dianping.com/promo/214182?source=1" target="_blank"></a></li>
+                <li class=" buttons-3 coupon"><a href="http://t.dianping.com/deal/2171608" target="_blank"></a></li>
+                <li class=" buttons-3 group"><a href="http://www.dianping.com/shop/6057548" target="_blank"></a></li>
+            </ul>
+        </li>
+    
+        <li>
+        <img class="shop-pic" src="img/3.jpg" alt="">
+        <p class="shop-name">小左美发(武宁路店)</p>
+            <ul class="button-ul">
+                <li class=" buttons-3 promotions"><a href="http://www.dianping.com/promo/214182?source=1" target="_blank"></a></li>
+                <li class=" buttons-3 coupon"><a href="http://t.dianping.com/deal/2171608" target="_blank"></a></li>
+                <li class=" buttons-3 group"><a href="http://www.dianping.com/shop/6057548" target="_blank"></a></li>
+            </ul>
+        </li>
+    
+        <li>
+        <img class="shop-pic" src="img/4.jpg" alt="">
+        <p class="shop-name">MeliaTokyo魅力东京造型</p>
+            <ul class="button-ul">
+                <li class=" buttons-3 promotions"><a href="http://www.dianping.com/promo/214182?source=1" target="_blank"></a></li>
+                <li class=" buttons-3 coupon"><a href="http://t.dianping.com/deal/2171608" target="_blank"></a></li>
+                <li class=" buttons-3 group"><a href="http://www.dianping.com/shop/6057548" target="_blank"></a></li>
+            </ul>
+        </li>
+    
+        <li>
+        <img class="shop-pic" src="img/5.jpg" alt="">
+        <p class="shop-name">xy hair salon(人民广场店）</p>
+            <ul class="button-ul">
+                <li class=" buttons-3 promotions"><a href="http://www.dianping.com/promo/214182?source=1" target="_blank"></a></li>
+                <li class=" buttons-3 coupon"><a href="http://t.dianping.com/deal/2171608" target="_blank"></a></li>
+                <li class=" buttons-3 group"><a href="http://www.dianping.com/shop/6057548" target="_blank"></a></li>
+            </ul>
+        </li>
+    
+        <li>
+        <img class="shop-pic" src="img/6.jpg" alt="">
+        <p class="shop-name">MeliaTokyo魅力东京造型</p>
+            <ul class="button-ul">
+                <li class=" buttons-3 promotions"><a href="http://www.dianping.com/promo/214182?source=1" target="_blank"></a></li>
+                <li class=" buttons-3 coupon"><a href="http://t.dianping.com/deal/2171608" target="_blank"></a></li>
+                <li class=" buttons-3 group"><a href="http://www.dianping.com/shop/6057548" target="_blank"></a></li>
+            </ul>
+        </li>
+    
+    
   </ul>
+  </div>
 </div>
+<a href="#top" target="_self"><i class='go-head'></i></a>
+
+
 
 <div class="footer-static">
   <ul>
@@ -169,14 +238,13 @@
      window.open('http://www.dianping.com');
   }
 
-
-
 </script>
 
 <script>
 $(document).ready(function(){
-	$('.role-intro').hide()
-  $('.city-match').hide()
+    out =_.template($('#template').html(),window.storeList)
+    // $('.main-content').html(out)
+
 })
 	
 </script>

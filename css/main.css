@@ -273,6 +273,7 @@ body {
 }
 .main-content {
   font-family: "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
+  position: relative;
 }
 .main-content .main-header {
   position: relative;
@@ -860,7 +861,23 @@ body {
   width: 100%;
   min-width: 960px;
   min-height:850px;
-  background: url('../img/bg.jpg') center repeat-y; 
+  padding-bottom: 150px;
+}
+
+.hair-content{
+  background: url('../img/hair-bg.jpg') center repeat-y; 
+}
+
+.meijia-content{
+  background: url('../img/meijia-bg.jpg') center repeat-y; 
+}
+
+.bea-content{
+  background: url('../img/bea-bg.jpg') center repeat-y; 
+}
+
+.mishi-content{
+  background: url('../img/mishi-bg.jpg') center repeat-y; 
 }
 
 .role-link {
@@ -1016,8 +1033,23 @@ body {
 }
 
 .banner{
-  background: url('../img/title.jpg') center no-repeat;
   height: 360px;
+}
+
+.hair-banner{
+  background: url('../img/hair-banner.jpg') center no-repeat;
+}
+
+.bea-banner{
+  background: url('../img/bea-banner.jpg') center no-repeat;
+}
+
+.mishi-banner{
+  background: url('../img/mishi-banner.jpg') center no-repeat;
+}
+
+.meijia-banner{
+  background: url('../img/meijia-banner.jpg') center no-repeat;
 }
 
 .main-ul{
@@ -1065,20 +1097,68 @@ body {
   height: 110px;
   
 }
+
+.buttons-0{
+  background: url('../img/buttons-meijia.png');  
+}
+
+.buttons-1{
+  background: url('../img/buttons-hair.png');  
+}
+
+.buttons-2{
+  background: url('../img/buttons-bea.png');  
+}
+
+.buttons-3{
+  background: url('../img/buttons-mishi.png');  
+}
+
+.buttons-dis{
+  background: url('../img/buttons-dis.png');  
+}
+
 .promotions{
-  background: url('../img/buttons.png');
-  background-position: -9px -3px ;
+  background-position: -6px -9px ;
   background-size: 138px 107px no-repeat;
 }
 
 .coupon{
-  background: url('../img/buttons.png');
-  background-position: 150px -3px ;
+  
+  background-position: 150px -9px ;
   background-size: 138px 107px no-repeat;
 }
 
 .group{
-  background: url('../img/buttons.png');
-  background-position: 293px -3px ;
+  
+  background-position: 293px -9px ;
   background-size: 138px 107px no-repeat;
 }
+
+.button-ul > li > a{
+  display: block;
+  width:100%;
+  height:100%;
+}
+
+.go-head {
+  display: block;
+  width: 57px;
+  height: 57px;
+  background: url('../img/head.png') center no-repeat;
+  position: fixed;
+  top: 50%;
+  right: 50px;
+}
+
+.coursel {
+  overflow: hidden;
+  width: 1000px;
+}
+.coursel img{
+  float: left;
+  margin-left: 17px;
+}
+.coursel :first-child{
+  margin-left:0px;
+};
