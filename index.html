@@ -47,12 +47,36 @@
     
     <%_.each(window.storeList,function(e){%>
         <li>
-        <img class='shop-pic' src="<%=e.img%>" alt="">
+        <div class="coursel">
+          <div class="coursel-main">
+            <%_.each(e.imgs,function(img){%>
+              <img class="shop-pic" src="<%=img%>" alt="">  
+            <%})%>
+          </div>
+        </div>
         <p class='shop-name'><%=e.name%></p>
             <ul class="button-ul">
-                <li class=' buttons-<%=window.type%> promotions'><a href="<%=e.promotion%>" target="_blank"></a></li>
-                <li class=' buttons-<%=window.type%> coupon' ><a href="<%=e.coupon%>" target="_blank"></a></li>
-                <li class=' buttons-<%=window.type%> group'><a href='<%=e.link%>' target="_blank"></a></li>
+                <li class='
+                <%if(e.promotion.length < 10){%>
+                  buttons-dis
+                <%} else {%>
+                  buttons-<%=window.type%>
+                <%}%>
+                 promotions'><a href="<%=e.promotion%>" target="_blank"></a></li>
+                 <li class=' 
+                <%if(e.link.length < 10){%>
+                  buttons-dis
+                <%} else {%>
+                  buttons-<%=window.type%>
+                <%}%>
+                 group'><a href='<%=e.link%>' target="_blank"></a></li>
+                <li class=' 
+                <%if(e.coupon.length < 10){%>
+                  buttons-dis
+                <%} else {%>
+                  buttons-<%=window.type%>
+                <%}%>
+                coupon' ><a href="<%=e.coupon%>" target="_blank"></a></li>
             </ul>
         </li>
     <%})%>
@@ -96,8 +120,11 @@
     
         <li>
         <div class="coursel">
-          <img class="shop-pic" src="img/1.jpg" alt="">  
-          <img class="shop-pic" src="img/1.jpg" alt="">  
+          <div class="coursel-main">
+            <img class="shop-pic" src="img/1.jpg" alt="">  
+            <img class="shop-pic" src="img/1.jpg" alt="">    
+            <img class="shop-pic" src="img/1.jpg" alt="">    
+          </div>
         </div>
         <p class="shop-name">MeliaTokyo魅力东京造型</p>
             <ul class="button-ul">
@@ -108,7 +135,12 @@
         </li>
     
         <li>
-        <img class="shop-pic" src="img/2.jpg" alt="">
+        <div class="coursel">
+          <div class="coursel-main">
+            <img class="shop-pic" src="img/1.jpg" alt="">  
+            <img class="shop-pic" src="img/1.jpg" alt="">    
+          </div>
+        </div>
         <p class="shop-name">香格俪莱(时代店)</p>
             <ul class="button-ul">
                 <li class=" buttons-3 promotions"><a href="http://www.dianping.com/promo/214182?source=1" target="_blank"></a></li>
@@ -239,12 +271,21 @@
   }
 
 </script>
-
 <script>
 $(document).ready(function(){
     out =_.template($('#template').html(),window.storeList)
-    // $('.main-content').html(out)
-
+    $('.main-content').html(out)
+    setInterval(function(){$('.coursel-main').trigger('coursel')},4000);
+    //$('.coursel-main').css('left','-440px')
+    $('.coursel-main').bind('coursel',function(event){
+      var img_length = $(this).find('img').length -1 ;
+      var sym = $(this).css('left')
+      if ((-1)*img_length * 440 + 'px' == sym){
+        $(this).css('left','0px')
+      } else {
+        $(this).css('left', $(this).position().left - 440 + 'px')
+      }
+    })
 })
 	
 </script>
