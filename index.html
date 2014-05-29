@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- saved from url=(0060)file:///Users/elr-mbp/code/dianping/kuwei/website/index.html -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
@@ -213,17 +212,63 @@ function close_box(){
 }
 
 $('.number-button').click(function(){
-  $('.alert-content p').html('编码已发送到'+$('.number-input').val()+'，请注意查收')
-  $('.alert-box').show();
-  $('.number-input').attr('disabled','disabled')
-  $(this).css('cursor','default')
-  $(this).unbind('click')
+  num = $('.number-input').val()
+  
+  $.ajax({
+    url: "/prize/ajax/userInfo",
+    data: {
+        mobileNo: num,
+        recordId: _id
+    },
+    success: function (response) {
+        switch (response.code) {
+            case 200:
+                $('.alert-content p').html('编码已发送到'+$('.number-input').val()+'，请注意查收')
+                $('.alert-box').show();
+                $('.number-input').attr('disabled','disabled')
+                $(this).css('cursor','default')
+                $(this).unbind('click')
+                //alert("提交成功！");
+                break;
+            default :
+                alert("系统发生错误，请重试！");
+                break;
+        }
+    },
+    error: function () {
+        alert("系统发生错误，请重试！");
+    }
+  });
+
 })
 
 $(document).ready(function(){
   close_box();  
   $('#inner').hide();
   $('#home').show();
+
+  $.ajax({
+    url:"/ajax/json/account/info",
+    data:{ r:Number(new Date()) },
+    success:function(res){
+      console.log(res);
+      switch (res.code) {
+          case 200:
+                //alert("提交成功！");
+                break;
+          case 403:
+                // window.location.href = 'http://www.dianping.com/login?redir=http%3A%2F%2Fevent.dianping.com%2Fmarket%yonghe2014%2Findex.html'     
+                break;
+          default :
+                alert("系统发生错误，请重试！");
+                break;
+      } 
+    }
+  })
+
+  
+
+
 })
 
 $('.alert-corner').click(function(){
@@ -237,8 +282,34 @@ $('.role-link').click(function(){
 
 lucky = {
   draw: function(){
-    $('#home').hide();
-    $('#inner').show();
+    $.ajax({
+      asyc:false,
+      url: "/prize/ajax/prizeDraw",
+      data:{groupId:198},
+      success: function (response) {
+          _id = response.msg.recordId
+          if(response.msg.prize.rank == 1){
+            $('.ticket').hide()
+            $('.net1').show()
+          }
+          if(response.msg.prize.rank == 2){
+            $('.ticket').hide()
+            $('.net2').show()
+          }
+          if(response.msg.prize.rank == 3){
+            $('.ticket').hide()
+            $('.net3').show()
+          }
+          $('#home').hide();
+          $('#inner').show();
+      },
+      error: function () {
+          alert("系统发生错误，请重试！");
+      }
+    });
+
+    
+
   }
 }
 
