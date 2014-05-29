@@ -2,7 +2,7 @@
 
 
 //0-美甲 1-美发 2-遇见 3-密室
-window.type = '1';
+window.type = '3';
 window.storeList = [{
         "name": "MeliaTokyo魅力东京造型",
         "imgs": ["img/1.jpg", "img/1.jpg"],
