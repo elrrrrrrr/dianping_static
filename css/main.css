@@ -1182,15 +1182,15 @@ object{
 .ticket{
   display: block;
   position: absolute;
-  top: 280px;
-  left: 5px;
+  top: 278px;
+  left: 10px;
 }
 
 .right-ticket{
   display: block;
   position: absolute;
   top: 276px;
-  right: 0px;
+  right: 7px;
 }
 
 #role-box>.alert-view{

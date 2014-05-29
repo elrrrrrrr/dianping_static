@@ -215,6 +215,9 @@ function close_box(){
 $('.number-button').click(function(){
   $('.alert-content p').html('编码已发送到'+$('.number-input').val()+'，请注意查收')
   $('.alert-box').show();
+  $('.number-input').attr('disabled','disabled')
+  $(this).css('cursor','default')
+  $(this).unbind('click')
 })
 
 $(document).ready(function(){
@@ -232,15 +235,12 @@ $('.role-link').click(function(){
   $('#role-box').show()
 })
 
-
 lucky = {
   draw: function(){
     $('#home').hide();
     $('#inner').show();
-    //ajax
   }
 }
-
 
 </script>
 
