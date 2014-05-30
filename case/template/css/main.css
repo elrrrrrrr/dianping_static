@@ -1,0 +1,1171 @@
+/**
+ * LESS CSS Created with WebStorm.
+ * Author: Jerry
+ * Date: 14-4-24
+ */
+body {
+  _position: relative;
+  _overflow: hidden;
+  
+  
+}
+.floating .inner {
+  width: 1000px;
+  margin: 0 auto;
+}
+.floating .inner .floating-tab {
+  _position: absolute;
+  _top: expression( ( 50 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+  width: 185px;
+  height: 212px;
+  margin-left: 1020px;
+  z-index: 100;
+  background: url("img/floating-tab.png") no-repeat center top ;
+}
+.floating .inner > .floating-tab {
+  position: fixed;
+  top: 50px;
+}
+.floating .inner a {
+  display: block;
+  width: 185px;
+  height: 52px;
+  margin-bottom: 1px;
+}
+/** * YUI 3.5.0 - reset.css (http://developer.yahoo.com/yui/3/cssreset/) * http://cssreset.com * Copyright 2012 Yahoo! Inc. All rights reserved. * http://yuilibrary.com/license/ */
+/**
+ *  TODO will need to remove settings on HTML since we can't namespace it.
+ *  TODO with the prefix, should I group by selector or property for weight savings?
+ */
+html {
+  color: #000;
+  background: #FFF;
+}
+/*	TODO remove settings on BODY since we can't namespace it.*/
+/*	TODO test putting a class on HEAD.		- Fails on FF. */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+/*	TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...*/
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+ol,
+ul {
+  list-style: none;
+}
+caption,
+th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+q:before,
+q:after {
+  content: '';
+}
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+/* to preserve line-height and selector appearance */
+sup {
+  vertical-align: text-top;
+}
+sub {
+  vertical-align: text-bottom;
+}
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+/*to enable resizing for IE*/
+input,
+textarea,
+select {
+  *font-size: 100%;
+}
+/*because legend doesn't inherit in IE */
+legend {
+  color: #000;
+}
+/* YUI CSS Detection Stamp */
+#yui3-css-stamp.cssreset {
+  display: none;
+}
+.clearfix {
+  overflow: visible;
+  zoom: 1;
+}
+.clearfix:after {
+  content: " ";
+  /* Older browser do not support empty content */
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+.jspContainer {
+  overflow: hidden;
+  position: relative;
+  outline: 0 none;
+}
+.jspPane {
+  position: absolute;
+}
+.jspVerticalBar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 100%;
+}
+.jspHorizontalBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 16px;
+}
+.jspVerticalBar *,
+.jspHorizontalBar * {
+  margin: 0;
+  padding: 0;
+}
+.jspCap {
+  display: none;
+}
+.jspHorizontalBar .jspCap {
+  float: left;
+}
+.jspTrack {
+  background: #dde;
+  position: relative;
+}
+.jspDrag {
+  background: #bbd;
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag {
+  float: left;
+  height: 100%;
+}
+.jspArrow {
+  background: #50506d;
+  text-indent: -20000px;
+  display: block;
+  cursor: pointer;
+}
+.jspArrow.jspDisabled {
+  cursor: default;
+  background: #80808d;
+}
+.jspVerticalBar .jspArrow {
+  height: 16px;
+}
+.jspHorizontalBar .jspArrow {
+  width: 16px;
+  float: left;
+  height: 100%;
+}
+.jspVerticalBar .jspArrow:focus {
+  outline: none;
+}
+.jspCorner {
+  background: #eeeef4;
+  float: left;
+  height: 100%;
+}
+.header {
+<<<<<<< HEAD
+  width: 100%;
+  min-width: 960px;
+}
+.footer-static {
+  min-width: 960px;
+  width: 100%;
+=======
+  min-width: 1000px;
+}
+.footer-static {
+  min-width: 1000px;
+>>>>>>> yonghe
+  padding: 20px 0;
+  text-align: center;
+  background-color: #ffffff;
+}
+.footer-static ul {
+  margin-bottom: 10px;
+}
+.footer-static li {
+  display: inline;
+  margin-right: 8px;
+  color: #CCC;
+}
+.footer-static li a {
+  margin-right: 10px;
+  color: #999;
+  text-decoration: none;
+}
+.footer-static li a:hover {
+  color: #C00;
+}
+.footer-static p {
+  color: #999;
+}
+.footer-static p a {
+  color: #999;
+  text-decoration: none;
+}
+.footer-static p a:hover {
+  color: #C00;
+}
+
+.main-content {
+  font-family: "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
+}
+.main-content .main-header {
+  position: relative;
+  overflow: hidden;
+  min-width: 1600px;
+}
+.main-content .main-header .block {
+  overflow: visible;
+  position: relative;
+  width: 100%;
+}
+.main-content .main-header .block .extend-background {
+  width: 250px;
+  height: 100%;
+  position: absolute;
+  background: url("img/banner.jpg") no-repeat scroll 0 0 transparent;
+}
+.main-content .main-header .block .block-left {
+  margin-left: -550px;
+  width: 50%;
+  height: 570px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.main-content .main-header .block .block-left .extend-background {
+  background-position: 0 50%;
+  top: 0;
+  right: 0;
+}
+.main-content .main-header .block .block-right {
+  margin-right: -550px;
+  width: 50%;
+  height: 570px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.main-content .main-header .block .block-right .extend-background {
+  background-position: 100% 50%;
+  top: 0;
+  left: 0;
+}
+.main-content .main-header .block .block-center {
+  margin: 0 auto;
+  width: 1100px;
+  height: 570px;
+  position: relative;
+  background: url("img/banner.jpg") repeat scroll 50% 50% transparent;
+}
+.main-content .section1 {
+  position: relative;
+  overflow: hidden;
+  min-width: 1100px;
+}
+.main-content .section1 .block {
+  overflow: visible;
+  position: relative;
+  width: 100%;
+}
+.main-content .section1 .block .extend-background {
+  width: 250px;
+  height: 100%;
+  position: absolute;
+  background: url("img/block1.jpg") no-repeat scroll 0 0 transparent;
+}
+.main-content .section1 .block .block-left {
+  margin-left: -550px;
+  width: 50%;
+  height: 480px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.main-content .section1 .block .block-left .extend-background {
+  background-position: 0 50%;
+  top: 0;
+  right: 0;
+}
+.main-content .section1 .block .block-right {
+  margin-right: -550px;
+  width: 50%;
+  height: 480px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.main-content .section1 .block .block-right .extend-background {
+  background-position: 100% 50%;
+  top: 0;
+  left: 0;
+}
+.main-content .section1 .block .block-center {
+  margin: 0 auto;
+  width: 1100px;
+  height: 480px;
+  position: relative;
+  background: url("img/block1.jpg") repeat scroll 50% 50% transparent;
+}
+.main-content .section1 .text-wrap {
+  right: 40px;
+  top: 50px;
+  width: 300px;
+  height: 400px;
+}
+.main-content .section1 .text-wrap h1 {
+  text-align: center;
+}
+.main-content .section1 a.promo-button {
+  right: 0;
+  bottom: 10px;
+}
+.main-content .section2 {
+  position: relative;
+  overflow: hidden;
+  min-width: 1100px;
+}
+.main-content .section2 .block {
+  overflow: visible;
+  position: relative;
+  width: 100%;
+}
+.main-content .section2 .block .extend-background {
+  width: 250px;
+  height: 100%;
+  position: absolute;
+  background: url("img/block2.jpg") no-repeat scroll 0 0 transparent;
+}
+.main-content .section2 .block .block-left {
+  margin-left: -550px;
+  width: 50%;
+  height: 720px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.main-content .section2 .block .block-left .extend-background {
+  background-position: 0 50%;
+  top: 0;
+  right: 0;
+}
+.main-content .section2 .block .block-right {
+  margin-right: -550px;
+  width: 50%;
+  height: 720px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.main-content .section2 .block .block-right .extend-background {
+  background-position: 100% 50%;
+  top: 0;
+  left: 0;
+}
+.main-content .section2 .block .block-center {
+  margin: 0 auto;
+  width: 1100px;
+  height: 720px;
+  position: relative;
+  background: url("img/block2.jpg") repeat scroll 50% 50% transparent;
+}
+.main-content .section2 .text-wrap {
+  left: 120px;
+  top: 60px;
+  width: 220px;
+  height: 500px;
+}
+.main-content .section2 a.promo-button {
+  right: 290px;
+  bottom: 70px;
+}
+.main-content .section1 .text-wrap,
+.main-content .section2 .text-wrap {
+  position: absolute;
+}
+.main-content .section1 .text-wrap h1,
+.main-content .section2 .text-wrap h1 {
+  padding: 10px 0;
+  font-size: 20px;
+  line-height: 30px;
+}
+.main-content .section1 .text-wrap h1 span,
+.main-content .section2 .text-wrap h1 span {
+  color: #dcb155;
+}
+.main-content .section1 .text-wrap p,
+.main-content .section2 .text-wrap p {
+  font-size: 16px;
+  line-height: 25px;
+  margin-bottom: 30px;
+}
+.main-content .section1 a.promo-button,
+.main-content .section2 a.promo-button {
+  -webkit-border-top-left-radius: 20px;
+  -webkit-border-top-right-radius: 20px;
+  -webkit-border-bottom-right-radius: 20px;
+  -webkit-border-bottom-left-radius: 20px;
+  -moz-border-radius-topleft: 20px;
+  -moz-border-radius-topright: 20px;
+  -moz-border-radius-bottomright: 20px;
+  -moz-border-radius-bottomleft: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  background-color: #b90016;
+  display: block;
+  color: #fff;
+  font-size: 16px;
+  line-height: 40px;
+  width: 160px;
+  height: 40px;
+  text-decoration: none;
+  text-align: center;
+  position: absolute;
+}
+.main-content .section3 {
+  width: 1340px;
+  margin: 0 auto;
+}
+.main-content .section3 .block {
+  padding-bottom: 60px;
+}
+.search-bar {
+  position: relative;
+  z-index: 2;
+  width: 1000px;
+  margin: 0 auto 40px;
+}
+.search-bar h1 {
+  color: #fff;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.search-bar .search-group {
+  overflow: visible;
+  zoom: 1;
+}
+.search-bar .search-group:before {
+  content: '';
+  display: block;
+}
+.search-bar .search-group:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.search-bar .search-group:after {
+  content: " ";
+  /* Older browser do not support empty content */
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+.search-bar .button {
+  position: relative;
+  float: left;
+  margin-right: 2px;
+  width: 248px;
+  height: 50px;
+}
+.search-bar .button.button-search {
+  background-color: #ba0017;
+  color: #fff;
+  font-size: 20px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  float: right;
+  margin-right: 0;
+}
+.search-bar .button a.span {
+  color: #999;
+  display: block;
+  width: 228px;
+  padding: 10px;
+  font-size: 20px;
+  line-height: 30px;
+  background-color: #fff;
+  text-decoration: none;
+}
+.search-bar .popup {
+  visibility: hidden;
+  position: absolute;
+  width: 248px;
+  height: 500px;
+  top: 50px;
+  left: 0;
+  background-color: #f6ebd4;
+}
+.search-bar .popup.visible {
+  visibility: visible;
+}
+.search-bar .popup ul {
+  position: relative;
+}
+.search-bar .popup ul li a {
+  color: #999;
+  display: block;
+  padding: 10px;
+  font-size: 20px;
+  line-height: 30px;
+  text-decoration: none;
+}
+.search-bar .popup ul li a:hover {
+  color: #fff;
+  background-color: #ba0017;
+}
+.search-bar .popup .jspVerticalBar {
+  width: 8px;
+}
+.search-bar .popup .jspVerticalBar .jspTrack {
+  background-color: #f6ebd4;
+}
+.search-bar .popup .jspVerticalBar .jspDrag {
+  background-color: #dcb155;
+}
+.shop-list {
+  position: relative;
+  z-index: 1;
+  padding-top: 20px;
+  width: 1000px;
+  margin: 0 auto;
+  background-color: #fffdf4;
+}
+.shop-list h1 {
+  padding: 10px 20px;
+  line-height: 30px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #ba0017;
+}
+.shop-list ul {
+  padding: 5px;
+  overflow: visible;
+  zoom: 1;
+}
+.shop-list ul:before {
+  content: '';
+  display: block;
+}
+.shop-list ul:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.shop-list ul:after {
+  content: " ";
+  /* Older browser do not support empty content */
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+.shop-list ul p.no-result {
+  padding: 0 10px;
+  font-size: 20px;
+  line-height: 30px;
+  height: 460px;
+}
+.shop-list ul .item {
+  float: left;
+  width: 320px;
+  margin: 5px;
+  display: inline;
+  background-color: #fff;
+}
+.shop-list ul .item a.image {
+  display: block;
+  width: 320px;
+  height: 240px;
+}
+.shop-list ul .item a.image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.shop-list ul .item .info {
+  border-left: 2px solid #fcf7fd;
+  border-right: 2px solid #fcf7fd;
+  border-bottom: 2px solid #fcf7fd;
+}
+.shop-list ul .item .info h2 {
+  font-size: 20px;
+  line-height: 30px;
+  margin: 0 10px;
+  padding: 10px 0;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+.shop-list ul .item .info h2 a {
+  color: #000;
+  text-decoration: none;
+}
+.shop-list ul .item .info p.type {
+  color: #999;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0 10px;
+  padding-left: 20px;
+  background: url("img/tag.png") no-repeat 0 0;
+}
+.shop-list ul .item .info p.type span {
+  padding: 0 5px;
+}
+.shop-list ul .item .info .promotion {
+  position: relative;
+  border-top: 1px dotted #999;
+  margin: 10px 10px 0 10px;
+  padding: 10px 0;
+  height: 40px;
+}
+.shop-list ul .item .info .promotion p {
+  color: #999;
+  font-size: 14px;
+  padding-left: 25px;
+  line-height: 20px;
+  height: 40px;
+  width: 150px;
+  background: url("img/promo.png") no-repeat 0 10px;
+}
+.shop-list ul .item .info .promotion a.reserve {
+  position: absolute;
+  background-color: #ba0017;
+  color: #fff;
+  text-decoration: none;
+  height: 40px;
+  font-size: 14px;
+  line-height: 40px;
+  text-align: center;
+  width: 110px;
+  right: 0;
+  bottom: 10px;
+  -webkit-border-top-left-radius: 20px;
+  -webkit-border-top-right-radius: 20px;
+  -webkit-border-bottom-right-radius: 20px;
+  -webkit-border-bottom-left-radius: 20px;
+  -moz-border-radius-topleft: 20px;
+  -moz-border-radius-topright: 20px;
+  -moz-border-radius-bottomright: 20px;
+  -moz-border-radius-bottomleft: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+  vertical-align: top;
+}
+.pagination ul {
+  display: inline-block;
+  vertical-align: top;
+}
+.pagination ul li {
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 5px;
+}
+.pagination ul li a {
+  display: block;
+  width: 20px;
+  font-size: 16px;
+  height: 20px;
+  line-height: 20px;
+  padding: 10px;
+  color: #dcb155;
+  text-decoration: none;
+  background-color: #fff;
+  -webkit-border-top-left-radius: 20px;
+  -webkit-border-top-right-radius: 20px;
+  -webkit-border-bottom-right-radius: 20px;
+  -webkit-border-bottom-left-radius: 20px;
+  -moz-border-radius-topleft: 20px;
+  -moz-border-radius-topright: 20px;
+  -moz-border-radius-bottomright: 20px;
+  -moz-border-radius-bottomleft: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.pagination ul li.current a {
+  color: #fff;
+  background-color: #ba0017;
+}
+.pagination .hide {
+  display: none;
+}
+.banner-content{
+  background-color: #fffae3;
+  padding: 0px;
+  margin: 0px;
+
+}
+.banner-content img{
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  display: block;
+}
+.booting{
+  min-height: 465px;
+  background-color: #fffae3;
+}
+.booting-content{
+  min-height: 465px;
+  width: 1100px;
+  /*background-color: white;*/
+  margin: 0 auto;
+  padding-top: 25px;
+  background: url("../img/booting.jpg") no-repeat center;
+
+}
+.booting-content img {
+  display: block;
+  float: right;
+  margin-top: 340px;
+  margin-right:125px;
+  cursor: pointer;
+}
+.more-link{
+  width: 100%;
+  min-height: 465px;
+  background-color: #f7f7f7;
+}
+.more-content{
+
+  width: 1013px;
+  height: 360px;
+  /*background-color: black;*/
+  margin: 0 auto;
+  padding-top: 35px;
+}
+.more-content img{
+  display: block;
+}
+.detail-list-content {
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.detail-list{
+  width: 100%;
+}
+.li-styl dt{
+  font-weight: bold;
+}
+.li-styl {
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 40px;
+  color: #282828;
+  font-family: "Microsoft Yahei", "Hiragino sans gb", sans-serif;
+}
+.first-row li{
+  display: inline-block;
+}
+.more-button{
+  width: 1000px;
+  margin: 0 auto;
+}
+.more-button img{
+  float: right;
+  cursor: pointer;
+}
+
+<<<<<<< HEAD
+.content {
+  width: 100%;
+  min-width: 960px;
+  height:850px;
+  background: url('../img/bg.jpg') no-repeat; 
+=======
+.yonghe-content {
+  min-width: 1000px;
+  height: 800px;
+  background: url('../img/bg.jpg') center top no-repeat; 
+  margin: 0 auto;
+>>>>>>> yonghe
+}
+
+.yonghe-main{
+  width: 1000px;
+  height: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+.role-link {
+  position: absolute;
+  left: 10px;
+  top: 97px;
+  width: 200px;
+  height: 50px;
+  background: url('../img/role-link.jpg') no-repeat;
+  cursor: pointer;
+}
+
+
+.alert-box {
+
+}
+.overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  opacity: 0.7;
+  left: 0;
+  top:0;
+}
+.alert-view{
+  position: absolute;
+  left: 105px;
+  top: 210px;
+  width: 800px;
+  height: 430px;
+  background-color: #ffffff;
+  z-index: 8888;
+}
+
+
+.alert-header{
+  min-height: 40px;
+}
+
+.alert-corner{
+  display: block;
+  float:right;
+  cursor: pointer;
+}
+
+
+.role-intro{
+  margin: 0 auto;
+  width: 667px;
+  height: 347px;
+}
+
+.city-chose {
+  padding-top: 100px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 25px;
+  line-height: 30px;
+  height: 30px;
+}
+.city-chose p{
+  display: inline-block;
+  line-height: 30px;
+}
+.city-chose select{
+  display: inline-block;
+  width: 150px;
+}
+.city-chose span{
+  margin-top: 40px;
+  display: block;
+  font-size: 30px;
+}
+.city-chose input{
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 300px;
+  height: 30px;
+  display: block;
+  font-size: 14px;
+}
+.city-chose ul {
+  position: absolute;
+  right: 5%;
+  bottom: 10%;
+}
+.city-chose ul li {
+  width: 100px;
+  height: 50px;
+  font-size: 18px;
+  color: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #e55b25;
+  display: inline-block;
+  line-height: 50px;
+  cursor: pointer;
+}
+
+.city-chose ul li:last-child {
+  color: #000;
+  background-color: #e9e9e9;
+} 
+
+.city-match {
+  margin-top: 80px;
+}
+.city-match-content {
+  width: 340px;
+  margin: 0 auto;
+}
+
+.city-match-content img{
+  width: 40px;
+  height: auto;
+}
+.city-match span {
+  text-align: center;
+  height: 40px;
+  display: inline-block;
+  font-size: 28px;
+}
+.city-match ul {
+  margin-top: 35px;
+}
+.city-match ul li {
+  width: 170px;
+  height: 50px;
+  font-size: 23px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #fd5a1e;
+  line-height: 50px;
+  color: white;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+
+
+.city-fail-content {
+  width: 400px;
+  height:380px;
+  display: inline-block;
+  padding-left: 20px;
+  box-sizing:border-box;
+}
+
+.city-fail-img {
+  margin-top: 20.1px;
+  margin-right: 20px;
+  width: 320px;
+  border: 10px solid #4f4f4f;
+  display: inline-block;
+}
+
+.p1{
+  margin-top: 60px;
+  font-size: 25px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.p2{
+  text-align: center;
+  margin-top: 60px;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.game-result{
+  padding: 0 150px;
+}
+
+.p3{
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 37px;
+}
+
+.p4{
+  font-size: 20px;
+  line-height: 2.74em;
+}
+
+.game-reult-ul li {
+  
+  display: inline-block;
+}
+
+.game-reult-ul li:last-child{
+  height: 30px;
+  width: 80px;
+  text-align: center;
+  line-height: 30px;
+  background-color: #e9e9e9;
+  border: 1px solid #929292;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+.game-result img{
+  display: block;
+  margin: 0 auto;
+}
+
+.game-over {
+  padding: 0 170px;
+  padding-top:100px;
+}
+
+.game-over-title{
+  font-size: 30px;
+  line-height: 52px;
+  text-align: center;
+}
+.game-over-content{
+  text-align: center;
+  font-size: 18px;
+  line-height: 52px;
+}
+
+.game-over-ul {
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 34px;
+}
+
+.game-over-ul li{
+  display: inline-block;
+  line-height: 50px;
+  height: 50px;
+  width: 200px;
+  text-align: center;
+  background-color: #7da914;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.event-link {
+  position: relative;
+}
+.event-link img{
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: 270px;
+  left: 320px;
+  cursor: pointer;
+}
+
+object{
+  margin: 0 auto;
+  margin-top: 240px;
+}
+
+.number-input{
+  width: 150px;
+  height: 30px;
+  font-size: 14px;  
+  position: absolute;
+  top:775px;
+  left:200px;
+}
+
+.yonghe-inner{
+  width: 100%;
+  height: 1000px;
+  min-width: 1000px;
+  background: url('../img/inner.jpg') center no-repeat;
+}
+
+.number-button{
+  display: block;
+  width: 100px;
+  height: 50px;
+  background: url('../img/number-button.png') center no-repeat;
+  position: absolute;
+  top:767px;
+  left:370px;
+  cursor: pointer;
+}
