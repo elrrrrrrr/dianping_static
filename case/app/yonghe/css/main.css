@@ -418,3 +418,35 @@ section {
 	border-radius: 4px;
 	text-align: center;
 }
+
+.overlay-quit{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background: #000000;
+	opacity: 0.94;
+	left: 0;
+	top:0; 
+	display: block;
+}
+.nologin{
+	background: url('../img/nologin.png') center center no-repeat;
+	background-size: 130px 120px;
+	width: 130px;
+	height: 120px;
+	margin: 0 auto;
+	margin-top:200px;
+	position: relative;  
+}
+.noprize{
+	background: url('../img/noprize.png') center center no-repeat;
+	background-size: 130px 120px;
+	width: 130px;
+	height: 120px;
+	margin: 0 auto;
+	margin-top:200px;
+	position: relative;  	
+}
+.login-quit{
+	display: block;
+}

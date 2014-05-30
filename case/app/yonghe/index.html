@@ -38,6 +38,14 @@ var _hip = [
 </script>
 </head>
 <body>
+    <div class="overlay-quit" id='nologin' style='display:none'>
+        <div class="nologin " style="display: block;">
+        </div>    
+    </div>
+    <div class="overlay-quit" id='noprize' style='display:none'>
+        <div class="noprize" style="display: block;">
+        </div>    
+    </div>
     <section class="active-bg" >
       </section>
     <section class="active-inner" style='display:none' >   
@@ -45,6 +53,8 @@ var _hip = [
         <input type="text" class="number-input">  
         <p class="number-button">
         </p>
+        <img src="img/net1.jpg" alt="" class='ticket net1'>
+        <img src="img/net2.jpg" alt="" class='ticket net2'>
         <img src="img/net3.jpg" alt="" class='ticket net3'>
         <img src="img/net4.jpg" alt="" class='right-ticket'>      
 
@@ -54,7 +64,9 @@ var _hip = [
             <img src="img/close.png" class='alert-corner' alt="">  
             </div>
             <span id='number-result'>编码已成功发送到1234513，请注意查收</span>
+            <a href="http://www.4000979797.com" target="_blank">
             <span id='yonghe-button'>立即去大王送使用</span>
+            </a>
           </div>  
       </div> 
 
@@ -65,7 +77,6 @@ var _hip = [
         <div class="role-link">
         </div>
     </section>
-
     <section class="role-intro" style='display:none'>
         <p class="role-title">限时抢购活动规则：</p>
         <p class="role-section">1、活动时间：2014年6月4日-7月3日</p>
@@ -133,20 +144,101 @@ var _hip = [
     _id = 196;
 
 $(document).ready(function(){
+  $.ajax({
+    url:"/ajax/json/account/info",
+    data:{ r:Number(new Date()) },
+    success:function(res){
+      console.log(res);
+      switch (res.code) {
+          case 200:
+                //alert("提交成功！");
+                break;
+          case 403:
+                // window.location.href = 'http://www.dianping.com/login?redir=http%3A%2F%2Fevent.dianping.com%2Fmarket%yonghe2014%2Findex.html'     
+                $('#nologin').show()
+                break;
+          default :
+                // alert("系统发生错误，请重试！");
+                break;
+      } 
+    }
+  })
   
 })
 $('.event-link').click(function(){
-    $('.active-bg').hide()
-    $('.active-content').hide()
-    $('.active-inner').show()
+    $.ajax({
+      asyc:false,
+      url: "/prize/ajax/prizeDraw",
+      data:{groupId:198},
+      success: function (response) {
+          console.log(response);
+          if(response.code == 501){
+            $('#noprize').show()
+            return
+          }
+
+          if( response.msg.recordId){
+            _id = response.msg.recordId  
+          }
+          
+          if(response.msg.prize.rank == 1){
+            $('.ticket').hide()
+            $('.net1').show()
+          }
+          if(response.msg.prize.rank == 2){
+            $('.ticket').hide()
+            $('.net2').show()
+          }
+          if(response.msg.prize.rank == 3){
+            $('.ticket').hide()
+            $('.net3').show()
+          }
+          $('.active-bg').hide()
+          $('.active-content').hide()
+          $('.active-inner').show()
+      },
+      error: function () {
+          // alert("系统发生错误，请重试！");
+          $('.ticket').hide()
+            $('.net3').show()
+          $('.active-bg').hide()
+          $('.active-content').hide()
+          $('.active-inner').show()  
+      }
+    });  
 })
 
 $('.number-button').click(function(){
-  $('#number-result').html('编码已发送到'+$('.number-input').val()+'，请注意查收');
-  $('.number-input').attr('disabled','disabled')
-  $('.overlay').show()
-  $('.alert-view').show()
-  document.body.scrollTop=0;
+  $.ajax({
+    url: "/prize/ajax/userInfo",
+    data: {
+        mobileNo: num,
+        recordId: _id
+    },
+    success: function (response) {
+        switch (response.code) {
+            case 200:
+                $('#number-result').html('编码已发送到'+$('.number-input').val()+'，请注意查收');
+                $('.number-input').attr('disabled','disabled')
+                $('.overlay').show()
+                $('.alert-view').show()
+                $(this).unbind('click')
+                document.body.scrollTop=0;
+                //alert("提交成功！");
+                break;
+            default :
+                alert("系统发生错误，请重试！");
+                break;
+        }
+    },
+    error: function () {
+        alert("系统发生错误，请重试！");
+    }
+  });
+
+
+
+  
 })
 
 $('.alert-corner').click(function(){
@@ -154,6 +246,9 @@ $('.alert-corner').click(function(){
   $('.alert-view').hide()
 })
 
+$('.overlay-quit').click(function(){
+  window.location.href = 'http://www.dianping.com/login'
+})
 
 
 </script>
