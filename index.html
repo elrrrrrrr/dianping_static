@@ -393,7 +393,7 @@ $(document).ready(function(){
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<!--     <link rel="stylesheet" href="css/base-old.v10.css">
+    <!--     <link rel="stylesheet" href="css/base-old.v10.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/style.css"> -->
     <link rel="stylesheet" href="css/style.css">
@@ -415,6 +415,7 @@ $(document).ready(function(){
     ];</script>
     <title>大上海时代广场</title>
     <script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+    <script src='js/underscore.js'></script>
 </head>
 <body id="top">
     <div class="header-bar">
@@ -447,19 +448,28 @@ $(document).ready(function(){
                         <div class="rules-box">
                             <div class="rules">
                                 <div class="title">
-                                    <div class="text">
-                                        <i><img src="images/star.png" alt=""></i>活动奖品
-                                    </div>
-                                    <a href="javascript:;" class="rules-btn">
-                                        规则详情 <strong>+</strong>
-                                    </a>
+                                    <div class="text">奖品介绍</div>
                                 </div>
                                 <div class="rules-text">
                                     <ul>
-                                        <li>1. 活动时间：2014.4.21-2014.5.20；</li>
-                                        <li>2. 参与方式：大众点评网上海会员登录后即可参与，会员活动期间每天可参与1次抽奖</li>
-                                        <li>3. 活动奖品：滩悦300元代金券，赤坂舞马雅300元代金券，石板街100元代金券，cookedDeli by city'super 50元代金券，悠乐Deli & Leisure 50元代金券，万裕国际影城电影兑换券，米子50元代金券，<span>翰林轩300元代金券(6月15日-7月30日)</span></li>
-                                        <li>4. <span>分享后中奖概率翻倍；</span><a class="btn-shareSina" href="" target="_blank"><img src="images/share.png" alt=""></a></li>
+                                        <li>
+                                            <span>唇齿留香奖：</span>江南驿80元的代金券    
+                                        </li>
+                                        <li>
+                                            <span>唇齿留香奖：</span>江南驿80元的代金券    
+                                        </li>
+                                        <li>
+                                            <span>唇齿留香奖：</span>江南驿80元的代金券    
+                                        </li>
+                                        <li>
+                                            <span>唇齿留香奖：</span>江南驿80元的代金券    
+                                        </li>
+                                        <li>
+                                            <span>唇齿留香奖：</span>江南驿80元的代金券    
+                                        </li>
+                                        <li>
+                                            <span>唇齿留香奖：</span>江南驿80元的代金券    
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -467,35 +477,19 @@ $(document).ready(function(){
                         <div class="prize-list">
                             <div class="list">
                                 <div class="title">
-                                    <div class="text">
-                                        <i><img src="images/star.png" alt=""></i>中奖用户名单
-                                    </div>
+                                    <div class="text">活动介绍</div>
                                 </div>
                                 <div class="list-text" id="winner-list">
                                     <div class="wraper">
                                         <ul class="roller">
-                                            <li><span class="user-name">abc</span>刚刚抽中<span class="prize-name">def</span></li>
-                                            <li><span class="user-name">abc</span>刚刚抽中<span class="prize-name">def</span></li>
-                                            <li><span class="user-name">abc</span>刚刚抽中<span class="prize-name">def</span></li>
-                                            <li><span class="user-name">abc</span>刚刚抽中<span class="prize-name">def</span></li>
-                                            <li><span class="user-name">abc</span>刚刚抽中<span class="prize-name">def</span></li>
+                                            <li>活动时间：<span>2014.5.16-2014.5.31</span>，每2周一期！</li>
+                                            <li>活动期间大众点评网会员点击“我要抽奖”就有机会获得由参与商户提供的奖品。</li>
+                                            <li>1、每日每位会员只限参与一次；</li>
+                                            <li>2、中奖会员凭短信到店享受优惠，请如实填写个人手机号；</li>
+                                            <li>3、所有奖品不能累积使用，如出现同一中奖人或同一手机号码，中取多奖，只能选取其中一个奖进行兑换。</li>
                                         </ul>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="rules-detail hide">
-                            <div class="rules-detail-title"><a href="javascript:;" class="btn-rules-detail-title"></a></div>
-                            <div class="rules-detail-mome">
-                                <ul>
-                                    <li>1、奖品券领取方式：中奖者凭中奖短信至大上海时代广场一楼服务台登记，即可领取!当日奖品券需隔日领取。<br>温馨提示：当场免费成为大上海时代广场会员，还能领取会员惊喜好礼哦！</li>
-                                    <li>2、奖品券领取地点：淮海中路99号大上海时代广场一楼东区服务台</li>
-                                    <li>3、奖品券领取时间：2014.4.21-2014.6.30  AM11：00-PM21：00</li>
-                                    <li>4、奖品券使用方式：于大上海时代广场内指定商户使用；餐饮现金券可于消费时直接抵扣，不限午市晚市，每桌每次最多可使用1张；电影兑换券可兑换票价80元以内任意场次电影票一张。奖品券使用有效期截止至2014年6月30日，逾期作废。奖品券需指定商户盖章后方能生效，不可兑换现金，不设找零，不提供发票，不可与其他优惠同享，遗失不补。</li>
-                                    <li>5、活动期间，每位会员（同一点评账号、手机号等满足任一条件均视为同一用户）最多可以领取3份奖品</li>
-                                    <li>6、中奖短信转发无效</li>
-                                    <li>7、为保证活动的公正公平，若发现有严重的刷票等违规操作，大众点评网有权取消其参与资格</li>
-                                </ul>
                             </div>
                         </div>
                     </div>
@@ -558,10 +552,105 @@ $(document).ready(function(){
                         <a class="addblock_button4" href="http://www.dianping.com/search/keyword/2/0_%E5%A4%A9%E6%84%8F%E5%B0%8F%E9%A6%86" target="_blank"></a>
                     </div>
                 </li>
+                <li>
+                    <div class="shop-intro">
+                        <img src="images/1.jpg" alt="" class="shop-img">    
+                        <div class="shop-mess">
+                            <p class="shop-name">哇哇叫</p>
+                            <p class="shop-des">9天7晚感受巴黎艺术文化名都；领略雅典2500年人文奇迹；迷恋纯净蓝白圣托里尼岛......</p>
+                            <img src="images/more-link.jpg" alt="" class="more-link" style='margin-top: 9px;'>   
+                        </div>
+                    </div>
+                    <div class="shop-link">
+                        <a class="addblock_button1" href="http://www.dianping.com/search/keyword/2/0_%E5%A4%A9%E6%84%8F%E5%B0%8F%E9%A6%86" target="_blank"></a>
+                        <a class="addblock_button2" href="http://www.dianping.com/search/keyword/2/0_%E5%A4%A9%E6%84%8F%E5%B0%8F%E9%A6%86" target="_blank"></a>
+                        <a class="addblock_button3" href="http://www.dianping.com/search/keyword/2/0_%E5%A4%A9%E6%84%8F%E5%B0%8F%E9%A6%86" target="_blank"></a>
+                        <a class="addblock_button4" href="http://www.dianping.com/search/keyword/2/0_%E5%A4%A9%E6%84%8F%E5%B0%8F%E9%A6%86" target="_blank"></a>
+                    </div>
+                </li>
             </ul>            
         </div>
     </div>
-    
+    <div class="width100 block3">
+        <div class="block-title">
+            <div class="width1000">
+            </div>
+        </div>
+        <div class="width1000">
+            <ul class="deal-box clearfix">
+                <li>
+                    <div class="shop-intro">
+                        <div class="carousel">
+                            <ul class='carousel-container'>
+                                <li><img src="images/1.jpg" alt="" class="shop-img"></li>
+                                <li><img src="images/2.jpg" alt="" class="shop-img"></li>
+                                <li><img src="images/3.jpg" alt="" class="shop-img"></li>
+                            </ul>
+                        </div>
+                        <div class="shop-mess">
+                            <p class="shop-name">哇哇叫</p>
+                            <p class="shop-des">9天7晚感受巴黎艺术文化名都；领略雅典2500年人文奇迹；迷恋纯净蓝白圣托里尼岛......</p>
+                            <img src="images/more-link.jpg" alt="" class="more-link" style='margin-top: 9px;'>   
+                        </div>
+                    </div>
+                    <div class="shop-link">
+                        <a class="addblock_button1" href="http://www.dianping.com/search/keyword/2/0_%E5%A4%A9%E6%84%8F%E5%B0%8F%E9%A6%86" target="_blank"></a>
+                        <a class="addblock_button2" href="http://www.dianping.com/search/keyword/2/0_%E5%A4%A9%E6%84%8F%E5%B0%8F%E9%A6%86" target="_blank"></a>
+                        <a class="addblock_button3" href="http://www.dianping.com/search/keyword/2/0_%E5%A4%A9%E6%84%8F%E5%B0%8F%E9%A6%86" target="_blank"></a>
+                        <a class="addblock_button4" href="http://www.dianping.com/search/keyword/2/0_%E5%A4%A9%E6%84%8F%E5%B0%8F%E9%A6%86" target="_blank"></a>
+                    </div>
+                </li>
+                <li>
+                    <div class="shop-intro">
+                        <img src="images/1.jpg" alt="" class="shop-img">    
+                        <div class="shop-mess">
+                            <p class="shop-name">哇哇叫</p>
+                            <p class="shop-des">9天7晚感受巴黎艺术文化名都；领略雅典2500年人文奇迹；迷恋纯净蓝白圣托里尼岛......</p>
+                            <img src="images/more-link.jpg" alt="" class="more-link" style='margin-top: 9px;'>   
+                        </div>
+                    </div>
+                    <div class="shop-link">
+                        <a class="addblock_button1" href="http://www.dianping.com/search/keyword/2/0_%E5%A4%A9%E6%84%8F%E5%B0%8F%E9%A6%86" target="_blank"></a>
+                        <a class="addblock_button2" href="http://www.dianping.com/search/keyword/2/0_%E5%A4%A9%E6%84%8F%E5%B0%8F%E9%A6%86" target="_blank"></a>
+                        <a class="addblock_button3" href="http://www.dianping.com/search/keyword/2/0_%E5%A4%A9%E6%84%8F%E5%B0%8F%E9%A6%86" target="_blank"></a>
+                        <a class="addblock_button4" href="http://www.dianping.com/search/keyword/2/0_%E5%A4%A9%E6%84%8F%E5%B0%8F%E9%A6%86" target="_blank"></a>
+                    </div>
+                </li>
+                <li>
+                    <div class="shop-intro">
+                        <img src="images/1.jpg" alt="" class="shop-img">    
+                        <div class="shop-mess">
+                            <p class="shop-name">哇哇叫</p>
+                            <p class="shop-des">9天7晚感受巴黎艺术文化名都；领略雅典2500年人文奇迹；迷恋纯净蓝白圣托里尼岛......</p>
+                            <img src="images/more-link.jpg" alt="" class="more-link" style='margin-top: 9px;'>   
+                        </div>
+                    </div>
+                    <div class="shop-link">
+                        <a class="addblock_button1" href="http://www.dianping.com/search/keyword/2/0_%E5%A4%A9%E6%84%8F%E5%B0%8F%E9%A6%86" target="_blank"></a>
+                        <a class="addblock_button2" href="http://www.dianping.com/search/keyword/2/0_%E5%A4%A9%E6%84%8F%E5%B0%8F%E9%A6%86" target="_blank"></a>
+                        <a class="addblock_button3" href="http://www.dianping.com/search/keyword/2/0_%E5%A4%A9%E6%84%8F%E5%B0%8F%E9%A6%86" target="_blank"></a>
+                        <a class="addblock_button4" href="http://www.dianping.com/search/keyword/2/0_%E5%A4%A9%E6%84%8F%E5%B0%8F%E9%A6%86" target="_blank"></a>
+                    </div>
+                </li>
+                <li>
+                    <div class="shop-intro">
+                        <img src="images/1.jpg" alt="" class="shop-img">    
+                        <div class="shop-mess">
+                            <p class="shop-name">哇哇叫</p>
+                            <p class="shop-des">9天7晚感受巴黎艺术文化名都；领略雅典2500年人文奇迹；迷恋纯净蓝白圣托里尼岛......</p>
+                            <img src="images/more-link.jpg" alt="" class="more-link" style='margin-top: 9px;'>   
+                        </div>
+                    </div>
+                    <div class="shop-link">
+                        <a class="addblock_button1" href="http://www.dianping.com/search/keyword/2/0_%E5%A4%A9%E6%84%8F%E5%B0%8F%E9%A6%86" target="_blank"></a>
+                        <a class="addblock_button2" href="http://www.dianping.com/search/keyword/2/0_%E5%A4%A9%E6%84%8F%E5%B0%8F%E9%A6%86" target="_blank"></a>
+                        <a class="addblock_button3" href="http://www.dianping.com/search/keyword/2/0_%E5%A4%A9%E6%84%8F%E5%B0%8F%E9%A6%86" target="_blank"></a>
+                        <a class="addblock_button4" href="http://www.dianping.com/search/keyword/2/0_%E5%A4%A9%E6%84%8F%E5%B0%8F%E9%A6%86" target="_blank"></a>
+                    </div>
+                </li>
+            </ul>            
+        </div>
+    </div>
     <div class="overlay hide"></div>
 
 

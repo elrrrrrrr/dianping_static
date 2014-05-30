@@ -4,7 +4,8 @@
  * Time: 下午6:43
  */
 var Global = {
-    LOGGED: true
+    LOGGED: false,
+    groupId:196
 };
 
 jQuery(function($){
@@ -32,7 +33,7 @@ jQuery(function($){
 });
 
 jQuery(function($){
-    $('#winner-list').prizeRoller();
+    //$('#winner-list').prizeRoller();
     //debug
     //$('#winner-list').rollingList();
     $('.rules-btn').on('click', function(){
@@ -88,7 +89,7 @@ jQuery(function($){
         grid = new $.Grid({
         gridSize: 148,
         gap: 5,
-        imgGroup:['chibanwu','cooked','shibanjie','tanyue','wanyu','youle','mizi','hanlinxuan','noprize1'],
+        imgGroup:['1','2','3','4','5','6','7','8','noprize1'],
         imgPath:'images/grid/'
     });
     //生产九宫格
@@ -101,28 +102,28 @@ jQuery(function($){
             case 200:
                 switch (PrizeInfo.msg.prize.rank) {
                 case 1: //中奖
-                    grid.prizeImage = 'tanyue';
+                    grid.prizeImage = '1';
                     break;
                 case 2:
-                    grid.prizeImage = 'chibanwu';
+                    grid.prizeImage = '2';
                     break;
                 case 3:
-                    grid.prizeImage = 'shibanjie';
+                    grid.prizeImage = '3';
                     break;
                 case 4:
-                    grid.prizeImage = 'cooked';
+                    grid.prizeImage = '4';
                     break;
                 case 5:
-                    grid.prizeImage = 'youle';
+                    grid.prizeImage = '5';
                     break;
                 case 6:
-                    grid.prizeImage = 'wanyu';
+                    grid.prizeImage = '6';
                     break;
                 case 7:
-                    grid.prizeImage = 'mizi';
+                    grid.prizeImage = '7';
                     break;
                 case 8:
-                    grid.prizeImage = 'hanlinxuan';
+                    grid.prizeImage = '8';
                     break;
                 default://没中奖
                     grid.prizeImage = randomString([
@@ -160,6 +161,7 @@ jQuery(function($){
 
         if (Global.LOGGED) {
             box.addClass('ready');
+
             activeButton.on('click', function () {
                 box.remove();
                 getNewPrize();
@@ -170,7 +172,7 @@ jQuery(function($){
 
             activeButton.on('click', function () {
                 if(window.DP){
-                    
+                    $.login();
                 }
 
                 else {
@@ -283,7 +285,7 @@ jQuery(function($){
     function getNewPrize() {
         $.ajax({
             url: '/prize/ajax/prizeDraw',
-            data: {groupId: 168},
+            data: {groupId: Global.groupId},
             // url: '',
             success: function (response) {
                 switch (response.code) {
@@ -297,7 +299,6 @@ jQuery(function($){
                 grid.trigger('gridReady');
             }
         });
-        grid.trigger('gridReady');
     }
 
     //登录
@@ -363,6 +364,6 @@ jQuery(function($){
         address = 'http://service.weibo.com/share/share.php?appkey=1392673069&url=' + url + '&title=' + title;
         window.open(address, '_blank');
     });
-    
+    Login();
     popupLayerEnter();
 });

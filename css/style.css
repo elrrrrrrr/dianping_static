@@ -1,8 +1,11 @@
 @import "base-old.v10.css";
 @import "base.css";
 @import "common.css";
+body{
+  background: #fffcf5 top left repeat;
+}
 .banner-bg {
-  background: url("../images/bg-block1.jpg") center bottom repeat-x;
+  
   height: 994px;
 }
 .banner-bg .banner,
@@ -76,8 +79,6 @@
 .banner-bg .luckydraw .right .rules-box,
 .banner-bg .luckydraw .right .prize-list {
   width: 347px;
-  height: 307px;
-  background: url("../images/rules-bg.png") top left repeat;
   position: relative;
 }
 .banner-bg .luckydraw .right .rules,
@@ -86,7 +87,7 @@
 }
 .banner-bg .luckydraw .right .rules .title,
 .banner-bg .luckydraw .right .list .title {
-  background-color: #e2e1de;
+  /*background-color: #e2e1de;*/
   height: 44px;
   line-height: 44px;
   padding-left: 20px;
@@ -116,8 +117,7 @@
 .banner-bg .luckydraw .right .list .rules-text,
 .banner-bg .luckydraw .right .rules .list-text,
 .banner-bg .luckydraw .right .list .list-text {
-  background-color: #fff;
-  height: 255px;
+  border-top: 1px solid #ece9e7;
 }
 .banner-bg .luckydraw .right .rules .rules-text ul,
 .banner-bg .luckydraw .right .list .rules-text ul,
@@ -151,19 +151,18 @@
 }
 .banner-bg .luckydraw .right .prize-list .list-text {
   height: 97px;
-  background-color: #fff;
+  
 }
 .banner-bg .luckydraw .right .prize-list .list-text .wraper {
   padding: 8px 20px;
   overflow: hidden;
-  height: 75px;
 }
 .banner-bg .luckydraw .right .prize-list .list-text .wraper .roller {
   padding: 0;
 }
 .banner-bg .luckydraw .right .prize-list .list-text .wraper .roller li {
-  font-size: 14px;
-  line-height: 26px;
+  font-size: 12px;
+  line-height: 24px;
   color: #322;
 }
 .rules-detail {
@@ -193,8 +192,8 @@
   padding: 0 20px 20px;
 }
 .block2 {
-  background: ##fffcf5 top left repeat;
-  height: 1170px;
+  background: #fffcf5 top left repeat;
+  
 }
 .block2 .block-title,
 .block2 .block-title .width1000 {
@@ -203,16 +202,18 @@
 }
 .deal-box {
   width: 940px;
+  box-sizing: border-box;
   margin: 0 auto;
+  border: 1px solid #ece9e7;
+
 }
 .deal-box li {
   float: left;
-  margin: 4px;
-  /*_margin: 4px 2px;*/
-  
-  width: 420px;
-  height: 320px;
-  padding: 10px;
+  display: inline-block;
+  width: 50%;
+  box-sizing: border-box;
+  border-right: 1px solid #ece9e7;
+  border-bottom: 1px solid #ece9e7;
   background-color: #fff;
 }
 
@@ -252,19 +253,18 @@
   margin: 10px auto 0;
 }
 .block3 {
-  background: url("../images/bg-block3.png") top left repeat;
-  height: 510px;
+  background: #fffcf5 top left repeat;
 }
 .block3 .block-title,
 .block3 .block-title .width1000 {
-  background: url("../images/title-block3.png") center 20px no-repeat;
-  height: 90px;
+  background: url("../images/sec-section.jpg") center 8px no-repeat;
+  height: 210px;
 }
 .block3 .width1000 {
   text-align: center;
 }
 .block3 .width1000 img {
-  margin: 20px auto 0;
+  
 }
 .float-layer {
   position: absolute;
@@ -478,7 +478,10 @@
 }
 
 .shop-intro{
-  height: 180px;
+  /*width: 470px;*/
+  overflow: hidden;
+  padding: 15px;
+  border-bottom: 1px solid #ece9e7;
 }
 .shop-img{
   width: 182px;
@@ -490,6 +493,7 @@
   color:#221815;
   font-family: 微软雅黑;
   padding-left: 13px;
+  padding-right: 13px;
   width: 223px;
   float: left;
 }
@@ -499,8 +503,10 @@
 }
 
 .shop-des{
+  
   font-size: 14px;
   line-height: 27px;
+  text-align: left;
 }
 
 .more-link{
@@ -549,4 +555,49 @@
 .shop-link a{
   margin:0 17px;
   display: inline-block;
+}
+.footer-static{
+  
+  border-top:0px;
+  margin-top: 100px;
+}
+
+.carousel{
+  float: left;
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+}
+.carousel-container{
+  overflow: hidden;
+  position: relative;
+  width: 1800px;
+}
+.carousel-container li{ 
+  display: inline-block;
+  width: 180px;
+  height: 180px;
+}
+.carousel-container li img{
+  margin: 0!important;
+}
+.carousel-div{
+  height: 180px;
+  
+}
+.carousel img{
+  float: left;
+}
+
+.title .text{
+  border-bottom: 1px solid #412f21;
+  width: 80px;
+}
+
+.rules-text ul li span{
+  color:#412f21;
+}
+
+.roller span{
+  color:#412f21;
 }
