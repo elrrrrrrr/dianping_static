@@ -287,6 +287,7 @@ body {
 }
 .main-content {
   font-family: "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
+  position: relative;
 }
 .main-content .main-header {
   position: relative;
@@ -875,6 +876,7 @@ body {
 .content {
   width: 100%;
   min-width: 960px;
+<<<<<<< HEAD
   height:850px;
   background: url('../img/bg.jpg') no-repeat; 
 =======
@@ -884,6 +886,26 @@ body {
   background: url('../img/bg.jpg') center top no-repeat; 
   margin: 0 auto;
 >>>>>>> yonghe
+=======
+  min-height:850px;
+  padding-bottom: 150px;
+}
+
+.hair-content{
+  background: url('../img/hair-bg.jpg') center repeat-y; 
+}
+
+.meijia-content{
+  background: url('../img/meijia-bg.jpg') center repeat-y; 
+}
+
+.bea-content{
+  background: url('../img/bea-bg.jpg') center repeat-y; 
+}
+
+.mishi-content{
+  background: url('../img/mishi-bg.jpg') center repeat-y; 
+>>>>>>> meijia
 }
 
 .yonghe-main{
@@ -1045,6 +1067,7 @@ body {
   margin-right: 20px;
   width: 320px;
   border: 10px solid #4f4f4f;
+<<<<<<< HEAD
   display: inline-block;
 }
 
@@ -1179,3 +1202,145 @@ object{
 }
 =======
 >>>>>>> dodge
+=======
+  line-height: 380px;
+  float: right;
+}
+
+.banner{
+  height: 360px;
+}
+
+.hair-banner{
+  background: url('../img/hair-banner.jpg') center no-repeat;
+}
+
+.bea-banner{
+  background: url('../img/bea-banner.jpg') center no-repeat;
+}
+
+.mishi-banner{
+  background: url('../img/mishi-banner.jpg') center no-repeat;
+}
+
+.meijia-banner{
+  background: url('../img/meijia-banner.jpg') center no-repeat;
+}
+
+.main-ul{
+  width: 900px;
+  min-height: 800px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+  overflow: hidden;
+}
+.main-ul >li{
+  background: white;
+  display: inline-block;
+  width: 440px;
+  height: 475px;
+  float: left;
+  margin-bottom: 20px;
+  border: 1px solid #e4e4e4;
+}
+
+.main-ul >li:nth-of-type(even){
+  float: right;
+}
+
+.shop-pic{
+  display: block;
+  width: 440px;
+}
+
+.shop-name{
+  display: block;
+  text-align: center;
+  margin-top: 24px;
+  font-size: 24px;
+  line-height: 1.2em;
+  height: 28px;
+}
+
+.button-ul {
+  margin-top:20px;
+  padding:8px;
+}
+.button-ul >li{
+  display: inline-block;
+  width: 138px;
+  height: 110px;
+  
+}
+
+.buttons-0{
+  background: url('../img/buttons-meijia.png');  
+}
+
+.buttons-1{
+  background: url('../img/buttons-hair.png');  
+}
+
+.buttons-2{
+  background: url('../img/buttons-bea.png');  
+}
+
+.buttons-3{
+  background: url('../img/buttons-mishi.png');  
+}
+
+.buttons-dis{
+  background: url('../img/buttons-dis.png');  
+}
+
+.promotions{
+  background-position: -6px -9px ;
+  background-size: 138px 107px no-repeat;
+}
+
+.coupon{
+  background-position: 293px -9px ;
+  
+  background-size: 138px 107px no-repeat;
+}
+
+.group{
+  
+  background-position: 150px -9px ;
+  background-size: 138px 107px no-repeat;
+}
+
+.button-ul > li > a{
+  display: block;
+  width:100%;
+  height:100%;
+}
+
+.go-head {
+  display: block;
+  width: 57px;
+  height: 57px;
+  background: url('../img/head.png') center no-repeat;
+  position: fixed;
+  top: 50%;
+  right: 50px;
+}
+
+.coursel {
+  overflow: hidden;
+  width: 440px;
+  height: 273px;
+  position: relative;
+}
+
+.coursel-main{
+  width: 15000px;
+  position: absolute;
+  left:0px; 
+  transition:left 0.8s;
+}
+.coursel-main img{
+  float: left;
+}
+>>>>>>> meijia
