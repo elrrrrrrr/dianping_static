@@ -902,7 +902,6 @@ legend {
   z-index: 8888;
 }
 
-
 .alert-header{
   min-height: 40px;
 }
@@ -1198,4 +1197,48 @@ object{
   width: 805px;
   height: 638px;
   background: url('../img/role-content.jpg') no-repeat;
+}
+
+.overlay-quit{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  opacity: 0.94;
+  left: 0;
+  top:0; 
+}
+.nologin{
+  background: url('../img/nologin.png') center center no-repeat;
+  width: 262px;
+  height: 245px;
+  margin: 0 auto;
+  margin-top:300px;
+  position: relative;
+}
+
+
+.noprize{
+  background: url('../img/noprize.png') center center no-repeat;
+  width: 262px;
+  height: 245px;
+  margin: 0 auto;
+  margin-top:300px;
+  position: relative;
+}
+
+.login-quit{
+  display: block;
+  width:64px;
+  height: 40px;
+  position: absolute;
+  top: 210px;
+  left: 125px;
+}
+
+#nologin{
+  display: none;
+}
+#noprize{
+  display: none;
 }

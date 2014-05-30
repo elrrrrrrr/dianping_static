@@ -106,6 +106,21 @@
   </a>
       <div class="role-link">
       </div>
+
+  
+  <div class="overlay-quit" id='nologin'>
+    <div class="nologin " style="display: block;">
+    <a class="login-quit" href="http://www.dianping.com/login"></a>
+  </div>    
+  </div>
+  
+  <div class="overlay-quit" id='noprize'>
+    <div class="noprize " style="display: block;">
+    <!-- <a class="login-btn" href="http://www.dianping.com/login"></a> -->
+    </div>  
+  </div>
+  
+
    <div class="alert-box" id='role-box'>
         <div class="overlay"></div>
         <div class="alert-view">
@@ -258,6 +273,7 @@ $(document).ready(function(){
                 break;
           case 403:
                 // window.location.href = 'http://www.dianping.com/login?redir=http%3A%2F%2Fevent.dianping.com%2Fmarket%yonghe2014%2Findex.html'     
+                $('#nologin').show()
                 break;
           default :
                 alert("系统发生错误，请重试！");
@@ -287,7 +303,12 @@ lucky = {
       url: "/prize/ajax/prizeDraw",
       data:{groupId:198},
       success: function (response) {
+          if(response.code == 501){
+            $('#noprize').show()
+            return
+          }
           _id = response.msg.recordId
+
           if(response.msg.prize.rank == 1){
             $('.ticket').hide()
             $('.net1').show()
