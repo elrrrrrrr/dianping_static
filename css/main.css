@@ -6,8 +6,6 @@
 body {
   _position: relative;
   _overflow: hidden;
-  
-  
 }
 .floating .inner {
   width: 1000px;
@@ -20,7 +18,7 @@ body {
   height: 212px;
   margin-left: 1020px;
   z-index: 100;
-  background: url("img/floating-tab.png") no-repeat center top ;
+  background: url("img/floating-tab.png") no-repeat;
 }
 .floating .inner > .floating-tab {
   position: fixed;
@@ -235,6 +233,7 @@ legend {
 }
 .header {
 <<<<<<< HEAD
+<<<<<<< HEAD
   width: 100%;
   min-width: 960px;
 }
@@ -247,6 +246,12 @@ legend {
 .footer-static {
   min-width: 1000px;
 >>>>>>> yonghe
+=======
+  min-width: 1340px;
+}
+.footer-static {
+  min-width: 1340px;
+>>>>>>> dodge
   padding: 20px 0;
   text-align: center;
   background-color: #ffffff;
@@ -277,14 +282,16 @@ legend {
 .footer-static p a:hover {
   color: #C00;
 }
-
+body {
+  min-width: 1340px;
+}
 .main-content {
   font-family: "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
 }
 .main-content .main-header {
   position: relative;
   overflow: hidden;
-  min-width: 1600px;
+  min-width: 1100px;
 }
 .main-content .main-header .block {
   overflow: visible;
@@ -864,6 +871,7 @@ legend {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 .content {
   width: 100%;
   min-width: 960px;
@@ -1169,3 +1177,5 @@ object{
   left:370px;
   cursor: pointer;
 }
+=======
+>>>>>>> dodge
