@@ -12,7 +12,7 @@
 <link href="css/main.css" rel="stylesheet" type="text/css">
 <script src='js/zepto.js'></script>
 
-<title>天天中奖</title>
+<title>永和大王</title>
 <meta name="Keywords" content=""/>
 <meta name="Description" content=""/>
 <script>var G_rtop=+new Date,_gaq=[
@@ -198,17 +198,14 @@ $('.event-link').click(function(){
           $('.active-inner').show()
       },
       error: function () {
-          // alert("系统发生错误，请重试！");
-          $('.ticket').hide()
-            $('.net3').show()
-          $('.active-bg').hide()
-          $('.active-content').hide()
-          $('.active-inner').show()  
+          alert("系统发生错误，请重试！");
+            
       }
     });  
 })
 
 $('.number-button').click(function(){
+  num = $('.number-input').val();
   $.ajax({
     url: "/prize/ajax/userInfo",
     data: {

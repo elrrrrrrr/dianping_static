@@ -227,12 +227,11 @@ function close_box(){
 }
 
 $('.number-button').click(function(){
-  num = $('.number-input').val()
   
   $.ajax({
     url: "/prize/ajax/userInfo",
     data: {
-        mobileNo: num,
+        mobileNo: $('.number-input').val(),
         recordId: _id
     },
     success: function (response) {
