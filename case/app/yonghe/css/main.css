@@ -7,7 +7,7 @@
 body {
 	width: 100%;
 	font-family: Helvetica, Arial, sans-serif;
-	font-size: 16px;
+	font-size: 12px;
 	color: #323232;
 	line-height: 1.5em;
 	background-color:#e6e6e6;
@@ -58,8 +58,17 @@ section {
 	background-size: auto 100%;
 }
 
+.active-inner{
+	position: absolute;
+	width: 100%;
+	height: 1000px;
+	z-index: -1;
+	background: url('../img/inner.jpg') top no-repeat;
+	background-size: 100% auto;
+}
+
 .active-title {
-	position: relative;
+	
 	padding: 10px 15px;
 	background: #f55e45;
 	color: #ffffff;
@@ -147,11 +156,11 @@ section {
 .active-border {
 	border-top: 1px solid #c8c8c8
 }
-#overlay_ {
+.overlay{
+	display: none;
 	background-color: rgb(0, 0, 0);
 	border-top-width: 1px;
-	border-top-style:;
-	solid;
+	border-top-style:;solid;
 	border-top-color: rgb(0, 0, 0);
 	position: fixed;
 	height: 100%;
@@ -162,15 +171,18 @@ section {
 	opacity: 0.7
 }
 .alert-view {
-	height: 140px;
-	width: 80%;
+	height: 220px;
+	width: 280px;
 	background-color: white;
-	opacity: 1;
+	border-radius: 5px;
+	position: absolute;
+	top:0px;
+	right: 20px;
+	background: url('../img/alert-content.jpg') ;
+	background-size: 100% auto;
+	padding: 7px;
+	box-sizing:border-box;
 	z-index: 100000;
-	position: fixed;
-	top: 30%;
-	left: 10%;
-	border-radius: 5px
 }
 .alert-message {
 	overflow: hidden;
@@ -191,12 +203,7 @@ section {
 	color: #ff8400;
 	border-right: 0;
 }
-.active-shop-title {
-	position: relative;
-	padding: 10px 25px;
-	background-color: #f3f3f3;
-	color: #9d9992
-}
+
 .shop-list .tit {
 	position: relative;
 	padding-bottom: 5px;
@@ -270,6 +277,11 @@ section {
 	font-size: 12px;
 }	
 
+@media(min-width:321px ){
+	.ticket{
+		margin-top: 200px!important;
+	}
+}
 
 @media (min-height: 500px) {
 	.active-content{
@@ -277,6 +289,12 @@ section {
 	}
 }
 
+.content-main{
+	width: 320px;
+	height: 800px;
+	margin: 0 auto;
+	position:relative;
+}
 .role-intro{
 	position: fixed;
 	top:0px;
@@ -307,6 +325,7 @@ section {
 	padding-top: 20px;
 	font-weight: bold;
 	margin-bottom: 10px;
+	font-size: 16px;
 }
 
 .role-section{
@@ -321,4 +340,81 @@ section {
 	width: 320px;
 	height: 20px;
 	left: 0px;
+}
+
+.number-input{
+  width: 115px;
+  height: 15px;
+  font-size: 14px;
+  position: absolute;
+  top: 333px;
+  right: 36px;
+}
+
+.yonghe-inner{
+  width: 100%;
+  height: 1000px;
+  min-width: 1000px;
+  background: url('../img/inner.jpg') top center no-repeat;
+}
+
+.number-button{
+  display: block;
+  width: 130px;
+  height: 30px;
+  position: absolute;
+  top: 363px;
+  right: 25px;
+  cursor: pointer;
+  background: url('../img/number-button.png') no-repeat;
+  background-size: 100% auto;
+}
+
+.ticket{
+  display: block;
+  width: 280px;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 160px;
+}
+.right-ticket{
+
+  display: block;
+  width: 280px;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.alert-content{
+	width: 280px;
+	height: 100%;
+	
+}
+
+.alert-corner{
+	width: 15px;
+	height: 15px;
+	float: right;
+}
+#number-result{
+	display: block;
+	text-align: center;
+	margin:0 auto;
+	margin-top: 80px;
+
+}
+#yonghe-button{
+	margin-top:10px;
+	display: block;
+	width: 110px;
+	height: 28px;
+	line-height: 28px;
+	margin:0 auto;
+	margin-top: 50px;
+	background: #e60027;
+	color: white;
+	border-radius: 4px;
+	text-align: center;
 }

@@ -1,0 +1,215 @@
+@import "base-old.v10.css";
+@import "base.css";
+@import "common.css";
+body {
+  background-color: #f8cebf;
+}
+.width1000 {
+  background-color: #f9f7ee;
+  border-left: 1px solid #494949;
+  border-right: 1px solid #494949;
+  width: 1320px;
+}
+.top {
+  background: url("../images/top.jpg") center 32px no-repeat #f9f7ee;
+  height: 286px;
+  padding: 32px 25px 0;
+}
+.top .width1000 {
+  background: url("../images/top.jpg") center top no-repeat;
+  height: 286px;
+}
+.middle {
+  padding: 0 25px;
+  background: url("../images/middle.jpg") center top no-repeat #f9f7ee;
+  height: 294px;
+}
+.middle .width1000 {
+  background: url("../images/middle.jpg") center top no-repeat;
+  height: 294px;
+}
+.bottom {
+  padding: 0 25px 15px;
+  background: url("../images/bottom.jpg") center top no-repeat #f9f7ee;
+  height: 341px;
+}
+.bottom .width1000 {
+  background: url("../images/bottom.jpg") center top no-repeat;
+  height: 341px;
+}
+.draw {
+  position: absolute;
+  z-index: 100;
+  top: -80px;
+  left: 30px;
+}
+.middle .turntable {
+  position: absolute;
+  top: 55px;
+  left: 51px;
+  font: 14px 'Microsoft Yahei';
+  color: #162b75;
+  font-weight: bold;
+  line-height: 40px;
+  z-index: 1;
+  width: 250px;
+  height: 169px;
+  overflow: hidden;
+}
+.middle .turntable ul {
+  width: 242px;
+  height: 160px;
+  display: block;
+}
+.middle .maskoverlay {
+  position: absolute;
+  top: -5px;
+  left: 0px;
+  background: url("../images/maskoverlay.png") left top repeat-x;
+  width: 250px;
+  height: 175px;
+  z-index: 2;
+}
+.bottom .rules-btn,
+.bottom .shop-address {
+  position: absolute;
+  display: block;
+  width: 88px;
+  height: 28px;
+  top: 24px;
+  left: 34px;
+  z-index: 500;
+}
+.bottom .shop-address {
+  top: 62px;
+}
+.bottom .winner-list {
+  position: absolute;
+  top: 25px;
+  right: 50px;
+  width: 240px;
+}
+.bottom .winner-list .wrapper {
+  height: 50px;
+  overflow: hidden;
+}
+.bottom .winner-list .wrapper .roller li {
+  font-size: 14px;
+  line-height: 24px;
+  color: #172a75;
+}
+.bottom .showprize-block {
+  position: absolute;
+  top: 260px;
+  right: 130px;
+  width: 220px;
+  height: 40px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #172a75;
+  text-align: center;
+}
+.overlay {
+  width: 1260px;
+  height: 865px;
+  position: absolute;
+  top: 60px;
+  left: 30px;
+  background: url("../images/overlay-bg.png");
+  z-index: 1000;
+}
+.overlay .close-btn {
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background: url("../images/close.png") center center no-repeat;
+}
+.overlay .content-box {
+  text-align: center;
+  width: 500px;
+  height: 400px;
+  margin: 130px auto 0;
+}
+.overlay .content-box .prize-text {
+  font-size: 26px;
+  color: #ff3c00;
+  font-weight: bold;
+}
+.overlay .content-box .prize-text span {
+  font-size: 16px;
+}
+.overlay .content-box .prize-tip {
+  margin: 20px auto 5px;
+  color: #fff;
+  font-size: 18px;
+}
+.overlay .content-box .prize-tip1 {
+  margin: 5px auto;
+  color: #fff;
+  font-size: 14px;
+}
+.overlay .content-box #mobileText {
+  border: none;
+  background: #fff;
+  width: 300px;
+  height: 26px;
+  padding: 7px;
+  font-size: 18px;
+  line-height: 26px;
+}
+.overlay .content-box #content-message-btn {
+  display: block;
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+  background-color: #ff3c00;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  margin: 20px auto;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.overlay .rules-box {
+  margin: 80px 150px 0 150px;
+  font-size: 12px;
+  color: #fff;
+  line-height: 24px;
+}
+.overlay .rules-box dt {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.overlay .rules-box dt img {
+  vertical-align: middle;
+  margin-bottom: 10px;
+}
+.overlay .noprize,
+.overlay .nologin,
+.overlay .weizhongjiang {
+  position: relative;
+  width: 262px;
+  height: 245px;
+  background: url("../images/noprize.png") center center no-repeat;
+  margin: 260px auto 0;
+}
+.overlay .weizhongjiang {
+  background-image: url("../images/weizhongjiang.png");
+}
+.overlay .nologin {
+  background: url("../images/nologin.png") center center no-repeat;
+}
+.overlay .nologin .login-btn {
+  display: block;
+  width: 64px;
+  height: 40px;
+  position: absolute;
+  top: 210px;
+  left: 125px;
+}

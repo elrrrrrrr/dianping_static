@@ -38,10 +38,28 @@ var _hip = [
 </script>
 </head>
 <body>
-    <section class="active-bg">
-        
+    <section class="active-bg" >
+      </section>
+    <section class="active-inner" style='display:none' >   
+      <div class="content-main">
+        <input type="text" class="number-input">  
+        <p class="number-button">
+        </p>
+        <img src="img/net3.jpg" alt="" class='ticket net3'>
+        <img src="img/net4.jpg" alt="" class='right-ticket'>      
+
+        <div class="overlay"></div>
+          <div class="alert-view" style='display:none' >
+            <div class="alert-header">
+            <img src="img/close.png" class='alert-corner' alt="">  
+            </div>
+            <span id='number-result'>编码已成功发送到1234513，请注意查收</span>
+            <span id='yonghe-button'>立即去大王送使用</span>
+          </div>  
+      </div> 
+
     </section>
-    <section class="active-content">
+    <section class="active-content" >
         <img src="img/event-link.png" alt="" class='event-link'>
         <p class='event-intro'>秘制三杯鸡（含烫高丽菜）+大王卤肉饭（含烫高丽菜）+爱玉柠檬汁（1杯）+香柠红茶（1杯）+盐酥鸡（1份）+莲子绿豆沙（1份）；</p>
         <div class="role-link">
@@ -52,92 +70,20 @@ var _hip = [
         <p class="role-title">限时抢购活动规则：</p>
         <p class="role-section">1、活动时间：2014年6月4日-7月3日</p>
         <p class="role-section">2、参与方式：大众点评网上海、北京、深圳的会员登录后即可参与，每位会员活动期间每天可参与1次抽奖。</p>
-        <p class="role-section">3、奖品券类型：大王送网络订餐奖品券（代码类）或堂食优惠券。大王送网络订餐奖品券包括：双人特享餐抵用券（秘制三杯鸡+大王卤肉饭+爱玉柠檬汁+香柠红茶+盐酥鸡+莲子绿豆沙）；任意消费可使用的大王卤肉饭抵用券；任意消费可使用的现磨豆浆（热/甜）1杯抵用券。</p>
-        <p class="role-section">4、领取方式：大王送网络订餐奖品券（代码类）或堂食优惠券将以手机短信形式发送给中奖者。</p>
-        <p class="role-section">5、奖品券使用方式：大王送网络订餐奖品券（代码类）：2014年7月10日前，您可以直接登录永和大王大王送官方网站（www.4000979797.com）, 网络订餐结束后进入结算页面，输入奖品券代码即可。</p>
-        <p class="role-section" style=''>堂食优惠券：在优惠券有效期内，您可以直接有此产品售卖的永和大王门店（除机场和火车站店外），展示即可使用。</p>
+        <p class="role-section">3、礼品券类型：大王送网络订餐专享券（编码类）或堂食优惠券两种。大王送网络订餐专享券包括：双人特享餐（秘制三杯鸡+大王卤肉饭+爱玉柠檬汁+香柠红茶+盐酥鸡+莲子绿豆沙）；任意消费可使用的大王卤肉饭；任意消费可使用的现磨豆浆（热）1杯。堂食优惠券：4.5元豆花剉冰优惠券。</p>
+        <p class="role-section">4、礼品数量：网络订餐双人特享餐券（网络订餐）：900张；任意消费可使用的大王卤肉饭抵用券（网络订餐） ：2970张；任意消费可使用的现磨豆浆（热）1杯抵用券（网络订餐） ：不限量；豆花剉冰（4.5元/份）优惠券（堂食）：不限量</p>
+        <p class="role-section">5、领取方式：大王送网络订餐礼品券（编码类）将以手机短信形式发送给中奖者；堂食优惠券，用户可拍照保留。 </p>
+        <p class="role-section">6、奖品券使用方式：大王送网络订餐专享券（编码类）：2014年7月10日前，您可以直接登录永和大王大王送官方网站（www.4000979797.com）, 网络订餐结束后进入结算页面，输入专享券编码即可。堂食优惠券：在优惠券有效期内，您可以直接有此产品售卖的永和大王门店（除机场和火车站店外），展示即可使用。</p>
+        <p class="role-section" style=''>7、为保证活动的公正公平，若发现有严重的刷票等违规操作，大众点评网有权取消其参与资格。</p>
         <div class="role-back" >
                 <img src="img/back-link.png" class='role-intro-back' alt="">        
         </div>
     </section>
-     <div class="overlay">
-    </div>
+    
 
     
-    <div class="alert-view">
-      <div class="alert-header">
-        <img src="img/close.jpg" class='alert-corner' alt="">  
-      </div>
-      <div class="alert-content">
-        <div class="role-intro">
-          <img src="img/role-intro-content.jpg" alt="">
-        </div>  
+    
 
-        <div class="city-chose">
-          <p>城市：</p>
-          <select >
-            <option value="1">北京</option>
-            <option value="1">上海</option>
-            <option value="1">深圳</option>
-          </select>
-          <span>请输入您所在地接到或楼宇名称:</span>
-          <input id='city-input' type="text" placeholder='请输入您订餐地地址(如路名/小区名/楼宇名)'>
-          <ul>
-            <li class='city-chose-click'>继续</li>
-            <li>取消</li>
-          </ul>
-        </div>
-
-
-        <div class="city-match">
-          <div class="city-match-content">
-            <span>恭喜您在大王送餐范围</span>  
-            <span>
-              <img src="img/city-match.jpg" alt="">
-            </span>   
-          </div>
-          <ul>
-            <li class='game-result-link'>马上抽 ></li>
-          </ul>
-        </div>
-
-        <div class="city-fail">
-          <div class='city-fail-content'>
-            <p class='p1'>
-              <i></i>
-              好伤心，<br>
-              您不再我们地外送送餐范围内
-            </p>
-            <p class='p2'>永和大王为您提供了专享地堂食优惠券，<br>
-              拍照留下吧，到永和大王餐厅展示即可使用哟！
-            </p>
-          </div>
-          <img class='city-fail-img' src="img/city-fail.jpg" alt="">
-        </div>
-        
-        <div class="game-result">
-          <img src="img/result.jpg" alt="">
-          <p class='p3'>获得永和大王价值67元双享餐网络订餐专享抵用券</p>
-          <ul style='padding-left:20px;' class='game-reult-ul' >
-             <li>
-              <p class='p4'>请输入您地手机号：</p>
-             </li>
-             <li><input  class='number-input'type="text" placeholder='12345678911'></li>
-             <li class='result-button'>获取序列号</li>
-           </ul> 
-        </div>
-
-        <div class="game-over">
-          <p class='game-over-title'>序列号发送成功</p>
-          <p class='game-over-content'>序列号已发送到<span>123445678911</span>，请注意查收</p>
-          <ul class='game-over-ul'>
-            <li>立即去大王送使用</li>
-          </ul>
-        </div>
-
-
-      </div>
-    </div>
 
 
 
@@ -187,104 +133,27 @@ var _hip = [
     _id = 196;
 
 $(document).ready(function(){
-
+  
+})
+$('.event-link').click(function(){
+    $('.active-bg').hide()
+    $('.active-content').hide()
+    $('.active-inner').show()
 })
 
-function close_box(){
-  $('.alert-box').hide()
-}
-
-function init_box(){
-  $('.role-intro').hide()
-  $('.city-chose').hide()
-  $('.city-match').hide()
-  $('.city-fail').hide()
-  $('.game-result').hide()
-  $('.game-over').hide()
-}
-
-$(document).ready(function(){
-  close_box();  
-  init_box();
-})
-
-$('.role-link').click(function(){
-  $('.alert-box').show()
-  $('.role-intro').show()
+$('.number-button').click(function(){
+  $('#number-result').html('编码已发送到'+$('.number-input').val()+'，请注意查收');
+  $('.number-input').attr('disabled','disabled')
+  $('.overlay').show()
+  $('.alert-view').show()
+  document.body.scrollTop=0;
 })
 
 $('.alert-corner').click(function(){
-  close_box()
-  init_box()
+  $('.overlay').hide()
+  $('.alert-view').hide()
 })
 
-$('.event-link-button').click(function(){
-  lucky.draw()
-})
-
-$('.city-chose-click').click(function(){
-  $('.city-chose').hide()
-  // $.ajax({
-  //   url:'http://115.29.185.2:901/yhkonline/api/mc/deliveryAddress/dianping/list.json',
-  //   dataType:'jsonp',
-  //   data:{city:'北京',keyword:$('#city-input').val(),jsonpCallback:'call'}
-  // })
-  if($('#city-input').val() == '安化路'){
-    $('.city-match').show()  
-  } else {
-    $('.city-fail').show()
-  }
-  
-  
-  //选择城市
-
-})
-
-function call(res){
-  console.log(res);
-  if(res.result.length > 0 ) {
-    $('.city-match').show()
-  } else {
-    $('.city-fail').show()
-  }
-
-}
-
-$('.game-result-link').click(function(){
-  // $.ajax({
-  //   url:'/prize/ajax/prizeDraw',
-  //   data:{groupId:_id},
-  //   success:function(res){
-  //     var code = res.code
-  //     if(code === 200){
-  //       //中奖
-  //     } else if (code === 406){
-  //       //内部错误 请稍后重试
-  //     } else if (code === 501){
-  //       //对不起，每天只能一次
-  //     }
-  //   },
-  //   eoror:function(res){
-  //     console.log('error');
-  //   }
-  // })
-  $('.city-match').hide()
-  $('.game-result').show()
-})
-
-$('.result-button').click(function(){
-  $('.game-result').hide()
-  $('.game-over').show()
-})
-
-
-lucky = {
-  draw: function(){
-    init_box()
-    $('.alert-box').show()
-    $('.city-chose').show()
-  }
-}
 
 
 </script>
