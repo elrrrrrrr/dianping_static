@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!-- saved from url=(0060)file:///Users/elr-mbp/code/dianping/kuwei/website/index.html -->
+=======
+>>>>>>> yonghe
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
@@ -27,6 +30,7 @@
 
     pageTracker._trackPageview('/dp_/market/kw_140521_minisite');
   </script>
+<<<<<<< HEAD
     
   <script type='text/template'id= "template">
     
@@ -89,6 +93,9 @@
   </div>  
   </script>
   <title>美容美甲</title>
+=======
+  <title>永和大王</title>
+>>>>>>> yonghe
 </head>
 <body>
 
@@ -116,6 +123,7 @@
   </div>
 </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -290,6 +298,82 @@
 
 
 >>>>>>> meijia
+=======
+<div class="yonghe-inner" id='inner'>
+  <div class="yonghe-main">
+    <input type="text" class="number-input">  
+    <p class="number-button">
+      
+    </p>
+    <img src="img/net1.jpg" alt="" class='ticket net1'>
+    <img src="img/net2.jpg" alt="" class='ticket net2'>
+    <img src="img/net3.jpg" alt="" class='ticket net3'>
+    <img src="img/net4.jpg" alt="" class='right-ticket'>
+     <div class="alert-box">
+        <div class="overlay"></div>
+        <div class="alert-view">
+      <div class="alert-header">
+        <img src="img/close.png" class='alert-corner' alt="">  
+      </div>
+      <div class="alert-content">
+        <p></p>
+        <a href="http://www.4000979797.com" target="_blank">
+          <span>立即去大王送使用</span>
+        </a>
+        
+      </div>
+        </div>
+    </div> 
+  </div>
+</div>
+<div class="yonghe-content" style='display: none' id='home'>
+	<div class="yonghe-main">
+    <a href="#">
+    <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1000" height="400">
+    <param name="movie" value="img/banner.swf" />
+    <param name="quality" value="high" />
+    <param name="wmode" value="transparent" />
+    <param name="swfversion" value="9.0.45.0" />
+    <!-- 此 param 标签提示使用 Flash Player 6.0 r65 和更高版本的用户下载最新版本的 Flash Player。如果您不想让用户看到该提示，请将其删除。 -->
+    <param name="expressinstall" value="Scripts/expressInstall.swf" />
+    <!-- 下一个对象标签用于非 IE 浏览器。所以使用 IECC 将其从 IE 隐藏。 -->
+    <!--[if !IE]>-->
+    <object type="application/x-shockwave-flash" data="img/banner.swf" width="1000" height="400">
+      <!--<![endif]-->
+      <param name="quality" value="high" />
+      <param name="wmode" value="transparent" />
+      <param name="swfversion" value="9.0.45.0" />
+      <param name="expressinstall" value="Scripts/expressInstall.swf" />
+      <!-- 浏览器将以下替代内容显示给使用 Flash Player 6.0 和更低版本的用户。 -->
+      <div>
+        <h4>此页面上的内容需要较新版本的 Adobe Flash Player。</h4>
+        <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="获取 Adobe Flash Player" width="112" height="33" /></a></p>
+      </div>
+      <!--[if !IE]>-->
+    </object>
+    <!--<![endif]-->
+  </object>
+  </a>
+      <div class="role-link">
+      </div>
+   <div class="alert-box" id='role-box'>
+        <div class="overlay"></div>
+        <div class="alert-view">
+      <div class="alert-header">
+        <img src="img/close.png" class='alert-corner' alt="">  
+      </div>
+      <div class="alert-content">
+      </div>
+        </div>
+  </div> 
+  </div>
+  
+    
+  
+</div>
+
+
+>>>>>>> yonghe
 
 <div class="footer-static">
   <ul>
@@ -371,7 +455,48 @@
 =======
 >>>>>>> meijia
 <script>
+
+_id = 196;
+
+
+
+function close_box(){
+  $('.alert-box').hide()
+}
+
+$('.number-button').click(function(){
+  num = $('.number-input').val()
+  
+  $.ajax({
+    url: "/prize/ajax/userInfo",
+    data: {
+        mobileNo: num,
+        recordId: _id
+    },
+    success: function (response) {
+        switch (response.code) {
+            case 200:
+                $('.alert-content p').html('编码已发送到'+$('.number-input').val()+'，请注意查收')
+                $('.alert-box').show();
+                $('.number-input').attr('disabled','disabled')
+                $(this).css('cursor','default')
+                $(this).unbind('click')
+                //alert("提交成功！");
+                break;
+            default :
+                alert("系统发生错误，请重试！");
+                break;
+        }
+    },
+    error: function () {
+        alert("系统发生错误，请重试！");
+    }
+  });
+
+})
+
 $(document).ready(function(){
+<<<<<<< HEAD
     out =_.template($('#template').html(),window.storeList)
     $('.main-content').html(out)
     setInterval(function(){$('.coursel-main').trigger('coursel')},4000);
@@ -385,8 +510,78 @@ $(document).ready(function(){
         $(this).css('left', $(this).position().left - 440 + 'px')
       }
     })
+=======
+  close_box();  
+  $('#inner').hide();
+  $('#home').show();
+
+  $.ajax({
+    url:"/ajax/json/account/info",
+    data:{ r:Number(new Date()) },
+    success:function(res){
+      console.log(res);
+      switch (res.code) {
+          case 200:
+                //alert("提交成功！");
+                break;
+          case 403:
+                // window.location.href = 'http://www.dianping.com/login?redir=http%3A%2F%2Fevent.dianping.com%2Fmarket%yonghe2014%2Findex.html'     
+                break;
+          default :
+                alert("系统发生错误，请重试！");
+                break;
+      } 
+    }
+  })
+
+  
+
+
+>>>>>>> yonghe
 })
-	
+
+$('.alert-corner').click(function(){
+  close_box()
+  init_box()
+})
+
+$('.role-link').click(function(){
+  $('#role-box').show()
+})
+
+lucky = {
+  draw: function(){
+    $.ajax({
+      asyc:false,
+      url: "/prize/ajax/prizeDraw",
+      data:{groupId:198},
+      success: function (response) {
+          _id = response.msg.recordId
+          if(response.msg.prize.rank == 1){
+            $('.ticket').hide()
+            $('.net1').show()
+          }
+          if(response.msg.prize.rank == 2){
+            $('.ticket').hide()
+            $('.net2').show()
+          }
+          if(response.msg.prize.rank == 3){
+            $('.ticket').hide()
+            $('.net3').show()
+          }
+          $('#home').hide();
+          $('#inner').show();
+      },
+      error: function () {
+          alert("系统发生错误，请重试！");
+      }
+    });
+
+    
+
+  }
+}
+
 </script>
 =======
 <html xmlns:wb="http://open.weibo.com/wb">
