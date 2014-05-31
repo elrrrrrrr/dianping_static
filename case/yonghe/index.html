@@ -227,11 +227,12 @@ function close_box(){
 }
 
 $('.number-button').click(function(){
+  num = $('.number-input').val()
   
   $.ajax({
     url: "/prize/ajax/userInfo",
     data: {
-        mobileNo: $('.number-input').val(),
+        mobileNo: num,
         recordId: _id
     },
     success: function (response) {
@@ -302,7 +303,7 @@ lucky = {
       url: "/prize/ajax/prizeDraw",
       data:{groupId:198},
       success: function (response) {
-          if(response.code == 501){
+          if(res.code == 501){
             $('#noprize').show()
             return
           }

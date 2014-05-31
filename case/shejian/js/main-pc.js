@@ -89,7 +89,7 @@ jQuery(function($){
         grid = new $.Grid({
         gridSize: 148,
         gap: 5,
-        imgGroup:['1','2','3','4','5','6','7','8','noprize1'],
+        imgGroup:['1-logo','2-logo','3-logo','4-logo','5-logo','6-logo','7-logo','8-logo','noprize1'],
         imgPath:'images/grid/'
     });
     //生产九宫格
@@ -360,7 +360,7 @@ jQuery(function($){
     $(document).on('click','.btn-shareSina', function(){
         var url = encodeURIComponent(location.href),
         pic = encodeURIComponent('http://event.dianping.com/market/dashanghai/images/grid/noprize3.png'),
-        title = encodeURIComponent('#大众点评#大上海时代广场美食大联盟，吃货福利，万券齐发！300元现金券乖乖等你中！谁戳谁知道哟！'),
+        title = encodeURIComponent('#大众点评#美食大联盟，吃货福利，万券齐发！'),
         address = 'http://service.weibo.com/share/share.php?appkey=1392673069&url=' + url + '&title=' + title;
         window.open(address, '_blank');
     });

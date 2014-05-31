@@ -6,7 +6,7 @@ body{
 }
 .banner-bg {
   
-  height: 994px;
+  /*height: 994px;*/
 }
 .banner-bg .banner,
 .banner-bg .banner .width1000 {
@@ -15,7 +15,7 @@ body{
 }
 .banner-bg .luckydraw {
   width: 869px;
-  height: 490px;
+  /*height: 490px;*/
   margin: 5px auto 20px;
 }
 .banner-bg .luckydraw .left {
@@ -25,7 +25,7 @@ body{
 }
 .banner-bg .luckydraw .left .grid-area {
   width: 454px;
-  height: 454px;
+  
   position: relative;
   top: 18px;
   left: 20px;
@@ -147,10 +147,10 @@ body{
 }
 .banner-bg .luckydraw .right .prize-list {
   margin-top: 8px;
-  height: 148px;
+  /*height: 148px;*/
 }
 .banner-bg .luckydraw .right .prize-list .list-text {
-  height: 97px;
+  /*height: 97px;*/
   
 }
 .banner-bg .luckydraw .right .prize-list .list-text .wraper {
@@ -479,9 +479,10 @@ body{
 
 .shop-intro{
   /*width: 470px;*/
-  overflow: hidden;
+  /*overflow: hidden;*/
   padding: 15px;
   border-bottom: 1px solid #ece9e7;
+  position: relative;
 }
 .shop-img{
   width: 182px;
@@ -500,6 +501,8 @@ body{
 
 .shop-name{
   font-size: 32.55px;
+  height: 49px;
+  overflow: hidden;
 }
 
 .shop-des{
@@ -527,6 +530,10 @@ body{
   cursor:pointer;
   background-position: 0px -55px;
 }
+
+
+
+
 .addblock_button2 {
   background: url('../images/buttons.png') 0 0 no-repeat;
   width: 67px;
@@ -551,6 +558,10 @@ body{
   height: 52px;
   cursor:pointer;
   background-position: -210px -55px;
+}
+
+.addblock_able{
+  background-position-y:0px; 
 }
 .shop-link a{
   margin:0 17px;
@@ -600,4 +611,42 @@ body{
 
 .roller span{
   color:#412f21;
+}
+
+.more-info{
+  position: absolute;
+  border: 1px solid #e75360;
+  padding: 10px;
+  width: 220px;
+  bottom: 75px;
+  right: 3;
+  background-color: white;
+  font-size: 12px;
+  line-height: 20px;
+  visibility: hidden;
+  z-index: 100;
+  font-size: 12px;
+}
+
+.show{
+  visibility: visible;
+}
+.info-cursor{
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 20px;
+  bottom: -20px;
+  right: 84px;
+  background: url("../img/info_foot.png") 
+}
+
+.clearfix:after {
+    content: "020";
+    display: block;
+    height: 0;
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
 }
