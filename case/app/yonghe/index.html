@@ -101,6 +101,35 @@ var _hip = [
 
 </body>
 <script>
+
+function setGroupId()
+{
+   var allcookies = document.cookie;
+   // Get all the cookies pairs in an array
+   var cookiearray  = allcookies.split(';');
+   console.log(cookiearray);
+   // Now take key value pair out of this array
+   for(var i=0; i<cookiearray.length; i++){
+      name = cookiearray[i].split('=')[0].toString().trim();
+      value = cookiearray[i].split('=')[1];
+      if (name == 'cye') {
+        if (value == 'shanghai') {
+          groupID = 226
+          return
+        } 
+        if (value == 'beijing') {
+          groupID = 227
+          return 
+        }
+        if (value == 'shenzhen') {
+          groupID = 228 
+          return 
+        }
+        alert('亲爱的用户，您所在的城市不在活动范围内。')
+      }
+   }
+}
+
 (function ($) {
   $.fn.slideDown = function (duration) {    
     // get old position to restore it then
@@ -142,7 +171,7 @@ var _hip = [
 </script>
 <script>
     _id = 196;
-
+    groupId = 0;
 $(document).ready(function(){
   $.ajax({
     url:"/ajax/json/account/info",
@@ -151,6 +180,7 @@ $(document).ready(function(){
       console.log(res);
       switch (res.code) {
           case 200:
+                setGroupId()
                 //alert("提交成功！");
                 break;
           case 403:
@@ -158,7 +188,7 @@ $(document).ready(function(){
                 $('#nologin').show()
                 break;
           default :
-                // alert("系统发生错误，请重试！");
+                alert("系统发生错误，请重试！");
                 break;
       } 
     }
@@ -169,7 +199,7 @@ $('.event-link').click(function(){
     $.ajax({
       asyc:false,
       url: "/prize/ajax/prizeDraw",
-      data:{groupId:198},
+      data:{groupId:groupId},
       success: function (response) {
           console.log(response);
           if(response.code == 501){

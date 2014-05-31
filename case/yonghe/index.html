@@ -218,9 +218,38 @@
 
 <script>
 
+
+function setGroupId()
+{
+   var allcookies = document.cookie;
+   // Get all the cookies pairs in an array
+   var cookiearray  = allcookies.split(';');
+   console.log(cookiearray);
+   // Now take key value pair out of this array
+   for(var i=0; i<cookiearray.length; i++){
+      name = cookiearray[i].split('=')[0].toString().trim();
+      value = cookiearray[i].split('=')[1];
+      if (name == 'cye') {
+        if (value == 'shanghai') {
+          groupID = 226
+          return
+        } 
+        if (value == 'beijing') {
+          groupID = 227
+          return 
+        }
+        if (value == 'shenzhen') {
+          groupID = 228 
+          return 
+        }
+        alert('亲爱的用户，您所在的城市不在活动范围内。')
+      }
+   }
+}
+
 _id = 196;
 
-
+groupId = 0 ;
 
 function close_box(){
   $('.alert-box').hide()
@@ -269,7 +298,7 @@ $(document).ready(function(){
       console.log(res);
       switch (res.code) {
           case 200:
-                //alert("提交成功！");
+                setGroupId();
                 break;
           case 403:
                 // window.location.href = 'http://www.dianping.com/login?redir=http%3A%2F%2Fevent.dianping.com%2Fmarket%yonghe2014%2Findex.html'     
@@ -301,7 +330,7 @@ lucky = {
     $.ajax({
       asyc:false,
       url: "/prize/ajax/prizeDraw",
-      data:{groupId:198},
+      data:{groupId:groupId},
       success: function (response) {
           if(res.code == 501){
             $('#noprize').show()
