@@ -5,7 +5,7 @@
  */
 var Global = {
     LOGGED: false,
-    groupId:196
+    groupId:198
 };
 
 jQuery(function($){
@@ -89,7 +89,7 @@ jQuery(function($){
         grid = new $.Grid({
         gridSize: 148,
         gap: 5,
-        imgGroup:['1-logo','2-logo','3-logo','4-logo','5-logo','6-logo','7-logo','8-logo','noprize1'],
+        imgGroup:['1','2','3','4','5','6','7','8','noprize1'],
         imgPath:'images/grid/'
     });
     //生产九宫格
@@ -202,7 +202,7 @@ jQuery(function($){
     function popupLayerPrize() {
 
         var overlay = $('.float-layer'),
-            box = $('<div class="pop-layer-result"></div>'),
+            box = $('<div class="pop-layer-result i3"></div>'),
             title = $('<p class="popup-title"></p>'),
             text = $('<p class="popup-text"></p>'),
             closeButton = $('<a class="close-button" title="关闭" href="javascript:void(0);"></a>'),
