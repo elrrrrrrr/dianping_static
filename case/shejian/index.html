@@ -72,7 +72,11 @@
                                             <span>何贤记：</span>价值109元顺德煎焗鱼、何贤记烧鸭半只
                                         </li>
                                         <li>
-                                            <span>一坐一忘丽江主题餐厅：</span>30元电子代金券   
+                                            <span>一坐一忘丽江主题餐厅：</span>200元代金券   
+                                        </li>
+                                        
+                                        <li>
+                                            <span>呷哺呷哺：</span>30元电子代金券   
                                         </li>
                                         <li>
                                             <span>红柳树：</span>价值202元烤羊蝎子双人套餐   
@@ -266,7 +270,10 @@
         <%_.each(window.storeList,function(e){%>
         <li>
                     <div class="shop-intro clearfix ">
-                        <img src="<%=e.imgs[0]%>" alt="" class="shop-img">    
+                        <a href='<%=e.link%>' target="_blank">
+                            <img src="<%=e.imgs[0]%>" alt="" class="shop-img">    
+                        </a>
+                        
                         <div class="shop-mess">
                             <p class="shop-name"><%=e.name%></p>
                             <p class="shop-des"><%=e.introduction.substring(0,40)%>...</p>
@@ -315,10 +322,11 @@
     <%})%>
     </script>
     <script src="js/jquery.min.js"></script>
+    <script src="js/data.js"></script>
     <script src="js/grid.js"></script>
     <script src="js/prize-roller.js"></script>
     <script src="js/main-pc.js"></script>
-    <script src="js/data.js"></script>
+    
     <script>
     $(document).ready(function(){
       //   out =_.template($('#template').html(),window.storeList)

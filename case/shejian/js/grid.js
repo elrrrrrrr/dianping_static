@@ -39,8 +39,11 @@
                         back = $('<div class="back"></div>').css({
                             transform: 'rotateY(180deg)'
                         }).appendTo(cell);
+                        _href = $("<a href=' ' target='_blank'></a>")
+                        a =  _href.appendTo(back);
 
-                    $('<img>').attr('src', _this.imgPath + 'back.png').appendTo(back);
+                        
+                    $('<img>').attr('src', _this.imgPath + 'back.png').appendTo(back.find('a'));
                     $('<img>').attr('src', _this.imgPath + 'front.png').appendTo(front);
 
                     cell.appendTo(_this.element);
@@ -254,7 +257,17 @@
     };
     fn.insertPicture = function (index, name) {
         var _this = this;
+        // console.log(isNaN((parseInt(name))));
+        
+        if ( name != 'noprize1'){
+            console.log(name);
+            var item = window.storeList[Number(name)-1]
+            _this.cells[index].$back.find('a').attr('href',item.link).find('img').attr('src', this.imgPath + name + '.png');
+                // console.log(name);
+        }
+        
         _this.cells[index].$back.find('img').attr('src', this.imgPath + name + '.png');
+        //_this.cells[index].$back.find('img').attr('src', this.imgPath + name + '.png');
     };
 
     fn.setSize = function () {

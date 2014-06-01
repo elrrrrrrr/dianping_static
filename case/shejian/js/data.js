@@ -19,7 +19,7 @@ window.storeList = [{
         "imgs": ["img/1.jpg"],
         "reservation":"",
         "introduction":"没名儿生煎创建于2011年7月，以生煎包为招牌特色，主要经营各类中华小吃，以其精益求精的饮食文化、体贴细腻的人性化服务，倾力打造中国餐饮一线品牌。特色推荐菜：没名儿生煎包、鲜肉小笼汤包",
-        "promotion": "",
+        "promotion": "http://www.dianping.com/promo/223409?source=6",
         "coupon": "",
         "link": "http://www.dianping.com/search/keyword/2/0_%E6%B2%A1%E5%90%8D%E5%84%BF%E7%94%9F%E7%85%8E",
         "member":""
@@ -28,7 +28,7 @@ window.storeList = [{
         "imgs": ["img/2.jpg"],
         "introduction":"嘉陵楼馋嘴城：原创馋嘴蛙 馋嘴菜的发源地始创于1995年京城东直门簋街一家仅60平方米、摆放了几张小桌的“同福居涮鲜肉馆”，它是嘉陵楼馋嘴城的前身，也是金簋小山城餐饮集团的的前身。也是在这研发的馋嘴蛙得到八方食圣金牌菜的开始并发扬。现在，它还是作为集团菜品研发的先锋，正在把馋嘴系列放大，把原创的馋嘴料应用到更多的食材和菜品中！更好的发展馋嘴菜系！让更多的馋嘴爱好者能够享受到馋嘴系列美食。",
         "reservation":"http://www.dianping.com/shop/5453947#reserve",
-        "promotion": "http://www.dianping.com/shop/5453947#reserve",
+        "promotion": "http://www.dianping.com/promo/223324",
         "coupon": "http://t.dianping.com/deal/6141260",
         "link": "http://www.dianping.com/search/keyword/2/0_%E5%98%89%E9%99%B5%E6%A5%BC%E9%A6%8B%E5%98%B4%E5%9F%8E",
         "member":""
