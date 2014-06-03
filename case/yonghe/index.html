@@ -332,7 +332,7 @@ lucky = {
       url: "/prize/ajax/prizeDraw",
       data:{groupId:groupId},
       success: function (response) {
-          if(res.code == 501){
+          if(response.code == 501){
             $('#noprize').show()
             return
           }
