@@ -1,0 +1,53 @@
+/**
+ * LESS Created by Jerry on 2014/5/29.
+ */
+@import "mixins";
+
+.popup-overlay{
+  font-family: "microsoft yahei", "hiragino sans gb", sans-serif;
+  _position: absolute;
+  _left:0;
+  _top:0;
+  z-index: 9000;
+  .popup-mask{
+    _position:absolute;
+    _top: ~"expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' )";
+    _width: ~"expression( ( document.documentElement.clientWidth > 1100 ? document.documentElement.clientWidth : 1100) + 'px')";
+    _height: ~"expression( document.documentElement.clientHeight )";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66000000', endColorstr='#66000000');
+    z-index: 9001;
+    zoom:1;
+  }
+  > .popup-mask{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.4);
+  }
+  .popup-window{
+    _position:absolute;
+    _top: ~"expression( ( document.documentElement.clientHeight / 2 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' )";
+    _left:~"expression( ( document.documentElement.clientWidth / 2 + ( ignoreMe = document.documentElement.scrollLeft) ) + 'px' )";
+
+    z-index: 9002;
+    .transform(translate3d(0,0,0));
+  }
+  > .popup-window{
+    position: fixed;
+    top:50%;
+    left:50%;
+  }
+  .popup-close{
+    position: absolute;
+    right: 5px;
+    top:5px;
+    width: 30px;
+    height: 30px;
+    z-index: 9003;
+  }
+  &.invisible{
+    visibility: hidden;
+  }
+}

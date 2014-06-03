@@ -1,0 +1,199 @@
+/**
+ * LESS Created by Jerry on 2014/5/29.
+ */
+
+@import "lib/mixins";
+@import "lib/reset";
+@import "lib/popup";
+
+.header {
+  min-width: 1600px;
+}
+
+.footer-static {
+  min-width: 1600px;
+  padding: 20px 0;
+  text-align: center;
+  background-color: #ffffff;
+  ul {
+    margin-bottom: 10px;
+  }
+  li {
+    display: inline;
+    margin-right: 8px;
+    color: #CCC;
+    a {
+      margin-right: 10px;
+      color: #999;
+      text-decoration: none;
+      &:hover{
+        color: #C00;
+      }
+    }
+  }
+  p{
+    color: #999;
+    a{
+      color: #999;
+      text-decoration: none;
+      &:hover{
+        color: #C00;
+      }
+    }
+  }
+}
+
+.main-content{
+  font-family: "microsoft yahei", "hiragino sans gb", sans-serif;
+  background: url("../img/background.jpg") no-repeat center top;
+  overflow: hidden;
+  min-width: 1600px;
+  .inner{
+    position: relative;
+    width: 1000px;
+    height: 1030px;
+    background: url("../img/background.jpg") no-repeat center top;
+    margin: 0 auto;
+    .logo{
+      display: block;
+      width: 210px;
+      height: 200px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      .hide-text-alter()
+    }
+    .title{
+      .hide-text-alter();
+      h1{
+        width: 700px;
+        height: 220px;
+        padding-top: 80px;
+        margin: 0 auto;
+      }
+      h2{
+        width: 700px;
+        height: 120px;
+        margin: 0 auto;
+      }
+    }
+    .prize-draw{
+      position: relative;
+      padding: 80px 0 60px;
+      height: 300px;
+      a{
+        display: block;
+        position: absolute;
+        width: 250px;
+        height: 300px;
+        left: 100px;
+        top: 80px;
+      }
+    }
+    .prize-info{
+      width: 840px;
+      margin-left: 50px;
+      .column{
+        float: left;
+        width: 50%;
+      }
+      h3{
+        font-size: 15px;
+        color: #fff;
+        background-color: #60bdd4;
+        text-align: center;
+        line-height: 25px;
+        white-space: nowrap;
+        width: 80px;
+        margin: 4px 0;
+      }
+      p{
+        color: #83786f;
+        font-size: 13px;
+        line-height: 20px;
+        strong{
+          font-size: 15px;
+          font-weight: bold;
+        }
+      }
+    }
+    .special-issue{
+      position: absolute;
+      width: 260px;
+      margin-left: 1000px;
+      left: 0;
+      top: 350px;
+      color: #404243;
+      h3{
+        height: 45px;
+        .hide-text-alter();
+      }
+      p{
+        font-family: 'simsun', serif;
+        font-size: 15px;
+        line-height: 20px;
+        text-align: center;
+        margin-top: 5px;
+      }
+      dl{
+        margin-top: 40px;
+        text-align: center;
+        dt{
+          font-size: 15px;
+          line-height: 20px;
+          font-weight: bold;
+          a{
+            color: #404243;
+          }
+        }
+        dd{
+          font-size: 12px;
+          line-height: 18px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+.popup-window{
+  .popup-close{
+    width: 50px;
+    height: 60px;
+    right: 0;
+    top: 0;
+    background: url("../img/popup-close.png") no-repeat;
+    .border-radius(0,3px,0,0);
+  }
+  .popup-info{
+    width: 360px;
+    height: 215px;
+    padding: 50px 50px 50px 420px;
+    .border-radius(3px,3px,3px,3px);
+    .box-shadow(0 0 20px rgba(0,0,0,0.4));
+    background: #fff200 url("../img/popup-image.jpg") no-repeat left top;
+    h1{
+      color: #00b3d8;
+      font-size: 36px;
+      line-height: 50px;
+      font-weight: bold;
+      a{
+        color: #404243;
+      }
+      white-space: nowrap;
+    }
+    h2{
+      font-size: 26px;
+      line-height: 44px;
+      white-space: nowrap;
+    }
+    .hint{
+      margin: 25px 0 0 -35px;
+      border-top: 1px solid #e3d700;
+      padding: 20px 35px;
+      width: 300px;
+      color: #404243;
+      font-size: 13px;
+      line-height: 20px;
+    }
+  }
+}
