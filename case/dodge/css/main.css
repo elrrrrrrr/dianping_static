@@ -20,10 +20,10 @@ body {
   z-index: 100;
   background: url("img/floating-tab.png") no-repeat;
 }
-.floating .inner > .floating-tab {
+/*.floating .inner > .floating-tab {
   position: fixed;
   top: 50px;
-}
+}*/
 .floating .inner a {
   display: block;
   width: 185px;
@@ -66,12 +66,12 @@ p,
 blockquote,
 th,
 td {
-  margin: 0;
-  padding: 0;
+  /*margin: 0;
+  padding: 0;*/
 }
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+  /*border-collapse: collapse;
+  border-spacing: 0;*/
 }
 fieldset,
 img {
@@ -171,13 +171,7 @@ legend {
   width: 16px;
   height: 100%;
 }
-.jspHorizontalBar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 16px;
-}
+
 .jspVerticalBar *,
 .jspHorizontalBar * {
   margin: 0;
@@ -232,10 +226,10 @@ legend {
   height: 100%;
 }
 .header {
-  min-width: 1340px;
+  /*min-width: 1340px;*/
 }
 .footer-static {
-  min-width: 1340px;
+  /*min-width: 1340px;*/
   padding: 20px 0;
   text-align: center;
   background-color: #ffffff;
@@ -267,7 +261,8 @@ legend {
   color: #C00;
 }
 body {
-  min-width: 1340px;
+  /*width: 1200px;*/
+  /*min-width: 1340px;*/
 }
 .main-content {
   font-family: "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
@@ -280,7 +275,7 @@ body {
 .main-content .main-header .block {
   overflow: visible;
   position: relative;
-  width: 100%;
+  /*width: 100%;*/
 }
 .main-content .main-header .block .extend-background {
   width: 250px;
@@ -491,7 +486,7 @@ body {
   position: absolute;
 }
 .main-content .section3 {
-  width: 1340px;
+  /*width: 1340px;*/
   margin: 0 auto;
 }
 .main-content .section3 .block {
@@ -854,3 +849,6 @@ body {
   cursor: pointer;
 }
 
+img {
+  display: block;
+}
