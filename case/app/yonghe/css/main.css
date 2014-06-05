@@ -61,7 +61,6 @@ section {
 .active-inner{
 	position: absolute;
 	width: 100%;
-	height: 1000px;
 	z-index: -1;
 	background: url('../img/inner.jpg') top no-repeat;
 	background-size: 100% auto;
@@ -293,6 +292,7 @@ section {
 	width: 320px;
 	height: 800px;
 	margin: 0 auto;
+	margin-bottom: 30px;
 	position:relative;
 }
 .role-intro{
@@ -384,7 +384,6 @@ section {
   height: 400px;
   margin: 0 auto;
   margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 .alert-content{
@@ -412,13 +411,26 @@ section {
 	height: 28px;
 	line-height: 28px;
 	margin:0 auto;
-	margin-top: 50px;
 	background: #e60027;
 	color: white;
 	border-radius: 4px;
 	text-align: center;
+	float: left;
 }
 
+#weixin-button{
+	margin-top:10px;
+	display: block;
+	width: 110px;
+	height: 28px;
+	line-height: 28px;
+	margin:0 auto;
+	background: #e60027;
+	color: white;
+	border-radius: 4px;
+	text-align: center;
+	float: right;
+}
 .overlay-quit{
 	position: fixed;
 	height: 100%;
@@ -449,4 +461,10 @@ section {
 }
 .login-quit{
 	display: block;
+}
+
+.button-container{
+	width: 240px;
+	margin: 0 auto;
+	margin-top: 50px;
 }

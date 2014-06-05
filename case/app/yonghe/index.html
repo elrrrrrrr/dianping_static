@@ -12,7 +12,7 @@
 <link href="css/main.css" rel="stylesheet" type="text/css">
 <script src='js/zepto.js'></script>
 
-<title>永和大王</title>
+<title>永和大王2014</title>
 <meta name="Keywords" content=""/>
 <meta name="Description" content=""/>
 <script>var G_rtop=+new Date,_gaq=[
@@ -64,9 +64,12 @@ var _hip = [
             <img src="img/close.png" class='alert-corner' alt="">  
             </div>
             <span id='number-result'>编码已成功发送到1234513，请注意查收</span>
-            <a href="http://www.4000979797.com" target="_blank">
-            <span id='yonghe-button'>立即去大王送使用</span>
-            </a>
+           
+              <!-- <span id='yonghe-button'>立即去大王送使用</span> -->
+              <div class='button-container'>
+                 <a href="http://www.4000979797.com" target="_blank"><span id='yonghe-button'>立即去大王送使用</span></a>
+                <span id='weixin-button'>分享至微信朋友圈</span>
+              </div>
           </div>  
       </div> 
 
@@ -101,35 +104,6 @@ var _hip = [
 
 </body>
 <script>
-
-function setGroupId()
-{
-   var allcookies = document.cookie;
-   // Get all the cookies pairs in an array
-   var cookiearray  = allcookies.split(';');
-   console.log(cookiearray);
-   // Now take key value pair out of this array
-   for(var i=0; i<cookiearray.length; i++){
-      name = cookiearray[i].split('=')[0].toString().trim();
-      value = cookiearray[i].split('=')[1];
-      if (name == 'cye') {
-        if (value == 'shanghai') {
-          groupId = 226
-          return
-        } 
-        if (value == 'beijing') {
-          groupId = 227
-          return 
-        }
-        if (value == 'shenzhen') {
-          groupId = 228 
-          return 
-        }
-        alert('亲爱的用户，您所在的城市不在活动范围内。')
-      }
-   }
-}
-
 (function ($) {
   $.fn.slideDown = function (duration) {    
     // get old position to restore it then
@@ -170,8 +144,36 @@ function setGroupId()
     })
 </script>
 <script>
-    _id = 196;
-    groupId = 0;
+    _id = null;
+    groupId = 0 ;
+
+  function setGroupId()
+{
+   var allcookies = document.cookie;
+   // Get all the cookies pairs in an array
+   var cookiearray  = allcookies.split(';');
+   console.log(cookiearray);
+   // Now take key value pair out of this array
+   for(var i=0; i<cookiearray.length; i++){
+      name = cookiearray[i].split('=')[0].toString().trim();
+      value = cookiearray[i].split('=')[1];
+      if (name == 'cye') {
+        if (value == 'shanghai') {
+          groupId = 226
+          return
+        } 
+        if (value == 'beijing') {
+          groupId = 227
+          return 
+        }
+        if (value == 'shenzhen') {
+          groupId = 228 
+          return 
+        }
+        alert('亲爱的用户，您所在的城市不在活动范围内。')
+      }
+   }
+}
 $(document).ready(function(){
   $.ajax({
     url:"/ajax/json/account/info",
@@ -181,14 +183,13 @@ $(document).ready(function(){
       switch (res.code) {
           case 200:
                 setGroupId()
-                //alert("提交成功！");
                 break;
           case 403:
                 // window.location.href = 'http://www.dianping.com/login?redir=http%3A%2F%2Fevent.dianping.com%2Fmarket%yonghe2014%2Findex.html'     
                 $('#nologin').show()
                 break;
           default :
-                alert("系统发生错误，请重试！");
+                // alert("系统发生错误，请重试！");
                 break;
       } 
     }
@@ -199,7 +200,7 @@ $('.event-link').click(function(){
     $.ajax({
       asyc:false,
       url: "/prize/ajax/prizeDraw",
-      data:{groupId:groupId},
+      data:{groupId:198},
       success: function (response) {
           console.log(response);
           if(response.code == 501){
@@ -209,6 +210,11 @@ $('.event-link').click(function(){
 
           if( response.msg.recordId){
             _id = response.msg.recordId  
+          }
+          
+          if(_id == null){
+            alert("感谢您的关注 活动尚未开始")
+            return;
           }
           
           if(response.msg.prize.rank == 1){
@@ -235,7 +241,7 @@ $('.event-link').click(function(){
 })
 
 $('.number-button').click(function(){
-  num = $('.number-input').val();
+  var num = $('.number-input').val();
   $.ajax({
     url: "/prize/ajax/userInfo",
     data: {
@@ -273,10 +279,26 @@ $('.alert-corner').click(function(){
   $('.alert-view').hide()
 })
 
-$('.overlay-quit').click(function(){
-  window.location.href = 'http://www.dianping.com/login'
+$('#yonghe-button').click(function(){
+  // window.location.href = 'http://www.dianping.com/login'
 })
 
+$("#weixin-button").click(function(){
+  WeiXinShareBtn();
+})
+
+
+function WeiXinShareBtn() {
+ if (typeof WeixinJSBridge == "undefined") {
+ alert("请在微信内打开页面活动链接");
+ } else {
+ WeixinJSBridge.invoke('shareTimeline', {
+ "title": "永和大王送大礼",
+ "link": "http://event.dianping.com/market/yonghe2014/mobile/index.html",
+ "desc": "永和大王送大礼",
+ });
+ }
+ }
 
 </script>
 </html>
