@@ -338,6 +338,10 @@ lucky = {
           }
           _id = response.msg.recordId
 
+          if(_id == null){
+            alert("感谢您的关注 活动尚未开始")
+            return;
+          }
           if(response.msg.prize.rank == 1){
             $('.ticket').hide()
             $('.net1').show()
