@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="css/mobile.css"/>
+  <title>杰卡斯真情相约|逢9必聚</title>
+</head>
+<body>
+<div class="wrap">
+  <div class="logo">
+    <img src="css/img/top-logo-mobile.png" alt="杰卡斯"/>
+  </div>
+  <div class="make-invitation">
+    <h2>选择日期</h2>
+    <div class="choose-date">
+      <div class="calendar-button">
+        <img src="css/img/button-calendar.png" alt=""/>
+      </div>
+      <div class="timing">
+        <p>点击选择日期</p>
+        <label class="select-group">
+          <span class="view">0000</span>
+          <select class="input" name="invYear" id="invYear">
+          </select>
+        </label>
+        <span>年</span>
+        <label class="select-group">
+          <span class="view">00</span>
+          <select class="input" name="invMonth" id="invMonth">
+          </select>
+        </label>
+        <span>月</span>
+        <label class="select-group">
+          <span class="view">00</span>
+          <select class="input" name="invMonth" id="invDate">
+          </select>
+        </label>
+        <span>日</span>
+      </div>
+    </div>
+    <h2>选择时间</h2>
+    <div class="choose-time">
+      <div class="timing">
+        <p>点击选择时间</p>
+        <label class="select-group">
+          <span class="view">00</span>
+          <select class="input" name="invHours" id="invHours">
+          </select>
+        </label>
+        <span>：</span>
+        <label class="select-group">
+          <span class="view">00</span>
+          <select class="input" name="invMinutes" id="invMinutes">
+          </select>
+        </label>
+      </div>
+    </div>
+    <h2>选择地点</h2>
+    <h3>选择杰卡斯特选活动餐厅聚会，邀请发送成功后，<br>即可获得更多中奖机会，及专享优惠券。</h3>
+    <div class="choose-restaurant">
+      <script type="text/template" id="template-restaurants">
+        <li>
+          <a class="info" href="#invPlace">
+            <h3>${shop}</h3>
+            <p>地址:<span class="address">${address}</span></p>
+            <p>电话:<span class="tel">${tel}</span></p>
+            <input class="promo" type="hidden" value="${promo}"/>
+          </a>
+        </li>
+      </script>
+      <ul class="item-list">
+      </ul>
+    </div>
+    <div class="text-restaurant">
+      <label><input type="text" id="invPlace" placeholder="其他：请输入聚会餐厅"/></label>
+      <input type="hidden" id="promoId" value="0"/>
+    </div>
+    <div class="button-group">
+      <a class="button" id="goNext" href="javascript:void(0);">下一步</a>
+    </div>
+  </div>
+  <div class="preview hide">
+    <div class="title">
+      <img src="css/img/title.png" alt="杰卡斯"/>
+    </div>
+    <h2>预览</h2>
+    <div class="share-info">
+      <img class="jacobs-image" src="css/img/share-default-image.jpg" alt=""/>
+      <p><strong>#真情相约，逢9必聚#</strong>亲爱的小伙伴们，<br>
+        是时候高端大气上档次地聚一回了！<span class="customize"><br>
+        <strong id="time"></strong>，<strong id="place"></strong>，不见不散！</span></p>
+    </div>
+    <div class="instruction no-weixin">
+      <img src="css/img/invite-instuction.png" alt=""/>
+    </div>
+    <div class="button-group" id="preview-group">
+      <a class="button" id="goPrev" href="javascript:void(0);">返回</a>
+    </div>
+  </div>
+</div>
+<script src="../js/modernizr.min.js"></script>
+<script src="js/make-invitation.js"></script>
+</body>
+</html>

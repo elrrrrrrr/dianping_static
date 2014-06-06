@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/main.css"/>
+		<style>
+			/*隐藏中奖名单和发邀约赢好礼
+			 a.button-invite{display: none !important;}*/
+			a.button-list {
+				display: none !important;
+			}
+		</style>
+		<title>杰卡斯真情相约|逢9必聚</title>
+	</head>
+	<body>
+		<div class="slides-wrap">
+			<div id="slide1" class="slides">
+				<div class="slide-inner">
+					<h1 class="text-wrap">真情相约，逢9必聚</h1>
+					<div class="button-group">
+						<a class="buttons button-list" href="javascript:void(0);" title="中奖名单"></a>
+						<a class="buttons button-rule" href="javascript:void(0);" title="活动规则"></a>
+					</div>
+
+					<h2 class="text-wrap">杰卡斯欢聚日，好久不见的你，出来见面吧！
+					<br>
+					1.邀约好友并选择活动餐厅聚会，即可获赠专享电子优惠券与即时抽奖机会，多重惊喜等你赢。
+					<br>
+					2.关注“杰卡斯真情有我”官方微信，即可参与每月9日、19日、29日抽奖，赢缤纷好礼。 </h2>
+					<a class="button-invite" href="javascript:void(0);" title="发邀约赢好礼"></a>
+					<div class="image-wrap"></div>
+				</div>
+			</div>
+			<div id="slide2" class="slides">
+				<div class="slide-inner">
+					<h1 class="text-wrap">真情相约，逢9必聚——杰卡斯最热聚点推荐</h1>
+					<a class="button-invite" href="javascript:void(0);" title="发邀约赢好礼"></a>
+					<div id="carousel-restaurant" class="carousel-group">
+						<script class="item-template" type="text/template">
+							<a class="item" target="_blank" href="${link}">
+							<img src="${image}" alt=""/>
+
+							<h3><span>{%html name%}</span></h3>
+							<span title="查看详情" class="view"></span>
+							</a>
+						</script>
+						<a class="carousel-nav carousel-nav-left" href="javascript:void(0);" title="上一页"></a>
+						<a class="carousel-nav carousel-nav-right" href="javascript:void(0);" title="下一页"></a>
+
+						<div class="carousel-container">
+							<ul class="item-list"></ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="slide3" class="slides">
+				<div class="slide-inner">
+					<h1 class="text-wrap">真情相约，逢9必聚——杰卡斯餐酒搭配贴士</h1>
+					<a class="button-invite" href="javascript:void(0);" title="发邀约赢好礼"></a>
+					<div id="carousel-cuisine" class="carousel-group">
+						<script class="item-template" type="text/template">
+							<div class="item">
+							<div class="cuisine">
+							<img src="${dishImage}" alt=""/>
+
+							<h3><span>${dishName}</span></h3>
+							</div>
+							<span class="plus">+</span>
+
+							<div class="wine">
+							<img src="${wineImage}" alt="${wineName}">
+							<h4>${wineName}</h4>
+							</div>
+
+							<a target="_blank" title="查看详情" class="view" href="javascript:void(0);"></a>
+							</div>
+						</script>
+						<a class="carousel-nav carousel-nav-left" href="javascript:void(0);" title="上一页"></a>
+						<a class="carousel-nav carousel-nav-right" href="javascript:void(0);" title="下一页"></a>
+
+						<div class="carousel-container">
+							<ul class="item-list"></ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="slide4" class="slides">
+				<div class="bottom-banner">
+					<div class="left"></div>
+					<div class="center">
+						<a class="coupon" target="_blank" href="http://t.dianping.com/deal/2201644"></a>
+					</div>
+					<div class="right"></div>
+				</div>
+				<div class="slide-inner">
+					<h1 class="text-wrap">真情相约，逢9必聚——杰卡斯贴心聚会攻略</h1>
+					<a class="button-invite" href="javascript:void(0);" title="发邀约赢好礼"></a>
+					<div id="carousel-guide" class="carousel-group">
+						<a class="carousel-nav carousel-nav-left" href="javascript:void(0);" title="上一页"></a>
+						<a class="carousel-nav carousel-nav-right" href="javascript:void(0);" title="下一页"></a>
+						<div class="carousel-container">
+							<ul class="item-list">
+								<li>
+									<div class="item">
+										<div class="guide1">
+											<!-- <div class="text-header pull-left">
+												<img src="data/guide/3-1.jpg" alt=""/>
+												<h2>打破聚会话题僵局的三个必杀TOPIC</h2>
+												<p>
+													朋友聚会最怕的是什么，有人迟到或者临时爽约？NO，朋友聚会最怕的不是人没齐，话先行。而是，人齐了，没话说。世上最尴尬的情况莫过如此。在这教你打破聚会话题僵局的三个必杀TOPIC。想成为聚会僵局的救世主，快学起来！活跃现场的重任就交给你了。
+												</p>
+											</div>
+											<div class="text-content pull-left">
+												<h3>必杀TOPIC一 星座</h3>
+
+												<p>
+													说到聚会聊天一拍即合的话题，星座绝对可以排到第一。无数有关星座的话题，渗透到生活中、工作里。星座话题最好的开场白永远是“你信星座么？”。在场的人，星座先都数一遍，自然而然就能生出话题。从“你是狮子座啊，好巧她是白羊！你们之间很配啊，来干一杯。”“听说双鱼座有艺术气息”等基础话题入手，再升级为“最近水星逆行，大家注意了！”等进阶话题。调侃为主，不必当真，酒到了，场面自然打开。
+												</p>
+
+												<h3>必杀TOPIC二 房地产</h3>
+
+												<p>
+													“房事”永远是热门话题，别想歪，这是有关房子的故事。家家有本难念的经，关于房子，人人都会有自己的故事。有爆料八卦的，“听说谁谁和谁谁为了房子离了？我早就说了。”“谁谁买房了，首付一次清，真是壕呀！”。有高瞻远瞩的，“我看房价十年内必降！”“最近的制度变化其实是预示的这样~”。有酒为催化剂，言语简单那需要酝酿，场面活跃起来。特别提醒：此话题见好就收，打开话匣子，就转移话题吧
+												</p>
+
+												<h3>必杀TOPIC三 一个大家都认识但不在现场的人的悲剧故事 </h3>
+
+												<p>
+													承认吧，人人也许都有一点幸灾乐祸的看戏心理。鲁迅曾说过，喜剧将那无价值的撕破给人看。无伤大雅的悲剧故事，其实在餐桌上会变成他人的喜剧故事。“他好像又被甩了，这都第几个了？”“我跟你们说，那天看到了某人超级尴尬的事。”在某人背后“说坏话”会使在场的人产生一种共同保密者的气氛，有了共同语言，直接拉进大家的距离。无需太严肃，八卦为主。随着饮酒的进度，一定注意不要太过火哦。
+												</p>
+											</div>
+											<img class="pull-right" src="data/guide/3-2.jpg" alt=""/> -->
+										</div>
+										<div class="share" id="share-1">
+											分享到：
+											<a class="share-sina " title="分享到新浪微博" href="javascript:void(0);"></a>
+											<a class="share-weixin " title="分享到朋友圈" href="javascript:void(0);"></a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="item">
+										<div class="guide2">
+											<!-- <div class="header">
+												<img class="pull-left" src="data/guide/2-1.jpg" alt="">
+												<h2>炒热聚会气氛的必备游戏</h2>
+												<p>
+													聚会中，超过1分钟以上，没有超过3个人以上的交流，这就是可怕的冷场预警！据路边社调研，朋友聚会如果有准备几个小游戏，聚会气氛平均上升三个级数。不必担心没有道具，或者规则麻烦。这里介绍炒热聚会气氛的几个必备游戏，瞬间拉进朋友间距离，让温吞水般的聚会气氛迅速升温！
+												</p>
+											</div>
+											<ul>
+												<li>
+													<h3>必备游戏一 真心话大冒险</h3>
+													<p>
+														选中一个人，选择真心话大冒险，说一段真心话或做一件冒险事。最直接最有效最广泛接受的聚会游戏无需任何道具，只需全心投入。注意，放不开你就输了！
+													</p>
+												</li>
+												<li>
+													<h3>必备游戏二 数9</h3>
+													<p>
+														古老的游戏，也能翻出新花样。原始的是轮流报数，到9或者9的倍数敲桌，否则罚酒一杯。新花样是数到逢9的数字后，要倒回去数！一开始是顺时针数到9敲桌，然后从此人开始逆时针继续。最终目的→越乱越开心！
+													</p>
+												</li>
+												<li>
+													<h3>必备游戏三 放硬币</h3>
+													<p>
+														一透明玻璃杯，然后把杯子装满水注意是几乎装满，离杯口差一到两毫米。然后每个人轮流放一个硬币入水，然后看谁放进去的时候水溢出来了。最为紧张的应该是水与杯口持平，但其实还可以放很多。一时的寂静是为了之后的爆发！多人游戏，乐趣翻倍！
+													</p>
+												</li>
+												<li>
+													<h3>必备游戏四 I NEVER</h3>
+													<p>
+														聚会中，一个人说一件从没有做过的事，如果其他人有人做过，那么做过的人就要受罚，如果其他人都没做过，那么这个人就要受罚。尺度可大可小，全凭现场气氛随机掌握。小心藏住你的秘密吧！
+													</p>
+												</li>
+											</ul> -->
+										</div>
+										<div class="share" id="share-2">
+											分享到：
+											<a class="share-sina " title="分享到新浪微博" href="javascript:void(0);"></a>
+											<a class="share-weixin " title="分享到朋友圈" href="javascript:void(0);"></a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="item">
+										<!-- <div class="guide3">
+											<img class="image-wrap pull-left" src="data/guide/1-1.jpg" alt=""/>
+											<div class="text-wrap pull-left">
+												<p>
+													饮酒不仅仅是在品酒，更是在品味文化。朋友聚会，葡萄酒不仅可以增加优雅属性，更有打开话题的功效。如果能说出关于葡萄酒的一二来，格调瞬间就升高了。而且说到葡萄酒与中餐的搭配，因为食材种类及烹调方式更加复杂的中餐，也许比西餐搭配更复杂。
+												</p>
+												<p>
+													简单来说，“白酒配白肉，红酒配红肉”的基本原则还是适用的。喝白葡萄酒时，易配清淡的菜系，否则口味重的菜会掩盖白葡萄酒细腻的口感。如果你吃的四川菜，辣辣的，口味重的，那么应该考虑配红葡萄酒，尤其是干红葡萄酒。
+												</p>
+												<p style="margin-bottom: 4px">
+													此外，如果不想在聚会时，遇到尴尬的情况，以下还有几个注意的要点，可以记好哦~
+												</p>
+												<img class="image-wrap pull-left" src="data/guide/1-2.jpg" alt=""/>
+												<h3>中餐葡萄酒搭配要点一 不要搭配需要蘸醋吃的食物</h3>
+												<p>
+													小笼包、虾饺、锅贴，因为需要蘸醋，所以吃这些美味的小食就不要搭配葡萄酒了。因为浓烈的酸味会留在口中，整个味觉都会改变。不过在烧制过程中加入糖醋味调料却比较容易搭配葡萄酒，如糖醋鲤鱼、糖醋排骨之类，因为醋与糖在烧制过程中中和并焦化了。
+												</p>
+												<h3>中餐葡萄酒搭配要点二 注意酒与食物搭配的顺序</h3>
+												<p>
+													为了能让不同葡萄酒的层次和浓度都能被充分感受，酒与食物搭配的顺序是很重要的。但在中餐厅吃中餐，菜肴的顺序都是不固定的，如需要搭配葡萄酒，那就需要心里小小规划下了。喝葡萄酒时，应该是从最淡到最浓的口味依次品味，通常情况下就是先喝白葡萄酒，后喝红葡萄酒。如果可以的话，食物应该也按照这个顺序依次品尝。
+												</p>
+												<h3>中餐葡萄酒搭配要点三 与茶类饮品搭配要谨慎</h3>
+												<p>
+													一般中餐厅餐前或餐后会有茶饮，但注意茶饮不宜与葡萄酒搭配。常见的铁观音、乌龙、龙井等，会抢去酒的味道，茶酒混合，红酒会变得苦涩，浪费佳肴。不过，也有例外，熟普洱对酒的味道影响就不大。当然，太甜的食物会令酒变得酸，也不宜配红酒，吃酸后饮酒会更酸更苦涩。
+												</p>
+											</div>
+										</div> -->
+										<div class="share" id="share-3">
+											分享到：
+											<a class="share-sina " title="分享到新浪微博" href="javascript:void(0);"></a>
+											<a class="share-weixin " title="分享到朋友圈" href="javascript:void(0);"></a>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="slide5" class="slides">
+				<div class="slide-inner">
+					<div class="slide-inner">
+					<h1 class="text-wrap">真情相约，逢9必聚——杰卡斯品牌故事</h1>
+					<a class="button-invite" href="javascript:void(0);" title="发邀约赢好礼"></a>
+					<div id="carousel-guide" class="carousel-group ppgs">
+						<div class="ppgs_img" id="ppgs_img"></div>
+						<div class="ppgs_time" id="ppgs_time">
+							<ul class="ppgs_time_ul">
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="fix-caution"></div>
+		<a class="fix-logo" href="#slide1"></a>
+		<div class="fix-nav-bar">
+			<div class="nav-trims nav-trims-left"></div>
+			<div class="nav-trims nav-trims-right"></div>
+			<div class="nav-bar">
+				<div class="countdown">
+					<h2>距离杰卡斯欢聚日</h2>
+					<h3>还有</h3>
+					<div class="countdown-digital"></div>
+					<p class="days">
+						天
+					</p>
+				</div>
+				<div class="nav-buttons">
+					<a id="nav1" class="nav-button" href="#slide2"></a>
+					<a id="nav2" class="nav-button" href="#slide3"></a>
+					<a id="nav3" class="nav-button" href="#slide4"></a>
+					<a id="nav4" class="nav-button" href="#slide5"></a>
+				</div>
+				<img class="nav-qrcode" src="css/img/slide-nav-qrcode.png" alt="二维码"/>
+			</div>
+			<div class="nav-bar-repeat"></div>
+		</div>
+
+		<script type="text/template" id="popup-rule">
+			<div class="popup-inner">
+			<h2></h2>
+			<div class="rule-text-container">
+			<div class="rule-text-inner">
+			<div class="rule-text">
+			<h3>1.参加资格：</h3>
+			<p>凡中国大陆地区居民（港、澳、台地区除外）年满18周岁用户均可参加本活动。</p>
+			<h3>2.活动时间：</h3>
+			<p>2014年 05月01日0:00起至2014年 06月 30 日24:00止；<br>
+			*以大众点评网站服务器时间为标准时间。
+			</p>
+			
+			<h3>3.参与方式：</h3>
+			<p>第一步：访问杰卡斯大众点评活动网站 http://event.dianping.	com/jcday参与“杰卡斯真情相遇，逢9必聚——相约中餐厅”电脑网站，扫描二维码（或通过大众点评APP活动入口）访问手机版活动界面；
+			</p>
+			<p>第二步：使用点评账号登录；</p>
+			<p>第三步：点击纸牌，参与即时抽奖；</p>
+			<p>第四步：制作邀请函：</p>
+			<ol>
+			<li>
+			<p>（1）选择聚会日期；</p>
+			</li>
+			<li>
+			<p>（2）选择聚会时间；</p>
+			</li>
+			<li>
+			<p>（3）选择合作餐厅作或手动输入地点信息，作为聚会场所；</p>
+			</li>
+			</ol>
+			<p>第五步：将邀请函分享到微信朋友圈，或直接发送给微信好友；</p>
+			<p>第六步：邀请函发送成功后保存优惠券、继续抽奖或关注杰卡斯官方微信号；</p>
+			<ol>
+			<li>
+			<p>（1）如选择合作餐厅作为聚会场所，即可获得对应电子优惠券一张，长按优惠券保存到手机并前往该合作餐厅使用；</p></li>
+			<li>
+			<p>（2）点击“继续抽奖”，返回即时抽奖界面；</p>
+			</li>
+			<li>
+			<p>（3）扫描二维码或搜索订阅号【杰卡斯真情有我】，关注杰卡斯官方微信账号。</p>
+			</li>
+			</ol>
+			<h3>4.	奖品设置：</h3>
+			<ol>
+			<li><strong>4.1. 即时抽奖</strong>
+			<p>本活动期间，凡参与即时抽奖的消费者，都有机会获得杰卡斯提供的精美礼品，抽奖次数不限。凡成功发送邀请函给好友的消费者，可提高中奖几率。奖品种类和数量如下列出：</p>
+			<table>
+			<thead>
+			<tr>
+			<th>奖品种类</th>
+			<th>数量</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+			<td>9元大众点评团购代金券</td>
+			<td>2000张</td>
+			</tr><tr>
+			<td>杰卡斯球包</td>
+			<td>90个</td>
+			</tr><tr>
+			<td>杰卡斯冲锋衣</td>
+			<td>45件</td>
+			</tr><tr>
+			<td>杰卡斯雨伞</td>
+			<td>200把</td>
+			</tr><tr>
+			<td>杰卡斯酿酒师臻选系列赛美戎长相思干白葡萄酒</td>
+			<td>10瓶</td>
+			</tr>
+			</tbody>
+			</table>
+			</li>
+			<li>
+			<strong>4.2. 杰卡斯欢聚日（每月9日，19日，29日）幸运奖——每次2名，共12名。</strong>
+			<p>本活动期间，活动主办方将在活动上线后每月的9日，19日，29日，从所有成功发送邀请函给好友的参与者中随机抽取2名幸运者，每位幸运者可获得“杰卡斯定制酒瓶（内涵杰卡斯经典系列梅洛干红葡萄酒）”一瓶。</p>
+			</li>
+			<li>
+			<strong>4.3. 中网VIP观赏礼遇奖——共1名。</strong>
+			<p>本活动期间，活动主办方将在6月30日24：00之后，从所有成功发送邀请函给好友的参与者中随机抽取1名幸运者，这位获奖者将获得北京中国网球公开赛VIP双人观赏礼遇（包括往返机票、住宿酒店安排，VIP包厢观赛及餐饮体验）。行程安排以保乐力加（中国）贸易有限公司最终通知为准。</p>
+			</li>
+			<li>
+			<strong>4.4. 微信官方账号幸运关注者——每次9名，共54名。</strong>
+			<p>本活动期间，活动主办方将在活动上线后每月的9日，19日，29日，从所有参与本活动并关注“杰卡斯真情有我”官方微信的用户中，随机抽取9个幸运作品及其所属作者。每位幸运者可获得由主办方提供的“杰卡斯酿酒师臻选系列赛美戎长相思干白葡萄酒”一瓶。</p>
+			</li>
+
+			<li>
+			<strong>4.5. “好友相聚，杰卡斯买单”幸运奖 —— 每周1名，共5名。</strong>
+			<p>2014年6月1日至2014年6月30日，每周从所有成功发送邀请函的参与者中随机抽取一名幸运者。每位幸运者可另携带8~10人，免费享用原价为3508元一席中餐。</p>
+			<p>*以大众点评网站服务器时间为标准时间。未发放的奖项将累计至下一周。</p>
+			<p>工作人员将于每周X电话通知每位幸运者，中奖者需要如实回复用餐时间，用餐人数，真实姓名，手机号码及省份证号码，以便用餐时核对信息。</p>
+			<p>幸运者可在5家“唐宫”中选择一家前往享用。（分别为浦东店、花木店、维景店、虹口店；889广场店），仅限大堂，一天内不限使用时段。用餐有效期为电话后一周内有效。</p>
+			</li>
+
+			</ol>
+			<h3>5.	中奖查询及领奖须知：</h3>
+			<ol>
+			<li>
+			<strong>5.1 中奖查询：</strong>
+			<p>中奖名单将在活动结束后，7个工作日内公布在杰卡斯大众点评活动网站。（如遇节假日，中奖信息公布顺延）</p>
+			</li>
+			<li>
+			<strong>5.2 领奖须知：</strong>
+			<ul>
+			<li>a) 参与即时抽奖，抽中9元大众点评团购代金券的参与者，奖品会在3个工作日内自动进入该参与者大众点评账户；</li>
+			<li>b) 除9元大众点评团购代金券的其他实物奖品中奖者，活动主办方将在活动结束后一个月内通过大众点评广播系统和/或电话通知获奖者中奖信息；</li>
+			<li>c) “杰卡斯买单”机会的中奖者，活动主办方将在每周五通过电话联系获奖者；</li>
+			<li>d) 为核实中奖者信息以及寄送奖品，中奖者需要如实回复真实姓名，个人手机联系方式，与有效地址。如果获奖者所提供的相关个人信息或者提供的个人信息错误、不完整、不真实时，将视为其自动放弃中奖机会。承办方对获奖者提供的个人信息将进行妥善的管理和保护，仅限核对获奖信息用途使用。在获奖公布后7个工作日内仍无法取得联系的获奖者将视为自动放弃获奖资格；</li>
+			<li>e) 中奖者对于奖项不能相互转让，出售，不然则视为自动放弃获奖资格；</li>
+			<li>f) 中奖者不得在任何公开场合发表有损于杰卡斯品牌形象的言论，否则一经活动主办方发现，主办方有权取消该中奖者的获奖资格。</li>
+			</ul>
+			</li>
+			</ol>
+			<h3>其他条款</h3>
+			<p>注意事项：</p>
+			<ul>
+			<li>– 用户保证在参加活动过程中遵守中国相关法律、法规、规章和其他规范性文件。</li>
+			<li>– 用户不得为任何非法目的而使用网络服务系统，不得在活动中出现任何损害国家利益、破坏民族团结、宣扬封建迷信、扰乱社会秩序、宣扬淫秽、色情、赌博、暴力、凶杀、恐怖、教唆犯罪和侵害他人合法权益等不符合国家法律规定的内容，也不得出现任何包含诬蔑、人身攻击、谩骂、侮辱、诋毁、有悖公序良俗等的不适当内容；</li>
+			<li>– 对于违反以上规定的内容，在不需要通知和解释的情况下，管理员有权予以屏蔽或删除，取消用户参与活动的资格和冻结帐号，情节严重的将转交相关司法机构处理；</li>
+			<li>– 就用户通过本网站发表的相关言论，纯属用户个人行为，由此引发的任何纠纷与主办方无关，由其自行承担一切法律责任。因此给主办方造成损失的（包括但不限于直接损失以及为解决纠纷所支出的成本和费用），主办方有权要求其予以赔偿。</li>
+			<li>– 用户对于通过上传文字及照片信息而参加活动的内容依法享有版权及其他相关合法权利，对于该等内容，用户不可撤销的同意主办方及其关联公司在全世界范围内具有免费的、永久性的使用许可，以使用、复制、修改、翻译、据以创作衍生作品、传播、表演和展示该等内容（整体或部分）。</li>
+			<li>– 用户保证上传的照片如包含其他人肖像，已事先征得该肖像所有权人同意并已明确告知关于其照片的使用用途和目的。本公司有权依赖活动参与用户的上述保证，如活动参与用户上传的任何照片侵犯了第三人的肖像权，本公司不承担任何责任。</li>
+			<li>- 中奖资格不得转让或出售给他人，不得以任何理由要求主办单位折换现金。个人所得税，等均由获奖者自行承担。获奖者须承担的个人所得税由个人至税务局自行缴纳。</li>
+			<li>– 活动方对活动参与者提交的有关姓名、住址等个人信息将仅使用于处理本活动相关事宜的必要范围内。</li>
+			<li>– 用户参加活动，即表示已仔细阅读上述关于本活动的规则和说明，并完全同意活动规则说明叙述内容。</li>
+			<li>– 图示的奖品仅供参考，奖品以实物为准。</li>
+			</ul>
+
+			<p class="rights">* 本次活动最终解释权归保乐力加（中国）贸易有限公司所有。</p>
+			</div>
+			</div>
+			</div>
+			</div>
+		</script>
+		<script type="text/template" id="popup-invite">
+			<div class="popup-inner">
+			</div>
+		</script>
+		<script type="text/template" id="popup-cuisine">
+			<div class="popup-inner">
+			<h2>${dishName}</h2>
+			<h3>配饮推荐：<span title="${wineName}">${wineName}</span></h3>
+			<div class="pull-left">
+			<div class="dialog">
+			{%html introduction%}
+			</div>
+			<div class="place">
+			<p>点击查看，亲临以下餐厅品尝：</p>
+			{%each links %}
+			<a class="link" target="_blank" title="${$value.shopName}" href="${$value.link}"><img src="${$value.shopImage}"></a>
+			{%/each%}
+			</div>
+			</div>
+			<div class="pull-right">
+			<img class="dish" src="${dishImageBig}" alt="${dishName}"/>
+			<p>图片来自大众点评 菜品请以实物为准</p>
+			<div class="wine">
+			<img src="${wineImageBig}" alt="${wineName}"/>
+			</div>
+			</div>
+			</div>
+		</script>
+		<script src="js/modernizr.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src='js/jquery.min.js'></script>
+		<script>
+			setInterval(function(){
+				console.log(1)
+			},800)
+			$('.ppgs_time_ul li').click(function(){
+				var left = 0;
+				var left_array = [0,700,1000,1300,2100,2400,2800,3100,3500]
+				var index = $(this).index()
+				$('#ppgs_img').css('left',left_array[index]*(-1)+'px')
+			})
+		</script>
+	</body>
+</html>

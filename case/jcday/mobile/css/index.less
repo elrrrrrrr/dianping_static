@@ -1,0 +1,135 @@
+/**
+ * LESS CSS Created with WebStorm.
+ * Author: Jerry
+ * Date: 14-4-28
+ */
+
+@import "../../css/reset";
+@import "../../css/mixins";
+@import "popup";
+
+html{
+}
+body{
+  font-family: "microsoft yahei", "hiragino sans gb", sans-serif;
+  color: #444;
+  min-width: 320px;
+}
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.hide{
+  display: none !important;
+}
+.wrap{
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+  background: url("img/index/background.jpg") no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  .lottery{
+    padding: 20px;
+  }
+  .win-more{
+    display: block;
+    width: 270px;
+    margin: 0 auto;
+  }
+  .rule{
+    padding: 20px;
+    h2{
+      color: #de0016;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 6px;
+    }
+    p{
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
+.grid-area {
+  width: 270px;
+  height: 270px;
+  background: #2e2e2e;
+  margin: 0 auto;
+  position: relative;
+  .border-radius(10px,10px,10px,10px);
+  #grid{
+    position: relative;
+    left: 6px;
+    top: 6px;
+    z-index: 50;
+  }
+  .animating {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+
+  .cell {
+    overflow: hidden;
+    .front,
+    .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      overflow: hidden;
+      z-index: 0;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      backface-visibility: hidden;
+      img {
+        display: block;
+        position: absolute;
+      }
+    }
+    .front {
+      left: 0;
+      cursor: pointer;
+    }
+    .back {
+      right: 0;
+    }
+  }
+}
+.float-layer {
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  .pop-layer-button {
+    position: absolute;
+    left: 65px;
+    top: 65px;
+    width: 140px;
+    height: 140px;
+    &.login {
+      background: url("img/index/pop-login.png") no-repeat;
+      background-size: 140px auto;
+    }
+    &.ready {
+      background: url("img/index/pop-ready.png") no-repeat;
+      background-size: 140px auto;
+    }
+    &.no-chance {
+      background: url("img/index/pop-end.png") no-repeat;
+      background-size: 140px auto;
+    }
+    a.btn{
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

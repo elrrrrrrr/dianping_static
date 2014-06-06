@@ -1,0 +1,483 @@
+/**
+ * LESS CSS Created with WebStorm.
+ * Author: Jerry
+ * Date: 14-4-9
+ */
+
+@import "../../css/reset";
+@import "../../css/mixins";
+@import "popup";
+
+html{
+}
+body{
+  font-family: "microsoft yahei", "hiragino sans gb", sans-serif;
+  color: #444;
+  min-width: 320px;
+}
+img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.hide{
+  display: none !important;
+}
+.wrap{
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+  background: url("img/background-mobile.jpg") no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  .logo{
+    img{
+      width: 110px;
+      margin: 0 auto;
+    }
+  }
+
+  .button-group{
+    padding: 20px 0;
+    a.button{
+      display: block;
+      margin: 0 auto;
+      width: 60%;
+      border: 2px solid #808080;
+      background-color: #c52606;
+      text-align: center;
+      color: #fff;
+      font-size: 18px;
+      line-height: 36px;
+      font-weight: bold;
+      text-decoration: none;
+      text-shadow: 0 -1px #000000;
+      .border-radius(0.5em, 0.5em, 0.5em, 0.5em)
+    }
+  }
+
+  .preview,
+  .view{
+    padding-bottom: 10px;
+    .title{
+      padding: 20px 0;
+      img{
+        max-width: 300px;
+        margin: 0 auto;
+      }
+    }
+    .share-info{
+      margin: 0 5%;
+      border: 1px solid #690010;
+      padding: 2.5%;
+      .jacobs-image{
+        width: 90%;
+        border: 3px solid #ffffff;
+        margin: 0 auto;
+      }
+      p{
+        text-align: center;
+        margin-top: 10px;
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: bold;
+        strong{
+          font-weight: bold;
+          color: #690010;
+        }
+      }
+    }
+    h2{
+      font-size: 18px;
+      line-height: 36px;
+      text-align: center;
+      font-weight: bold;
+      color: #690010;
+      margin: 10px 5%;
+    }
+    p{
+      font-size: 12px;
+      line-height: 20px;
+      text-align: center;
+      margin: 10px 5%;
+      i{
+        font-weight: bold;
+        color: #690010;
+        font-size: 16px;
+      }
+    }
+    a.send-invitation{
+      width: 110px;
+      display: block;
+      margin: 10px auto;
+      img{
+        width: 100%;
+      }
+    }
+    a.app-send-invitation{
+      margin-bottom: 20px;
+    }
+    .instruction{
+      margin: 20px 5%;
+      padding: 2.5%;
+      background-color: #f4ebe0;
+      .border-radius(5px, 5px, 5px, 5px);
+      img{
+        width: 90%;
+        max-width: 425px;
+        margin: 0 auto;
+      }
+      &.no-weixin{
+        display: none;
+      }
+    }
+    .qr-code{
+      margin: 0 auto;
+      width: 120px;
+    }
+  }
+
+  .make-invitation{
+    h2{
+      font-size: 20px;
+      line-height: 30px;
+      background: url("img/trim.png") no-repeat center bottom;
+      background-size: 100%;
+      text-align: center;
+      color: #690010;
+      font-weight: bold;
+      padding: 5px 0;
+    }
+    h3{
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+      color: #690010;
+      padding: 5px 0;
+    }
+    .timing{
+      text-align: center;
+      line-height: 30px;
+      padding: 10px 0;
+      p{
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 10px;
+      }
+      .select-group{
+        display: inline-block;
+        position: relative;
+      }
+      .view{
+        display: block;
+        padding: 5px;
+        font-size: 16px;
+        line-height: 20px;
+        background: #f1e6d2;
+        z-index: 0;
+        border: 1px solid #690010;
+        .border-radius(3px, 3px, 3px, 3px);
+      }
+      .input{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border: 0 none;
+        opacity: 0;
+        z-index: 1;
+      }
+    }
+    .choose-date{
+      padding: 10px 0;
+      .calendar-button{
+        display: block;
+        margin: 0 auto;
+        width: 25%;
+      }
+    }
+    .choose-time{
+      padding: 10px 0;
+    }
+    .choose-restaurant{
+      ul{
+        margin: 0 auto;
+        width: 85%;
+        background-color: #f1e6d2;
+        border: 1px solid #690010;
+        padding: 5px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        .border-radius(3px, 3px, 3px, 3px);
+        li{
+          padding: 5px;
+          background: url("img/trim.png") no-repeat center top;
+          background-size: 320px auto;
+          &:first-child{
+            background: none;
+          }
+          a.info{
+            display: block;
+            padding:5px 20px 5px;
+            text-decoration: none;
+            &:active,
+            &.active{
+              background-color: #dc967e;
+            }
+            h3{
+              font-size: 16px;
+              font-weight: bold;
+              line-height: 20px;
+              text-align: left;
+              color: #000000;
+              padding: 0;
+            }
+            p{
+              font-size: 14px;
+              line-height: 20px;
+              color: #000000;
+            }
+          }
+        }
+      }
+    }
+    .text-restaurant{
+      margin: 10px 0;
+      input{
+        margin: 0 auto;
+        width: 85%;
+        display: block;
+        padding: 5px 10px;
+        font-size: 16px;
+        line-height: 30px;
+        background: #f4eee4;
+        border: 1px solid #690010;
+        color: #444444;
+        .border-radius(3px, 3px, 3px, 3px);
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        &:focus{
+          outline: 0 none;
+        }
+      }
+    }
+  }
+
+  .lottery{
+    .title{
+      padding: 20px 0;
+      img{
+        max-width: 300px;
+        margin: 0 auto;
+      }
+    }
+    h2{
+      font-size: 18px;
+      line-height: 36px;
+      text-align: center;
+      font-weight: bold;
+      font-style: italic;
+      color: #690010;
+      margin: 0 5%;
+    }
+    p{
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 20px;
+      text-align: center;
+      margin: 10px 5%;
+      span{
+        color: #690010;
+      }
+      i{
+        font-weight: bold;
+        color: #690010;
+        font-size: 16px;
+      }
+    }
+    .lottery-zone{
+      margin: 0 auto;
+      width: 300px;
+      overflow: auto;
+      .poker{
+        margin: 10px;
+        float: left;
+        position: relative;
+        width: 80px;
+        height: 112px;
+        z-index: 1;
+        .front,
+        .back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          overflow: hidden;
+          z-index: 0;
+          -webkit-backface-visibility: hidden;
+          -moz-backface-visibility: hidden;
+          backface-visibility: hidden;
+          img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+          }
+        }
+        .front {
+          left: 0;
+          cursor: pointer;
+        }
+        .back {
+          right: 0;
+        }
+      }
+      .animating {
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+      }
+
+      .cell {
+        overflow: hidden;
+      }
+    }
+
+    a.send-invitation{
+
+      display: block;
+      margin: 20px auto;
+      width: 130px;
+      img{
+        width: 100%;
+      }
+    }
+
+    .qr-code{
+      margin: 0 auto;
+      width: 120px;
+      padding-bottom: 40px;
+    }
+    .rule{
+      background-color: #22272a;
+      padding-bottom: 40px;
+      a.rule-button{
+        position: fixed;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        display: block;
+        padding: 5px;
+        color: #fff;
+        text-decoration: none;
+        background-color: #22272a;
+        z-index: 100;
+        span{
+          display: block;
+          padding-top: 14px;
+          font-size: 12px;
+          height: 16px;
+          text-align: center;
+          background: url("img/expand-arrow.png") no-repeat center 3px;
+          background-size: 15px auto;
+          background-position: center -27px;
+        }
+      }
+      .rule-text{
+        display: none;
+        padding: 20px;
+        h2, p{
+          color: #fff;
+          font-size: 12px;
+          line-height: 20px;
+          text-align: left;
+          font-weight: normal;
+          margin: 0;
+        }
+      }
+      &.expand{
+        a.rule-button{
+          span{
+            background-position: center 0;
+          }
+        }
+        .rule-text{
+          display: block;
+        }
+      }
+    }
+  }
+
+  .promo{
+    .title{
+      padding: 20px 0;
+      img{
+        max-width: 300px;
+        margin: 0 auto;
+      }
+    }
+    h2{
+      font-size: 20px;
+      line-height: 36px;
+      text-align: center;
+      font-weight: bold;
+      color: #690010;
+      margin: 0 5%;
+    }
+    p{
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 20px;
+      text-align: center;
+      margin: 10px 5%;
+      span{
+        color: #690010;
+      }
+      i{
+        font-weight: bold;
+        color: #690010;
+        font-size: 16px;
+      }
+    }
+    .promo-info{
+      p{
+        font-size: 16px;
+        &.hint{
+          color: #690010;
+          font-size: 12px;
+        }
+      }
+      a{
+        display: block;
+        width: 280px;
+        height: 175px;
+        margin: 0 auto;
+        background: url("img/loading.png") no-repeat;
+        background-size: 100%;
+        img{
+          width: 280px;
+          height: 175px;
+          .box-shadow(0 0 10px rgba(0,0,0,0.6))
+        }
+      }
+    }
+    a.go-lottery{
+      display: block;
+      margin: 20px auto;
+      width: 130px;
+      img{
+        width: 100%;
+      }
+    }
+    .qr-code{
+      margin: 0 auto;
+      width: 120px;
+      padding-bottom: 60px;
+    }
+  }
+}

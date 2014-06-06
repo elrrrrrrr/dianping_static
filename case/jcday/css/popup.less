@@ -1,0 +1,353 @@
+/**
+ * LESS CSS Created with WebStorm.
+ * Author: Jerry
+ * Date: 14-4-3
+ */
+@import "mixins";
+
+.popup-framework{
+  display: none;
+}
+.popup-overlay{
+  font-family: "microsoft yahei", "hiragino sans gb", sans-serif;
+  _position: absolute;
+  _left:0;
+  _top:0;
+  z-index: 9000;
+  .popup-mask{
+    _position:absolute;
+    _top: ~"expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' )";
+    _width: ~"expression( ( document.documentElement.clientWidth > 1100 ? document.documentElement.clientWidth : 1100) + 'px')";
+    _height: ~"expression( document.documentElement.clientHeight )";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66000000', endColorstr='#66000000');
+    z-index: 9001;
+    zoom:1;
+  }
+  > .popup-mask{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.4);
+  }
+  .popup-window{
+    _position:absolute;
+    _top: ~"expression( ( document.documentElement.clientHeight / 2 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' )";
+    _left:~"expression( ( document.documentElement.clientWidth / 2 + ( ignoreMe = document.documentElement.scrollLeft) ) + 'px' )";
+    width: 400px;
+    height: 300px;
+    padding: 1px;
+    background-color: #fff;
+
+    z-index: 9002;
+    opacity: 1;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+    .transform(translate3d(0,0,0));
+    .box-shadow(0 0 20px rgba(0,0,0,0.6));
+  }
+  > .popup-window{
+    position: fixed;
+    top:50%;
+    left:50%;
+  }
+  .popup-close{
+    position: absolute;
+    right: 5px;
+    top:5px;
+    width: 30px;
+    height: 30px;
+    z-index: 9003;
+    background: url("img/popup-close.png") no-repeat;
+  }
+  &.invisible{
+    visibility: hidden;
+    .popup-window{
+      opacity: 0;
+    }
+  }
+}
+.popup-window{
+  background: url("img/texture.jpg") repeat;
+  .jspVerticalBar
+  {
+    width: 8px;
+    height: 100%;
+    background: transparent;
+    .jspTrack{
+      background: url("img/slide-scrollpane.png") repeat-y;
+      background-position: 0 0;
+      .jspDrag{
+        background: url("img/slide-scrollpane.png") no-repeat;
+        background-position: -8px 0;
+      }
+    }
+  }
+}
+.popup-invite{
+  .popup-inner{
+    width: 660px;
+    height: 480px;
+    background: url("img/popup-invite-image.png") repeat;
+  }
+}
+.popup-rule{
+  .popup-inner{
+    width: 660px;
+    height: 400px;
+    padding-top: 50px;
+    h2{
+      width: 130px;
+      height: 30px;
+      margin: 0 auto 30px;
+      background: url("img/popup-rule-header.png") no-repeat;
+    }
+    .rule-text-container{
+      border-top: 1px solid #690010;
+      border-bottom: 1px solid #690010;
+      padding: 10px;
+      margin: 0 40px;
+      position: relative;
+      color: #690010;
+      font-size: 14px;
+      line-height: 30px;
+      .rule-text-inner{
+        height: 270px;
+        position: relative;
+        overflow: auto;
+      }
+      .rule-text{
+        position: relative;
+      }
+      h3{
+        font-weight: bold;
+      }
+      p{
+        padding-left: 1em;
+        &.rights{
+          margin-top: 10px;
+          padding-left: 0;
+          font-size: 12px;
+          line-height: 20px;
+          color: #444444;
+        }
+      }
+      ul, ol{
+        padding-left: 1em;
+        p{
+          padding-left: 1em;
+        }
+      }
+      strong{
+        font-weight: bold;
+      }
+      table{
+        margin: 0 auto;
+        width: 300px;
+        th,td{
+          text-align: center;
+          border: 1px solid #444444;
+          background-color: #ffffff;
+        }
+        th{
+          background-color: #dddddd;
+          color: #000000;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+.popup-list{
+  .popup-inner{
+    width: 660px;
+    height: 400px;
+    padding-top: 50px;
+    h2{
+      width: 130px;
+      height: 30px;
+      margin: 0 auto 30px;
+      background: url("img/popup-list-header.png") no-repeat;
+    }
+    .tabs-hide{
+      display: none;
+    }
+    .dates{
+      margin: 0 60px;
+      height: 30px;
+      a{
+        float: left;
+        display: inline;
+        width: 90px;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: bold;
+        font-style: italic;
+        text-decoration: none;
+        text-align: center;
+        color: #ffffff;
+        background-color: #808080;
+        margin: 6px 6px 0 0;
+        height: 24px;
+        &.highlight{
+          line-height: 30px;
+          height: 30px;
+          background-color: #690010;
+          margin-top: 0;
+        }
+      }
+    }
+    .list-container{
+      border-top: 1px solid #690010;
+      border-bottom: 1px solid #690010;
+      padding: 10px;
+      margin: 0 40px;
+      position: relative;
+      color: #690010;
+      font-size: 18px;
+      line-height: 40px;
+      .list-inner{
+        height: 270px;
+        position: relative;
+        overflow: hidden;
+        ul{
+          width: 480px;
+          margin: 0 auto;
+          overflow: auto;
+          li{
+            text-align: center;
+            overflow: auto;
+            .phone{
+              float: left;
+              width: 160px;
+              margin-right: 40px;
+            }
+            .prize{
+              float: left;
+              width: 280px;
+            }
+            &:nth-child(even){
+              .phone,
+              .prize{
+                background-color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.popup-cuisine{
+  .popup-inner{
+    width: 610px;
+    height: 440px;
+    padding: 25px;
+    color: #690010;
+    h2{
+      font-size: 30px;
+      line-height: 30px;
+      height: 30px;
+      font-weight: bold;
+    }
+    h3{
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: bold;
+      padding-bottom: 12px;
+      margin-bottom: 12px;
+      border-bottom: 1px solid #690010;
+    }
+    .pull-left{
+      float: left;
+      width: 330px;
+      height: 350px;
+      .dialog{
+        height: 240px;
+        p{
+          font-size: 14px;
+          line-height: 20px;
+          margin-bottom: 20px;
+        }
+      }
+      .place{
+        p{
+          font-size: 18px;
+          line-height: 20px;
+          margin-bottom: 10px;
+          color: #000;
+          font-weight: bold;
+        }
+        a{
+          width: 135px;
+          height: 75px;
+          display: block;
+          float: left;
+          margin-right: 30px;
+          background: #ffffff;
+          .box-shadow(0 0 5px rgba(0,0,0,0.4));
+          img{
+            width: auto;
+            height: 75px;
+            display: block;
+          }
+        }
+      }
+    }
+    .pull-right{
+      float: right;
+      width: 260px;
+      height: 350px;
+      position: relative;
+      img.dish{
+        display: block;
+        width: 235px;
+        height: auto;
+        border: 3px solid #ffffff;
+        .box-shadow(0 0 10px rgba(0,0,0,0.4));
+      }
+      p{
+        color: #000;
+        font-size: 12px;
+        margin-top: 5px;
+        line-height: 20px;
+      }
+      .wine{
+        position: absolute;
+        right: -20px;
+        bottom:-25px;
+        display: block;
+        width: 70px;
+        height: 270px;
+        img{
+          display: block;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+.popup-share-weixin{
+  .popup-inner{
+    width: 320px;
+    height: 240px;
+    h2{
+      color: #690010;
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 40px;
+      text-align: center;
+    }
+    .qr-code{
+      width: 160px;
+      height: 160px;
+      margin: 20px auto;
+      background: url("img/share-weixin-code.png") no-repeat;
+    }
+  }
+}

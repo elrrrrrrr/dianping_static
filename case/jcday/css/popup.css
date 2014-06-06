@@ -1,0 +1,372 @@
+/**
+ * LESS CSS Created with WebStorm.
+ * Author: Jerry
+ * Date: 14-4-3
+ */
+body {
+  _position: relative;
+  _overflow: hidden;
+}
+.floating .inner {
+  width: 1000px;
+  margin: 0 auto;
+}
+.floating .inner .floating-tab {
+  _position: absolute;
+  _top: expression( ( 50 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+  width: 185px;
+  height: 212px;
+  margin-left: 1020px;
+  z-index: 100;
+  background: url("img/floating-tab.png") no-repeat;
+}
+.floating .inner > .floating-tab {
+  position: fixed;
+  top: 50px;
+}
+.floating .inner a {
+  display: block;
+  width: 185px;
+  height: 52px;
+  margin-bottom: 1px;
+}
+.popup-framework {
+  display: none;
+}
+.popup-overlay {
+  font-family: "microsoft yahei", "hiragino sans gb", sans-serif;
+  _position: absolute;
+  _left: 0;
+  _top: 0;
+  z-index: 9000;
+}
+.popup-overlay .popup-mask {
+  _position: absolute;
+  _top: expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+  _width: expression( ( document.documentElement.clientWidth > 1100 ? document.documentElement.clientWidth : 1100) + 'px');
+  _height: expression( document.documentElement.clientHeight );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66000000', endColorstr='#66000000');
+  z-index: 9001;
+  zoom: 1;
+}
+.popup-overlay > .popup-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.popup-overlay .popup-window {
+  _position: absolute;
+  _top: expression( ( document.documentElement.clientHeight / 2 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+  _left: expression( ( document.documentElement.clientWidth / 2 + ( ignoreMe = document.documentElement.scrollLeft) ) + 'px' );
+  width: 400px;
+  height: 300px;
+  padding: 1px;
+  background-color: #fff;
+  z-index: 9002;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -ms-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+.popup-overlay > .popup-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+.popup-overlay .popup-close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 30px;
+  height: 30px;
+  z-index: 9003;
+  background: url("img/popup-close.png") no-repeat;
+}
+.popup-overlay.invisible {
+  visibility: hidden;
+}
+.popup-overlay.invisible .popup-window {
+  opacity: 0;
+}
+.popup-window {
+  background: url("img/texture.jpg") repeat;
+}
+.popup-window .jspVerticalBar {
+  width: 8px;
+  height: 100%;
+  background: transparent;
+}
+.popup-window .jspVerticalBar .jspTrack {
+  background: url("img/slide-scrollpane.png") repeat-y;
+  background-position: 0 0;
+}
+.popup-window .jspVerticalBar .jspTrack .jspDrag {
+  background: url("img/slide-scrollpane.png") no-repeat;
+  background-position: -8px 0;
+}
+.popup-invite .popup-inner {
+  width: 660px;
+  height: 480px;
+  background: url("img/popup-invite-image.png") repeat;
+}
+.popup-rule .popup-inner {
+  width: 660px;
+  height: 400px;
+  padding-top: 50px;
+}
+.popup-rule .popup-inner h2 {
+  width: 130px;
+  height: 30px;
+  margin: 0 auto 30px;
+  background: url("img/popup-rule-header.png") no-repeat;
+}
+.popup-rule .popup-inner .rule-text-container {
+  border-top: 1px solid #690010;
+  border-bottom: 1px solid #690010;
+  padding: 10px;
+  margin: 0 40px;
+  position: relative;
+  color: #690010;
+  font-size: 14px;
+  line-height: 30px;
+}
+.popup-rule .popup-inner .rule-text-container .rule-text-inner {
+  height: 270px;
+  position: relative;
+  overflow: auto;
+}
+.popup-rule .popup-inner .rule-text-container .rule-text {
+  position: relative;
+}
+.popup-rule .popup-inner .rule-text-container h3 {
+  font-weight: bold;
+}
+.popup-rule .popup-inner .rule-text-container p {
+  padding-left: 1em;
+}
+.popup-rule .popup-inner .rule-text-container p.rights {
+  margin-top: 10px;
+  padding-left: 0;
+  font-size: 12px;
+  line-height: 20px;
+  color: #444444;
+}
+.popup-rule .popup-inner .rule-text-container ul,
+.popup-rule .popup-inner .rule-text-container ol {
+  padding-left: 1em;
+}
+.popup-rule .popup-inner .rule-text-container ul p,
+.popup-rule .popup-inner .rule-text-container ol p {
+  padding-left: 1em;
+}
+.popup-rule .popup-inner .rule-text-container strong {
+  font-weight: bold;
+}
+.popup-rule .popup-inner .rule-text-container table {
+  margin: 0 auto;
+  width: 300px;
+}
+.popup-rule .popup-inner .rule-text-container table th,
+.popup-rule .popup-inner .rule-text-container table td {
+  text-align: center;
+  border: 1px solid #444444;
+  background-color: #ffffff;
+}
+.popup-rule .popup-inner .rule-text-container table th {
+  background-color: #dddddd;
+  color: #000000;
+  font-weight: bold;
+}
+.popup-list .popup-inner {
+  width: 660px;
+  height: 400px;
+  padding-top: 50px;
+}
+.popup-list .popup-inner h2 {
+  width: 130px;
+  height: 30px;
+  margin: 0 auto 30px;
+  background: url("img/popup-list-header.png") no-repeat;
+}
+.popup-list .popup-inner .tabs-hide {
+  display: none;
+}
+.popup-list .popup-inner .dates {
+  margin: 0 60px;
+  height: 30px;
+}
+.popup-list .popup-inner .dates a {
+  float: left;
+  display: inline;
+  width: 90px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: none;
+  text-align: center;
+  color: #ffffff;
+  background-color: #808080;
+  margin: 6px 6px 0 0;
+  height: 24px;
+}
+.popup-list .popup-inner .dates a.highlight {
+  line-height: 30px;
+  height: 30px;
+  background-color: #690010;
+  margin-top: 0;
+}
+.popup-list .popup-inner .list-container {
+  border-top: 1px solid #690010;
+  border-bottom: 1px solid #690010;
+  padding: 10px;
+  margin: 0 40px;
+  position: relative;
+  color: #690010;
+  font-size: 18px;
+  line-height: 40px;
+}
+.popup-list .popup-inner .list-container .list-inner {
+  height: 270px;
+  position: relative;
+  overflow: hidden;
+}
+.popup-list .popup-inner .list-container .list-inner ul {
+  width: 480px;
+  margin: 0 auto;
+  overflow: auto;
+}
+.popup-list .popup-inner .list-container .list-inner ul li {
+  text-align: center;
+  overflow: auto;
+}
+.popup-list .popup-inner .list-container .list-inner ul li .phone {
+  float: left;
+  width: 160px;
+  margin-right: 40px;
+}
+.popup-list .popup-inner .list-container .list-inner ul li .prize {
+  float: left;
+  width: 280px;
+}
+.popup-list .popup-inner .list-container .list-inner ul li:nth-child(even) .phone,
+.popup-list .popup-inner .list-container .list-inner ul li:nth-child(even) .prize {
+  background-color: #fff;
+}
+.popup-cuisine .popup-inner {
+  width: 610px;
+  height: 440px;
+  padding: 25px;
+  color: #690010;
+}
+.popup-cuisine .popup-inner h2 {
+  font-size: 30px;
+  line-height: 30px;
+  height: 30px;
+  font-weight: bold;
+}
+.popup-cuisine .popup-inner h3 {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: bold;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #690010;
+}
+.popup-cuisine .popup-inner .pull-left {
+  float: left;
+  width: 330px;
+  height: 350px;
+}
+.popup-cuisine .popup-inner .pull-left .dialog {
+  height: 240px;
+}
+.popup-cuisine .popup-inner .pull-left .dialog p {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+.popup-cuisine .popup-inner .pull-left .place p {
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  color: #000;
+  font-weight: bold;
+}
+.popup-cuisine .popup-inner .pull-left .place a {
+  width: 135px;
+  height: 75px;
+  display: block;
+  float: left;
+  margin-right: 30px;
+  background: #ffffff;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+.popup-cuisine .popup-inner .pull-left .place a img {
+  width: auto;
+  height: 75px;
+  display: block;
+}
+.popup-cuisine .popup-inner .pull-right {
+  float: right;
+  width: 260px;
+  height: 350px;
+  position: relative;
+}
+.popup-cuisine .popup-inner .pull-right img.dish {
+  display: block;
+  width: 235px;
+  height: auto;
+  border: 3px solid #ffffff;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.popup-cuisine .popup-inner .pull-right p {
+  color: #000;
+  font-size: 12px;
+  margin-top: 5px;
+  line-height: 20px;
+}
+.popup-cuisine .popup-inner .pull-right .wine {
+  position: absolute;
+  right: -20px;
+  bottom: -25px;
+  display: block;
+  width: 70px;
+  height: 270px;
+}
+.popup-cuisine .popup-inner .pull-right .wine img {
+  display: block;
+  height: 100%;
+}
+.popup-share-weixin .popup-inner {
+  width: 320px;
+  height: 240px;
+}
+.popup-share-weixin .popup-inner h2 {
+  color: #690010;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 40px;
+  text-align: center;
+}
+.popup-share-weixin .popup-inner .qr-code {
+  width: 160px;
+  height: 160px;
+  margin: 20px auto;
+  background: url("img/share-weixin-code.png") no-repeat;
+}

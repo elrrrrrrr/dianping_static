@@ -1,0 +1,155 @@
+/**
+ * LESS CSS Created with WebStorm.
+ * Author: Jerry
+ * Date: 14-4-3
+ */
+@import "../../css/mixins";
+
+.popup-framework{
+  display: none;
+}
+.popup-overlay{
+  font-family: "microsoft yahei", "hiragino sans gb", sans-serif;
+  _position: absolute;
+  _left:0;
+  _top:0;
+  z-index: 9000;
+  .popup-mask{
+    _position:absolute;
+    _top: ~"expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' )";
+    _width: ~"expression( ( document.documentElement.clientWidth > 1100 ? document.documentElement.clientWidth : 1100) + 'px')";
+    _height: ~"expression( document.documentElement.clientHeight )";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66000000', endColorstr='#66000000');
+    z-index: 9001;
+    zoom:1;
+  }
+  > .popup-mask{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    background-color: rgba(0,0,0,0.4);
+  }
+  .popup-window{
+    _position:absolute;
+    _top: ~"expression( ( document.documentElement.clientHeight / 2 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' )";
+    _left:~"expression( ( document.documentElement.clientWidth / 2 + ( ignoreMe = document.documentElement.scrollLeft) ) + 'px' )";
+    width: 400px;
+    height: 300px;
+    padding: 1px;
+    background-color: #fff;
+
+    z-index: 9002;
+    opacity: 1;
+    -webkit-transition: opacity 0.5s ease;
+    -moz-transition: opacity 0.5s ease;
+    -ms-transition: opacity 0.5s ease;
+    -o-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+    .box-shadow(0 0 20px rgba(0,0,0,0.6));
+  }
+  > .popup-window{
+    position: fixed;
+    top:50%;
+    left:50%;
+    .transform(translate3d(0,0,0));
+  }
+  .popup-close{
+    position: absolute;
+    right: 5px;
+    top:5px;
+    width: 20px;
+    height: 20px;
+    z-index: 9003;
+    background: url("img/close-button.png") no-repeat;
+    background-size: 20px 20px;
+  }
+  &.invisible{
+    visibility: hidden;
+    .popup-window{
+      opacity: 0;
+    }
+  }
+}
+
+.popup-window{
+  width: 85%;
+  height: auto;
+  background: none;
+}
+.popup-prize{
+  background: #e7e7e7;
+  border: 1px solid #000;
+  .border-radius(5px, 5px, 5px, 5px);
+  .popup-inner{
+    width: 260px;
+    padding: 20px 10px;
+    h2{
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: bold;
+      color: #690010;
+      text-align: center;
+    }
+    h3{
+      font-size: 14px;
+      line-height: 20px;
+      text-align: center;
+      padding: 10px 0;
+      span{
+        font-size: 16px;
+        color: #690010;
+      }
+    }
+    p{
+      font-size: 14px;
+      line-height: 20px;
+      color: #690010;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    a{
+      display: block;
+      margin: 20px auto 0;
+      width: 80%;
+      border: 2px solid #808080;
+      background-color: #c52606;
+      text-align: center;
+      color: #fff;
+      font-size: 18px;
+      line-height: 36px;
+      font-weight: bold;
+      text-decoration: none;
+      text-shadow: 0 -1px #000000;
+      .border-radius(0.5em, 0.5em, 0.5em, 0.5em)
+    }
+    label{
+      display: block;
+      font-size: 14px;
+      line-height: 20px;
+      color: #888;
+      padding: 10px 0;
+      width: 44px;
+    }
+    input[type=text]{
+      display: block;
+      margin:-40px 0 10px 44px;
+      width: 200px;
+      border: 1px solid #808080;
+      font-size: 18px;
+      line-height: 24px;
+      text-decoration: none;
+      height: 24px;
+      padding: 7px;
+      -webkit-box-sizing: content-box;
+      -moz-box-sizing: content-box;
+      box-sizing: content-box;
+      .border-radius(0.5em, 0.5em, 0.5em, 0.5em);
+      &:focus{
+        outline: 0 none;
+      }
+    }
+  }
+}

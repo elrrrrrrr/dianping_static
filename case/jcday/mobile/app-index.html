@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="css/index.css"/>
+  <title>快来抢DP团购券</title>
+</head>
+<body>
+<div class="wrap">
+  <div class="title">
+    <img src="css/img/index/title.png" alt=""/>
+  </div>
+  <div class="lottery">
+    <div class="grid-area">
+      <div id="grid"></div>
+      <div class="float-layer"></div>
+    </div>
+  </div>
+  <a class="win-more" href="lottery.html">
+    <img src="css/img/index/button.png" alt=""/>
+  </a>
+
+  <div class="rule">
+    <h2>活动规则</h2>
+    <p>1.参与活动，就有机会获得【9元点评团购券】</p>
+    <p>2.【9元点评团购券】将于10个工作日后发给您</p>
+    <p>3.每人每天有5次抽奖机会</p>
+    <p>4.参与杰卡斯分享活动有更多精彩奖品，包含免费霸王餐，中网VIP门票，冲锋衣，球包等等</p>
+  </div>
+</div>
+<script id="popup-prize" type="text/template">
+  <div class="popup-inner">
+    {%if rank %}
+    <h2>恭喜您！中奖啦！</h2>
+    <h3>您的奖品为<span>${prizeName}</span></h3>
+    {%else%}
+    <h2>没有中奖，再接再厉！</h2>
+    {%/if%}
+    <p>参加杰卡斯真情相约，逢9必聚，<br>赢更多奖品，<br>更赢北京中网VIP观赏礼遇。</p>
+
+    <a class="button-send" href="lottery.html">赢取更多奖品</a>
+  </div>
+</script>
+
+<script src="../js/modernizr.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

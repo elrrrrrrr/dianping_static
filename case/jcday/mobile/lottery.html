@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="css/mobile.css"/>
+  <title>杰卡斯真情相约|逢9必聚</title>
+</head>
+<body>
+<div class="wrap">
+  <div class="logo">
+    <img src="css/img/top-logo-mobile.png" alt="杰卡斯"/>
+  </div>
+  <div class="lottery">
+    <div class="title">
+      <img src="css/img/title.png" alt="杰卡斯"/>
+    </div>
+    <h2>杰卡斯欢聚日，出来见面吧！</h2>
+
+    <p>杰卡斯为您准备精彩好礼，让聚会更开心！<br>
+      <span>点击下方纸牌</span>即可抽奖！<br>
+      通过微信邀约好友聚会，<br>
+      更有机会赢<span>好友相聚、杰卡斯买单，及2014北京中网VIP观赏礼遇</span>！</p>
+
+    <div class="lottery-zone">
+      <div class="poker">
+        <div class="front">
+          <img src="css/img/poker-front-hazure.png" alt=""/>
+        </div>
+        <div class="back">
+          <img src="css/img/poker-back.png" alt=""/>
+        </div>
+      </div>
+      <div class="poker">
+        <div class="front">
+          <img src="css/img/poker-front-hazure.png" alt=""/>
+        </div>
+        <div class="back">
+          <img src="css/img/poker-back.png" alt=""/>
+        </div>
+      </div>
+      <div class="poker">
+        <div class="front">
+          <img src="css/img/poker-front-hazure.png" alt=""/>
+        </div>
+        <div class="back">
+          <img src="css/img/poker-back.png" alt=""/>
+        </div>
+      </div>
+      <div class="poker">
+        <div class="front">
+          <img src="css/img/poker-front-hazure.png" alt=""/>
+        </div>
+        <div class="back">
+          <img src="css/img/poker-back.png" alt=""/>
+        </div>
+      </div>
+      <div class="poker">
+        <div class="front">
+          <img src="css/img/poker-front-hazure.png" alt=""/>
+        </div>
+        <div class="back">
+          <img src="css/img/poker-back.png" alt=""/>
+        </div>
+      </div>
+      <div class="poker">
+        <div class="front">
+          <img src="css/img/poker-front-hazure.png" alt=""/>
+        </div>
+        <div class="back">
+          <img src="css/img/poker-back.png" alt=""/>
+        </div>
+      </div>
+    </div>
+
+    <a class="send-invitation" href="make-invitation.html">
+      <img src="css/img/send-invitation.png" alt=""/>
+    </a>
+
+    <p>关注官方微信，<br>
+      即可参与
+      <i>每月9日、19日、29日</i>
+      抽奖，<br>
+      赢缤纷好礼。</p>
+
+    <p>发现更多精彩：<br>
+      1.长按保存二维码，在“扫一扫”功能选择“从相册选择二维码”。<br>
+      2.搜索<i>“杰卡斯真情有我”</i>
+    </p>
+    <img class="qr-code" src="css/img/jacobs-qrcode.png" alt=""/>
+
+    <div class="rule" id="rule">
+      <a class="rule-button" href="#rule"><span>活动规则</span></a>
+
+      <div class="rule-text">
+        <h2>活动时间：</h2>
+
+        <p>2014年05月01日0:00起至2014年06月30日24:00止；</p>
+
+        <h2>参与方式：</h2>
+
+        <p>第一步：访问杰卡斯大众点评活动网站参与“杰卡斯真情相遇，逢9必聚——相约中餐厅”，扫描二维码（或通过大众点评APP活动入口）访问手机版活动界面；</p>
+
+        <p>第二步：使用点评账号登录；</p>
+
+        <p>第三步：点击纸牌，参与即时抽奖；</p>
+
+        <p>第四步：制作邀请函：</p>
+
+        <p>（1）选择聚会日期；</p>
+
+        <p>（2）选择聚会时间；</p>
+
+        <p>（3）选择合作餐厅作或手动输入地点信息，作为聚会场所；</p>
+
+        <p>第五步：将邀请函分享到微信朋友圈，或直接发送给微信好友；</p>
+
+        <p>第六步：邀请函发送成功后保存优惠券、继续抽奖或关注杰卡斯官方微信号；</p>
+
+        <p>（1）如选择合作餐厅作为聚会场所，即可获得对应电子优惠券一张，长按优惠券保存到手机并前往该合作餐厅使用；</p>
+
+        <p>（2）点击“继续抽奖”，返回即时抽奖界面；</p>
+
+        <p>（3）扫描二维码或搜索订阅号【杰卡斯真情有我】，关注杰卡斯官方微信账号。 </p>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+<script id="popup-prize" type="text/template">
+  <div class="popup-inner">
+    {%if rank %}
+    <h2>恭喜您！中奖啦！</h2>
+
+    <h3>您的奖品为<span>${prizeName}</span></h3>
+    {%if rank > 1 %}
+
+    <p>请填写您的个人信息，以便我们联系及发送奖品。</p>
+
+    <label for="userName">姓名：</label>
+    <input type="text" id="userName"/>
+    <label for="mobileNo">手机：</label>
+    <input type="text" id="mobileNo"/>
+    <label for="address">地址：</label>
+    <input type="text" id="address"/>
+    <a class="send-info" href="javascript:void(0);">发送信息</a>
+    {%else%}
+    <p>通过微信发邀约，还能提升中奖率噢！<br>更赢北京中网VIP观赏礼遇。</p>
+    <a class="button-more" href="javascript:void(0);">再抽一次</a>
+    <a class="button-send" href="make-invitation.html">发邀约</a>
+    {%/if%}
+    {%else%}
+    <h2>没有中奖，再接再厉！</h2>
+    <p>通过微信发邀约，还能提升中奖率噢！<br>更赢北京中网VIP观赏礼遇。</p>
+    <a class="button-more" href="javascript:void(0);">再抽一次</a>
+    <a class="button-send" href="make-invitation.html">发邀约</a>
+    {%/if%}
+  </div>
+</script>
+
+<script src="../js/modernizr.min.js"></script>
+<script src="js/lottery.js"></script>
+</body>
+</html>
