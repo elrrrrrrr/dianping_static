@@ -1,3 +1,126 @@
+
+
+.guide3-next {
+  height: 20px;
+  width: 70px;
+  position: absolute;
+  bottom: 56px;
+  left: 439px;
+  cursor: pointer;
+}
+
+
+.share-tmall {
+  display: inline-block;
+  vertical-align: top;
+  width: 30px;
+  height: 30px;
+  margin-left: 115px;
+}
+
+.result-2-a {
+  height: 400px;
+  width: 100%;
+  background: url("img/jh4-a.jpg") center no-repeat;
+  display: none;
+}
+
+.result-2-b {
+  height: 400px;
+  width: 100%;
+  background: url("img/jh3-b.jpg") center no-repeat;
+  display: none;
+}
+
+.result-2-b {
+  height: 400px;
+  width: 100%;
+  background: url("img/jh3-c.jpg") center no-repeat;
+  display: none;
+}
+
+.result-a {
+  height: 400px;
+  width: 100%;
+  background: url("img/jh3-a.jpg") center no-repeat;
+  display: none;
+}
+
+.result-b {
+  height: 400px;
+  width: 100%;
+  background: url("img/jh3-b.jpg") center no-repeat;
+  display: none;
+}
+
+.result-c {
+  height: 400px;
+  width: 100%;
+  background: url("img/jh3-c.jpg") center no-repeat;
+  display: none;
+}
+
+.guide3 {
+  display: none;
+}
+
+.guide3-a {
+  height: 400px;
+  width: 100%;
+  background: url("img/jh2-a.jpg") center no-repeat;
+  display: none;
+}
+
+.guide3-b {
+  height: 400px;
+  width: 100%;
+  background: url("img/jh2-b.jpg") center no-repeat;
+  display: none;
+}
+
+.guide3-c {
+  height: 400px;
+  width: 100%;
+  background: url("img/jh2-c.jpg") center no-repeat;
+  display: none;
+}
+
+.guide4 {
+  height: 400px;
+  width: 100%;
+  background: url("img/jh3.jpg") center no-repeat;
+  display: none;
+}
+.guide5 {
+  height: 400px;
+  width: 100%;
+  background: url("img/jh4.jpg") center no-repeat;
+  display: none;
+  
+}
+
+.guide5-select {
+  width: 400px;
+  height: 235px;
+  display: block;
+  position: absolute;
+  top: 126px;
+  left: 268px;
+}
+
+.guide5-select > li{
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin-left: 18px;
+  margin-right: 17px;
+  margin-bottom: 31px;
+  cursor:pointer;
+}
+
+.guide5-select > li:nth-child(3n) {
+  margin-right: 0px;
+}
 /**
  * LESS CSS Created with WebStorm.
  * Author: Jerry
@@ -865,6 +988,14 @@ body {
   margin: 5px auto 0;
   background: url("img/slide-button-view-detail.png") no-repeat;
 }
+
+#slide4 .guide1 {
+  background: url("img/jh1.jpg") center no-repeat;
+}
+#slide4 .guide2 {
+  background: url("img/jh2.jpg") center no-repeat;
+  display: none;
+}
 #slide4 h1.text-wrap {
   width: 620px;
   height: 60px;
@@ -895,26 +1026,26 @@ body {
   height: 500px;
 }
 #slide4 ul.item-list {
-  height: 100%;
+  /*height: 100%;
   width: 10000%;
   position: relative;
   -webkit-transition: left 1s ease;
   -moz-transition: left 1s ease;
   -o-transition: left 1s ease;
-  transition: left 1s ease;
+  transition: left 1s ease;*/
 }
 #slide4 ul.item-list li {
-  float: left;
+  /*float: left;
   width: 960px;
-  height: 100%;
+  height: 100%;*/
 }
 #slide4 ul.item-list li .item {
   height: 450px;
   margin: 5px;
-  background: url("img/texture.jpg") repeat;
-  -webkit-box-shadow: 0 0 5px rgba(92, 48, 0, 0.4);
+  /*background: url("img/texture.jpg") repeat;*/
+  /*-webkit-box-shadow: 0 0 5px rgba(92, 48, 0, 0.4);
   -moz-box-shadow: 0 0 5px rgba(92, 48, 0, 0.4);
-  box-shadow: 0 0 5px rgba(92, 48, 0, 0.4);
+  box-shadow: 0 0 5px rgba(92, 48, 0, 0.4);*/
   position: relative;
 }
 #slide4 ul.item-list li .item img {
@@ -925,23 +1056,27 @@ body {
   height: 30px;
   display: block;
   position: absolute;
-  right: 10px;
-  bottom: 10px;
+  left: 260px;
+  bottom: 129px;
   vertical-align: top;
+}
+#share-1-2 {
+  left: 369px!important;
+  bottom: 106px!important;
 }
 #slide4 ul.item-list li .item .share .share-sina {
   display: inline-block;
   vertical-align: top;
   width: 30px;
   height: 30px;
-  background: url("img/slide-4-image-share-buttons.png") no-repeat 0 0;
+  
 }
 #slide4 ul.item-list li .item .share .share-weixin {
   display: inline-block;
   vertical-align: top;
   width: 30px;
   height: 30px;
-  background: url("img/slide-4-image-share-buttons.png") no-repeat -30px 0;
+  
 }
 #slide4 ul.item-list li .guide1 {
   height: 400px;
@@ -1014,18 +1149,19 @@ body {
   color: #888;
   padding: 0 20px 20px;
 }
+
 #slide4 ul.item-list li .guide2 ul {
-  margin: 14px 0 0 2px;
-  overflow: auto;
+  /*margin: 14px 0 0 2px;
+  overflow: auto;*/
 }
 #slide4 ul.item-list li .guide2 ul li {
-  margin-right: -1px;
+  /*margin-right: -1px;
   border-left: 1px solid #690010;
   border-right: 1px solid #690010;
   float: left;
   width: 210px;
   padding: 0 10px;
-  height: 190px;
+  height: 190px;*/
 }
 #slide4 ul.item-list li .guide2 ul li h3 {
   width: 210px;
@@ -1325,6 +1461,7 @@ body {
 
 .carousel-guide{
   position: relative;
+  background: url("img/texture.jpg") repeat;
 }
 
 .ppgs_img{
@@ -1332,3 +1469,55 @@ body {
   left: 0px;
   transition: left 0.8s;
 }
+
+.guide1-select{
+  display: block;
+  display: block;
+  margin: 0 auto;
+  width: 750px;
+  margin-top:110px;
+}
+
+.guide1-select >li {
+  display: inline-block;
+  width: 240px;
+  height: 254px;
+  cursor: pointer;
+  margin-right: 9px;
+
+}
+
+.guide1-select >li:last-child{
+  margin-right: 0px;
+};
+
+.guide1-select li:hover{
+  background-color: black;
+};
+
+
+.guide2-select {
+  display: block;
+  margin: 0 auto;
+  width: 750px;
+  margin-top:110px;
+}
+
+.guide2-select >li {
+  display: inline-block;
+  width: 240px;
+  height: 254px;
+  cursor: pointer;
+  margin-right: 9px;
+
+}
+
+
+.guide2-select >li:last-child{
+  margin-right: 0px;
+};
+
+.guide2-select li:hover{
+  background-color: black;
+};
+
