@@ -1,0 +1,471 @@
+/**
+ * LESS CSS Created with WebStorm.
+ * Author: Jerry
+ * Date: 14-4-24
+ */
+
+@import "mixins";
+@import "reset";
+
+.fluid-banner(
+  @content-width: 1000px,
+  @image-width: 1600px,
+  @image-height:0,
+  @image-url:"") {
+  position: relative;
+  overflow: hidden;
+  min-width: @content-width;
+  .block {
+    overflow: visible;
+    position: relative;
+    width: 100%;
+    .extend-background {
+      width: (@image-width - @content-width) / 2;
+      height: 100%;
+      position: absolute;
+      background: url(@image-url) no-repeat scroll 0 0 transparent;
+    }
+    .block-left {
+      margin-left: -(@content-width / 2);
+      width: 50%;
+      height: @image-height;
+      position: absolute;
+      top: 0;
+      left: 0;
+      .extend-background {
+        background-position: 0 50%;
+        top: 0;
+        right: 0;
+      }
+    }
+    .block-right {
+      margin-right: -(@content-width / 2);
+      width: 50%;
+      height: @image-height;
+      position: absolute;
+      top: 0;
+      right: 0;
+      .extend-background {
+        background-position: 100% 50%;
+        top: 0;
+        left: 0;
+      }
+    }
+    .block-center {
+      margin: 0 auto;
+      width: @content-width;
+      height: @image-height;
+      position: relative;
+      background: url(@image-url) repeat scroll 50% 50% transparent;
+    }
+  }
+}
+.jspContainer {
+  overflow: hidden;
+  position: relative;
+  outline: 0 none;
+}
+.jspPane {
+  position: absolute;
+}
+.jspVerticalBar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 16px;
+  height: 100%;
+}
+.jspHorizontalBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 16px;
+}
+.jspVerticalBar *,
+.jspHorizontalBar * {
+  margin: 0;
+  padding: 0;
+}
+.jspCap {
+  display: none;
+}
+.jspHorizontalBar .jspCap {
+  float: left;
+}
+.jspTrack {
+  background: #dde;
+  position: relative;
+}
+.jspDrag {
+  background: #bbd;
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag {
+  float: left;
+  height: 100%;
+}
+.jspArrow {
+  background: #50506d;
+  text-indent: -20000px;
+  display: block;
+  cursor: pointer;
+}
+.jspArrow.jspDisabled {
+  cursor: default;
+  background: #80808d;
+}
+.jspVerticalBar .jspArrow {
+  height: 16px;
+}
+.jspHorizontalBar .jspArrow {
+  width: 16px;
+  float: left;
+  height: 100%;
+}
+.jspVerticalBar .jspArrow:focus {
+  outline: none;
+}
+.jspCorner {
+  background: #eeeef4;
+  float: left;
+  height: 100%;
+}
+
+.header {
+  min-width: 1340px;
+}
+.footer-static {
+  min-width: 1340px;
+  padding: 20px 0;
+  text-align: center;
+  background-color: #ffffff;
+  ul {
+    margin-bottom: 10px;
+  }
+  li {
+    display: inline;
+    margin-right: 8px;
+    color: #CCC;
+    a {
+      margin-right: 10px;
+      color: #999;
+      text-decoration: none;
+      &:hover{
+        color: #C00;
+      }
+    }
+  }
+  p{
+    color: #999;
+    a{
+      color: #999;
+      text-decoration: none;
+      &:hover{
+        color: #C00;
+      }
+    }
+  }
+}
+
+body{
+  min-width: 1340px;
+  background-color: #FFCC35;
+}
+
+.main-content {
+  font-family: "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
+
+  .main-header {
+    .fluid-banner(1100px, 1600px, 570px, "img/banner.jpg");
+  }
+  .section1{
+    .fluid-banner(1100px, 1600px, 480px, "img/block1.jpg");
+    .text-wrap{
+      right:40px;
+      top: 50px;
+      width: 300px;
+      height: 400px;
+      h1{
+        text-align: center;
+      }
+    }
+    a.promo-button{
+      right: 0;
+      bottom: 10px;
+    }
+  }
+  .section2{
+    .fluid-banner(1100px, 1600px, 720px, "img/block2.jpg");
+    .text-wrap{
+      left:120px;
+      top: 60px;
+      width: 220px;
+      height: 500px;
+    }
+    a.promo-button{
+      right: 290px;
+      bottom: 70px;
+    }
+  }
+  .section1,
+  .section2{
+    .text-wrap{
+      position: absolute;
+      h1{
+        padding: 10px 0;
+        font-size: 20px;
+        line-height: 30px;
+        span{
+          color: #dcb155;
+        }
+      }
+      p{
+        font-size: 16px;
+        line-height: 25px;
+        margin-bottom: 30px;
+      }
+    }
+    a.promo-button{
+      .border-radius(20px,20px,20px,20px);
+      background-color: #b90016;
+      display: block;
+      color: #fff;
+      font-size: 16px;
+      line-height: 40px;
+      width: 160px;
+      height: 40px;
+      text-decoration: none;
+      text-align: center;
+      position: absolute;
+    }
+  }
+  .section3{
+    width: 1340px;
+    margin: 0 auto;
+    .block{
+      padding-bottom: 60px;
+    }
+  }
+}
+.search-bar{
+  position: relative;
+  z-index: 2;
+  width: 1000px;
+  margin: 0 auto 40px;
+  h1{
+    color: #fff;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 10px;
+  }
+  .search-group{
+    .clearfix();
+  }
+  .button{
+    position: relative;
+    float: left;
+    margin-right: 2px;
+    width: 248px;
+    height: 50px;
+    &.button-search{
+      background-color: #ba0017;
+      color: #fff;
+      font-size: 20px;
+      line-height: 50px;
+      text-align: center;
+      text-decoration: none;
+      float: right;
+      margin-right: 0;
+    }
+    a.span{
+      color: #999;
+      display: block;
+      width: 228px;
+      padding: 10px;
+      font-size: 20px;
+      line-height: 30px;
+      background-color: #fff;
+      text-decoration: none;
+    }
+  }
+  .popup{
+    visibility: hidden;
+    position: absolute;
+    width: 248px;
+    height: 500px;
+    top: 50px;
+    left: 0;
+    background-color: lighten(#dcb155, 30%);
+    &.visible{
+      visibility: visible;
+    }
+    ul{
+      position: relative;
+      li{
+        a{
+          color: #999;
+          display: block;
+          padding: 10px;
+          font-size: 20px;
+          line-height: 30px;
+          text-decoration: none;
+          &:hover{
+            color: #fff;
+            background-color: #ba0017;
+          }
+        }
+      }
+    }
+    .jspVerticalBar{
+      width: 8px;
+      .jspTrack{
+        background-color: lighten(#dcb155, 30%);
+      }
+      .jspDrag{
+        background-color: #dcb155;
+      }
+    }
+  }
+}
+
+.shop-list{
+  position: relative;
+  z-index: 1;
+  padding-top: 20px;
+  h1{
+    padding: 10px 20px;
+    line-height: 30px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #ba0017;
+  }
+  width: 1000px;
+  margin: 0 auto;
+  background-color: #fffdf4;
+  ul{
+    padding: 5px;
+    .clearfix();
+    p.no-result{
+      padding: 0 10px;
+      font-size: 20px;
+      line-height: 30px;
+      height: 460px;
+    }
+    .item{
+      float: left;
+      width: 320px;
+      margin: 5px;
+      display: inline;
+      background-color: #fff;
+      a.image{
+        display: block;
+        width: 320px;
+        height: 240px;
+        img{
+          display: block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .info{
+        border-left: 2px solid #fcf7fd;
+        border-right: 2px solid #fcf7fd;
+        border-bottom: 2px solid #fcf7fd;
+        h2{
+          font-size: 20px;
+          line-height: 30px;
+          margin: 0 10px;
+          padding: 10px 0;
+          font-weight: bold;
+          .text-overflow();
+          a{
+            color: #000;
+            text-decoration: none;
+          }
+        }
+        p.type{
+          color: #999;
+          font-size: 14px;
+          line-height: 20px;
+          margin:0 10px;
+          padding-left: 20px;
+          span{
+            padding: 0 5px;
+          }
+          background: url("img/tag.png") no-repeat 0 0;
+        }
+        .promotion{
+          position: relative;
+          border-top: 1px dotted #999;
+          margin: 10px 10px 0 10px;
+          padding: 10px 0;
+          height: 40px;
+          p{
+            color: #999;
+            font-size: 14px;
+            padding-left: 25px;
+            line-height: 20px;
+            height: 40px;
+            width: 150px;
+            background: url("img/promo.png") no-repeat 0 10px;
+          }
+          a.reserve{
+            position: absolute;
+            background-color: #ba0017;
+            color: #fff;
+            text-decoration: none;
+            height: 40px;
+            font-size: 14px;
+            line-height: 40px;
+            text-align: center;
+            width: 110px;
+            right: 0;
+            bottom: 10px;
+            .border-radius(20px,20px,20px,20px);
+          }
+        }
+      }
+    }
+  }
+}
+.pagination{
+  margin-top: 20px;
+  text-align: center;
+  vertical-align: top;
+  ul{
+    display: inline-block;
+    vertical-align: top;
+    li{
+      text-align: center;
+      display: inline-block;
+      vertical-align: top;
+      padding: 0 5px;
+      a{
+        display: block;
+        width: 20px;
+        font-size: 16px;
+        height: 20px;
+        line-height: 20px;
+        padding: 10px;
+        color: #dcb155;
+        text-decoration: none;
+        background-color: #fff;
+        .border-radius(20px, 20px, 20px, 20px);
+      }
+      &.current{
+        a{
+          color: #fff;
+          background-color: #ba0017;
+        }
+      }
+    }
+  }
+  .hide{
+    display: none;
+  }
+}
