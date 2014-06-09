@@ -1,0 +1,544 @@
+@import "base-old.v10.css";
+@import "base.css";
+@import "common.css";
+body {
+  background: #fffcf5 top left repeat;
+}
+.banner-bg {
+  /* height: 994px;
+  */
+}
+.banner-bg .banner, .banner-bg .banner .width1000 {
+  background: url("../images/banner.jpg") center top no-repeat;
+  height: 500px;
+}
+.banner-bg .luckydraw {
+  width: 869px;
+  /* height: 490px;
+  */
+  margin: 5px auto 20px;
+}
+.banner-bg .luckydraw .left {
+  float: left;
+  width: 494px;
+  height: 100%;
+}
+.banner-bg .luckydraw .left .grid-area {
+  width: 454px;
+  position: relative;
+  top: 18px;
+  left: 20px;
+}
+.banner-bg .luckydraw .left .grid-area #grid {
+  z-index: 50;
+}
+.banner-bg .luckydraw .left .grid-area .animating {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.banner-bg .luckydraw .left .grid-area .cell {
+  overflow: hidden;
+}
+.banner-bg .luckydraw .left .grid-area .cell .front, .banner-bg .luckydraw .left .grid-area .cell .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  overflow: hidden;
+  z-index: 0;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.banner-bg .luckydraw .left .grid-area .cell .front img, .banner-bg .luckydraw .left .grid-area .cell .back img {
+  width: 148px;
+  height: 148px;
+  display: block;
+  position: absolute;
+}
+.banner-bg .luckydraw .left .grid-area .cell .front {
+  left: 0;
+  cursor: pointer;
+}
+.banner-bg .luckydraw .left .grid-area .cell .back {
+  right: 0;
+}
+.banner-bg .luckydraw .right {
+  position: relative;
+  float: left;
+  width: 366px;
+  height: 100%;
+  margin-top: 18px;
+}
+.banner-bg .luckydraw .right .rules-box, .banner-bg .luckydraw .right .prize-list {
+  width: 347px;
+  position: relative;
+}
+.banner-bg .luckydraw .right .rules, .banner-bg .luckydraw .right .list {
+  margin: 0 6px 7px;
+}
+.banner-bg .luckydraw .right .rules .title, .banner-bg .luckydraw .right .list .title {
+  /* background-color: #e2e1de;
+  */
+  height: 44px;
+  line-height: 44px;
+  padding-left: 20px;
+  font-size: 18px;
+  color: #240801;
+  position: relative;
+}
+.banner-bg .luckydraw .right .rules .title .text i, .banner-bg .luckydraw .right .list .title .text i {
+  margin-right: 7px;
+}
+.banner-bg .luckydraw .right .rules .title a, .banner-bg .luckydraw .right .list .title a {
+  display: block;
+  text-align: center;
+  font-size: 15px;
+  width: 98px;
+  height: 32px;
+  color: #ff6522;
+  background-color: #fff;
+  line-height: 32px;
+  position: absolute;
+  right: 28px;
+  top: 6px;
+}
+.banner-bg .luckydraw .right .rules .rules-text, .banner-bg .luckydraw .right .list .rules-text, .banner-bg .luckydraw .right .rules .list-text, .banner-bg .luckydraw .right .list .list-text {
+  border-top: 1px solid #ece9e7;
+}
+.banner-bg .luckydraw .right .rules .rules-text ul, .banner-bg .luckydraw .right .list .rules-text ul, .banner-bg .luckydraw .right .rules .list-text ul, .banner-bg .luckydraw .right .list .list-text ul {
+  padding: 8px 20px;
+}
+.banner-bg .luckydraw .right .rules .rules-text ul li, .banner-bg .luckydraw .right .list .rules-text ul li, .banner-bg .luckydraw .right .rules .list-text ul li, .banner-bg .luckydraw .right .list .list-text ul li {
+  font-size: 13px;
+  line-height: 26px;
+}
+.banner-bg .luckydraw .right .rules .rules-text ul li span, .banner-bg .luckydraw .right .list .rules-text ul li span, .banner-bg .luckydraw .right .rules .list-text ul li span, .banner-bg .luckydraw .right .list .list-text ul li span {
+  color: #ff6522;
+}
+.banner-bg .luckydraw .right .rules .rules-text ul li a img, .banner-bg .luckydraw .right .list .rules-text ul li a img, .banner-bg .luckydraw .right .rules .list-text ul li a img, .banner-bg .luckydraw .right .list .list-text ul li a img {
+  height: 26px;
+  vertical-align: -8px;
+}
+.banner-bg .luckydraw .right .prize-list {
+  margin-top: 8px;
+  /* height: 148px;
+  */
+}
+.banner-bg .luckydraw .right .prize-list .list-text {
+  /* height: 97px;
+  */
+}
+.banner-bg .luckydraw .right .prize-list .list-text .wraper {
+  padding: 8px 20px;
+  overflow: hidden;
+}
+.banner-bg .luckydraw .right .prize-list .list-text .wraper .roller {
+  padding: 0;
+}
+.banner-bg .luckydraw .right .prize-list .list-text .wraper .roller li {
+  font-size: 12px;
+  line-height: 24px;
+  color: #322;
+}
+.rules-detail {
+  position: absolute;
+  width: 336px;
+  height: 367px;
+  top: 35px;
+  left: 0;
+}
+.rules-detail .rules-detail-title {
+  width: 336px;
+  height: 62px;
+  background: url("../images/popupbox-rules-header.png") center top no-repeat;
+}
+.rules-detail .rules-detail-title .btn-rules-detail-title {
+  display: block;
+  width: 26px;
+  height: 26px;
+  float: right;
+  margin-right: 15px;
+  margin-top: 36px;
+}
+.rules-detail .rules-detail-mome {
+  background-color: #fff;
+  border: 1px solid #444;
+  border-top: none;
+  padding: 0 20px 20px;
+}
+.block2 {
+  background: #fffcf5 top left repeat;
+}
+.block2 .block-title, .block2 .block-title .width1000 {
+  background: url("../images/first-section.jpg") center 8px no-repeat;
+  height: 210px;
+}
+.deal-box {
+  width: 940px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  border: 1px solid #ece9e7;
+}
+.deal-box li {
+  float: left;
+  display: inline-block;
+  width: 50%;
+  box-sizing: border-box;
+  border-right: 1px solid #ece9e7;
+  border-bottom: 1px solid #ece9e7;
+  background-color: #fff;
+}
+.deal-box li * {
+  display: block;
+  margin: 0 auto;
+}
+.deal-box li .deal-text {
+  margin-top: 5px;
+  height: 145px;
+}
+.deal-box li .deal-text h3 {
+  border-bottom: 1px solid #d1d1d1;
+  margin-bottom: 3px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-warp: normal;
+}
+.deal-box li .deal-text h3 a {
+  font-size: 26px;
+  font-weight: bold;
+  color: #240801;
+  line-height: 38px;
+}
+.deal-box li .deal-text p {
+  width: 284px;
+  height: 54px;
+  overflow: hidden;
+}
+.deal-box li .deal-text .deal-btn {
+  display: block;
+  width: 109px;
+  height: 30px;
+  background: url("../images/deal-btn.png");
+  margin: 10px auto 0;
+}
+.block3 {
+  background: #fffcf5 top left repeat;
+}
+.block3 .block-title, .block3 .block-title .width1000 {
+  background: url("../images/sec-section.jpg") center 8px no-repeat;
+  height: 210px;
+}
+.block3 .width1000 {
+  text-align: center;
+}
+.block3 .width1000 img {
+}
+.float-layer {
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+.pop-layer-button {
+  position: absolute;
+  left: 70px;
+  top: 70px;
+  width: 317px;
+  height: 317px;
+}
+.pop-layer-button.login {
+  background: url("../images/popup/button-login.png") no-repeat center center;
+}
+.pop-layer-button.ready {
+  background: url("../images/popup/button-ready.png") no-repeat center center;
+}
+.pop-layer-button.no-chance {
+  background: url("../images/popup/button-no-chance.png") no-repeat center center;
+}
+.pop-layer-button a.btn {
+  display: block;
+  width: 197px;
+  height: 197px;
+  position: absolute;
+  left: 60px;
+  top: 60px;
+}
+.pop-layer-result {
+  position: fixed;
+  _position: absolute;
+  left: 7px;
+  top: -22px;
+  width: 450px;
+  height: 250px;
+  z-index: 1001;
+}
+
+.i1,.i2,.i3,.i4,.i5,.i6,.i7,.i8{
+  background: url("../images/popup/popup-win.png") no-repeat;  
+}
+
+.noprize1,.noprize2,.noprize3 {
+  background: url("../images/popup/popup-lose.png") no-repeat;
+}
+.pop-layer-result  .close-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: block;
+  width: 19px;
+  height: 19px;
+  background: url("../images/popup/close-button.png") no-repeat;
+}
+
+
+.pop-layer-result  .btn {
+  display: block;
+  width: 150px;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  height: 64px;
+  line-height: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0px auto 20px;
+  background: url("../images/popup/btn-bg.png") repeat-x;
+}
+.noprize1 .popup-title, .noprize2 .popup-title, .noprize3 .popup-title {
+  padding-top: 50px;
+  height: 65px;
+  line-height: 65px;
+  font-size: 23px;
+  text-align: center;
+  color: #ff7121;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+  background: url("../images/popup/bg-line.png") center bottom no-repeat;
+}
+.noprize1 .popup-text, .noprize2 .popup-text, .noprize3 .popup-text {
+  padding: 10px;
+  height: 30px;
+  font-size: 13px;
+  text-align: center;
+  color: #515050;
+}
+.noprize1 .btn-group, .noprize2 .btn-group, .noprize3 .btn-group {
+  padding: 20px 20px 0 20px;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
+  position: fixed;
+  _position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* 抽到奖品弹的窗配置 */
+.i3 .popup-title {
+  padding-top: 50px;
+  height: 75px;
+  line-height: 30px;
+  font-size: 23px;
+  text-align: center;
+  color: #ff7121;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+  background: url("../images/popup/bg-line.png") center bottom no-repeat;
+}
+.i3 span, .chibanwu .popup-title span, .shibanjie .popup-title span, .cooked .popup-title span, .youle .popup-title span, .wanyu .popup-title span, .mizi .popup-title span, .hanlinxuan .popup-title span {
+  color: #ffa26d;
+  font-size: 18px;
+}
+.i3 .popup-text, .chibanwu .popup-text, .shibanjie .popup-text, .cooked .popup-text, .youle .popup-text, .wanyu .popup-text, .mizi .popup-text, .hanlinxuan .popup-text {
+  font-size: 12px;
+  color: #515050;
+}
+.i3 .tips, .chibanwu .popup-text .tips, .shibanjie .popup-text .tips, .cooked .popup-text .tips, .youle .popup-text .tips, .wanyu .popup-text .tips, .mizi .popup-text .tips, .hanlinxuan .popup-text .tips {
+  padding: 5px 0 5px;
+  text-align: center;
+}
+.i3  label, .chibanwu .popup-text label, .shibanjie .popup-text label, .cooked .popup-text label, .youle .popup-text label, .wanyu .popup-text label, .mizi .popup-text label, .hanlinxuan .popup-text label {
+  padding: 0 0 5px 153px;
+  display: block;
+}
+.i3  label span, .chibanwu .popup-text label span, .shibanjie .popup-text label span, .cooked .popup-text label span, .youle .popup-text label span, .wanyu .popup-text label span, .mizi .popup-text label span, .hanlinxuan .popup-text label span {
+  margin-left: -40px;
+}
+.i3 label input, .chibanwu .popup-text label input, .shibanjie .popup-text label input, .cooked .popup-text label input, .youle .popup-text label input, .wanyu .popup-text label input, .mizi .popup-text label input, .hanlinxuan .popup-text label input {
+  border: none;
+  background-color: #fff;
+  padding: 4px 8px;
+  width: 180px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.shop-intro {
+  /* width: 470px;
+  */
+  /* overflow: hidden;
+  */
+  padding: 15px;
+  border-bottom: 1px solid #ece9e7;
+  position: relative;
+}
+.shop-img {
+  width: 182px;
+  height: 182px;
+  float: left;
+}
+.shop-mess {
+  color: #221815;
+  font-family: 微软雅黑;
+  padding-left: 13px;
+  padding-right: 13px;
+  width: 223px;
+  float: left;
+}
+.shop-name {
+  font-size: 32.55px;
+  height: 49px;
+  overflow: hidden;
+}
+.shop-des {
+  font-size: 14px;
+  line-height: 27px;
+  text-align: left;
+}
+.more-link {
+  margin-top: 5px;
+}
+.shop-link {
+  width: 100%;
+  background-color: #faf7f5;
+  padding: 15px 0px;
+}
+.addblock_button1 {
+  background: url('../images/buttons.png') 0 0 no-repeat;
+  width: 67px;
+  height: 52px;
+  display: inline-block;
+  cursor: pointer;
+  background-position: 0px -55px;
+}
+.addblock_button2 {
+  background: url('../images/buttons.png') 0 0 no-repeat;
+  width: 67px;
+  height: 52px;
+  display: inline-block;
+  cursor: pointer;
+  background-position: -70px -55px;
+}
+.addblock_button3 {
+  background: url('../images/buttons.png') 0 0 no-repeat;
+  width: 67px;
+  height: 52px;
+  display: inline-block;
+  display: inline;
+  cursor: pointer;
+  background-position: -140px -55px;
+}
+.addblock_button4 {
+  background: url('../images/buttons.png') 0 0 no-repeat;
+  width: 67px;
+  height: 52px;
+  cursor: pointer;
+  background-position: -210px -55px;
+}
+.addblock_able {
+  background-position-y: 0px;
+}
+.shop-link a {
+  margin: 0 17px;
+  display: inline-block;
+}
+.footer-static {
+  border-top: 0px;
+  margin-top: 100px;
+}
+.carousel {
+  float: left;
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+}
+.carousel-container {
+  overflow: hidden;
+  position: relative;
+  width: 1800px;
+}
+.carousel-container li {
+  display: inline-block;
+  width: 180px;
+  height: 180px;
+}
+.carousel-container li img {
+  margin: 0 !important;
+}
+.carousel-div {
+  height: 180px;
+}
+.carousel img {
+  float: left;
+}
+.title .text {
+  border-bottom: 1px solid #412f21;
+  width: 80px;
+}
+.rules-text ul li span {
+  color: #412f21;
+}
+.roller span {
+  color: #412f21;
+}
+.more-info {
+  position: absolute;
+  border: 1px solid #e75360;
+  padding: 10px;
+  width: 220px;
+  bottom: 75px;
+  right: 3;
+  background-color: white;
+  font-size: 12px;
+  line-height: 20px;
+  visibility: hidden;
+  z-index: 100;
+  font-size: 12px;
+}
+.show {
+  visibility: visible;
+}
+.info-cursor {
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 20px;
+  bottom: -20px;
+  right: 84px;
+  background: url("../img/info_foot.png")
+}
+.clearfix:after {
+  content: "020";
+  display: block;
+  height: 0;
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
