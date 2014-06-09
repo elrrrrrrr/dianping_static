@@ -11,7 +11,7 @@
 <meta name="apple-mobile-web-app-title" content="大众点评">
 <link href="css/main.css" rel="stylesheet" type="text/css">
 <script src='js/underscore.js'></script>
-<script src='img/2/data.js'></script>
+<script src='img/3/data.js'></script>
 <script src='js/zepto.js'></script>
 <script type='text/template' id='template'>
 <%if( window.type == '0'){%>
@@ -20,7 +20,7 @@
     </section>
     <%}%>
     <%if( window.type == '1'){%>
-        <section class="hair-banner title-banner ">
+        <section class="meifa-banner title-banner ">
         </section>
     <%}%>
     <%if( window.type == '2'){%>
@@ -45,11 +45,15 @@
         <div class="coursel">
           <div class="coursel-main">
             <%_.each(e.imgs,function(img){%>
+              <a href="<%=e.link%>">
               <img class="shop-pic" src="<%=img%>" alt="">  
+              </a>
             <%})%>
           </div>
         </div>
+        <a href="<%=e.link%>" >
         <p class='shop-name'><%=e.name%></p>
+        </a>
             <ul class="button-ul">
                 <li class='
                 <%if(e.promotion.length < 10){%>
@@ -57,28 +61,43 @@
                 <%} else {%>
                   buttons-<%=window.type%>
                 <%}%>
-                 promotions'><a href="<%=e.promotion%>" target="_blank"></a></li>
+                 promotions'>
+                 <%if(e.promotion.length >5 ) {%>
+                 <a href="<%=e.promotion%>" target="_blank"></a>
+                 <%}%>
+                 </li>
+                 <li class=' 
+                <%if(e.coupon.length < 10){%>
+                  buttons-dis
+                <%} else {%>
+                  buttons-<%=window.type%>
+                <%}%>
+                coupon' >
+                <%if(e.coupon.length >5 ) {%>
+                 <a href="<%=e.coupon%>" target="_blank"></a>
+                 <%}%>
+                </li>
                  <li class=' 
                 <%if(e.link.length < 10){%>
                   buttons-dis
                 <%} else {%>
                   buttons-<%=window.type%>
                 <%}%>
-                 group'><a href='<%=e.link%>' target="_blank"></a></li>
-                <li class=' 
-                <%if(e.coupon.length < 10){%>
-                  buttons-dis
-                <%} else {%>
-                  buttons-<%=window.type%>
-                <%}%>
-                coupon' ><a href="<%=e.coupon%>" target="_blank"></a></li>
+                 group'>
+
+                 <%if(e.link.length >5 ) {%>
+                 <a href="<%=e.link%>" target="_blank"></a>
+                 <%}%>
+
+                 </li>
+                
             </ul>
         </li>
     <%})%>
   </ul>
   </section>
 </script>
-<title>天天中奖</title>
+<title>密室集中营</title>
 <meta name="Keywords" content=""/>
 <meta name="Description" content=""/>
 <script>var G_rtop=+new Date,_gaq=[
@@ -234,18 +253,103 @@ $(document).ready(function(){
   out =_.template($('#template').html(),window.storeList)
   // console.log(window.stroeList);
     $('.template-render').html(out)
-  setInterval(function(){$('.coursel-main').trigger('coursel')},4000);
-    //$('.coursel-main').css('left','-440px')
-    $('.coursel-main').bind('coursel',function(event){
-      var img_length = $(this).find('img').length -1 ;
-      var sym = $(this).css('left')
-      if ((-1)*img_length * 145 + 'px' == sym){
-        $(this).css('left','0px')
-      } else {
-        $(this).css('left', $(this).position().left - 145 + 'px')
-      }
-    })
 })
+
+function close_box(){
+  $('.alert-box').hide()
+}
+
+function init_box(){
+  $('.role-intro').hide()
+  $('.city-chose').hide()
+  $('.city-match').hide()
+  $('.city-fail').hide()
+  $('.game-result').hide()
+  $('.game-over').hide()
+}
+
+$(document).ready(function(){
+  close_box();  
+  init_box();
+})
+
+$('.role-link').click(function(){
+  $('.alert-box').show()
+  $('.role-intro').show()
+})
+
+$('.alert-corner').click(function(){
+  close_box()
+  init_box()
+})
+
+$('.event-link-button').click(function(){
+  lucky.draw()
+})
+
+$('.city-chose-click').click(function(){
+  $('.city-chose').hide()
+  // $.ajax({
+  //   url:'http://115.29.185.2:901/yhkonline/api/mc/deliveryAddress/dianping/list.json',
+  //   dataType:'jsonp',
+  //   data:{city:'北京',keyword:$('#city-input').val(),jsonpCallback:'call'}
+  // })
+  if($('#city-input').val() == '安化路'){
+    $('.city-match').show()  
+  } else {
+    $('.city-fail').show()
+  }
+  
+  
+  //选择城市
+
+})
+
+function call(res){
+  console.log(res);
+  if(res.result.length > 0 ) {
+    $('.city-match').show()
+  } else {
+    $('.city-fail').show()
+  }
+
+}
+
+$('.game-result-link').click(function(){
+  // $.ajax({
+  //   url:'/prize/ajax/prizeDraw',
+  //   data:{groupId:_id},
+  //   success:function(res){
+  //     var code = res.code
+  //     if(code === 200){
+  //       //中奖
+  //     } else if (code === 406){
+  //       //内部错误 请稍后重试
+  //     } else if (code === 501){
+  //       //对不起，每天只能一次
+  //     }
+  //   },
+  //   eoror:function(res){
+  //     console.log('error');
+  //   }
+  // })
+  $('.city-match').hide()
+  $('.game-result').show()
+})
+
+$('.result-button').click(function(){
+  $('.game-result').hide()
+  $('.game-over').show()
+})
+
+
+lucky = {
+  draw: function(){
+    init_box()
+    $('.alert-box').show()
+    $('.city-chose').show()
+  }
+}
 
 
 </script>

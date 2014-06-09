@@ -422,6 +422,7 @@ section {
   font-size: 12px;
   line-height: 1.2em;
   height: 28px;
+	color: black;
 }
 
 .button-ul {
@@ -460,14 +461,13 @@ section {
 }
 
 .coupon{
-  background-position: 49px 0px ;
   
+  background-position: 100px 0px ;
   background-size: 48px 44px no-repeat;
 }
 
 .group{
-  
-  background-position: 100px 0px ;
+  background-position: 49px 0px ;
   background-size: 48px 44px no-repeat;
 }
 
