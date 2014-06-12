@@ -1,0 +1,136 @@
+﻿body, div, h1, h2, h3, h4, h5, h6, p, ul, li {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	font-weight: normal
+}
+body {
+	width: 100%;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	color: #323232;
+	line-height: 1.5em;
+	background:#fafbf8;
+	/*background-size: auto 100%;*/
+	/*background-size: 100% auto;
+	height: 1120px;*/
+}
+
+.sushi-bg {
+	width: 100%;
+	display: block;
+}
+
+.active-content{
+	min-height: 300px;
+	background:#fafbf8;
+	padding: 10px 30px;
+	box-sizing: border-box;
+	width: 320px;
+	margin: 0 auto;
+}
+
+.content-text {
+	font-size: 12px;
+	line-height: 1.5em;
+}
+
+.carousel-box {
+	margin-top: 20px;
+	width: 100%;
+	border: 2px solid #fff0dd;
+	border-radius: 8px;
+	background: white;
+	padding: 20px 0px;
+	position: relative;
+}
+
+.carousel {
+ 	overflow: hidden;
+}
+.carousel-container {
+	overflow: hidden;
+	position: relative;
+	width: 1800px;
+	transition: left 1s;
+}
+.carousel-container ul {
+    display: block;
+}
+.carousel-container li {
+	float: left;
+	display: block;
+	margin-right: 10px;
+	width: 100px;
+	height: 70px;
+}
+.carousel-container li img {
+	width: 100px;
+	height: 70px;
+	margin: 0 !important;
+	border-radius: 8px;
+	border:2px solid #fff0dd;
+}
+
+.carousel-display {
+  width: 215px;
+  height: 70px;
+  margin: 0 auto;
+}
+
+.prev-button {
+	width: 20px;
+	height: 70px;
+	position: absolute;
+	left: 0px;
+	background: url('../img/prev-button.jpg') center no-repeat;
+	background-size: 100% auto ;
+}
+
+.next-button {
+	width: 20px;
+	height: 70px;
+	position: absolute;
+	right: 0px;
+	background: url('../img/next-button.jpg') center no-repeat;
+	background-size: 100% auto ;
+}
+
+.shop-link {
+	width: 90px;
+	height: 30px;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+.sushi-logo {
+	width: 90px;
+	height: 30px;
+	display: block;
+	
+}
+
+.sushi-link {
+	width: 160px;
+	height: 40px;
+	display: block;
+	
+}
+
+.sushi-foot {
+	width: 90px;
+	height: 27px;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 20px;	
+	margin-top:8px;
+}
+
+.event-link {
+	display: block;
+	width: 160px;
+	height: 40px;
+	margin: 0 auto;
+	margin-top:20px;
+}
