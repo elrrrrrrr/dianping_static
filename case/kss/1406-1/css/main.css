@@ -1,0 +1,85 @@
+﻿body, div, h1, h2, h3, h4, h5, h6, p, ul, li {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	font-weight: normal
+}
+body {
+	width: 100%;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	color: #323232;
+	line-height: 1.5em;
+	background: url("../img/kss-bg.jpg") top center ;
+	background-size: auto 100%;
+	min-height: 900px;
+	/*background-size: auto 100%;*/
+	/*background-size: 100% auto;
+	height: 1120px;*/
+}
+
+.cell {
+	transition: all 0.3s ;
+}
+.animating {
+	transition: all 0.5s ease;
+	position: absolute;
+	top:0px;
+	left:0px;
+}
+
+.in {
+	-webkit-animation-name: flipintoright;
+	-webkit-animation-duration: 225ms;
+	animation-name: flipintoright;
+	animation-duration: 225ms;
+}
+
+.out {
+	-webkit-transform: rotateY(-90deg) scale(.9);
+	-webkit-animation-name: flipouttoleft;
+	-webkit-animation-duration: 175ms;
+	transform: rotateY(-90deg) scale(.9);
+	animation-name: flipouttoleft;
+	animation-duration: 175ms;
+}
+.kss-bg {
+	width: 100%;
+	display: block;
+}
+
+.kss-title {
+	display: block;
+	margin: 0 auto;
+	width: 90%;
+}
+
+.kss-logo {
+	display: block;
+	margin: 0 auto;
+	width: 75px;
+	margin-bottom: 15px;
+}
+.active-content{
+	min-height: 300px;
+	padding: 10px 30px;
+	box-sizing: border-box;
+	width: 320px;
+	margin: 0 auto;
+}
+
+.content-text {
+	font-size: 12px;
+	line-height: 1.4em;
+	color: white;
+	text-indent:-2em ;
+	width: 260px;
+	padding-left: 2em;
+	box-sizing: border-box;
+	margin-bottom: 40px;
+}
+
+.content-text p {
+	display: block;
+	margin-bottom: 10px;
+}
