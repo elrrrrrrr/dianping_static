@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>酷圣石</title>
+    <meta name="Keywords" content=""/>
+    <meta name="Description" content=""/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-title" content="大众点评">
+    <link rel="stylesheet" href="css/main.css">
+    <script>document.documentElement.className=location.hash?'J_H':'';var G_rtop=+new Date,_gaq=[
+    ['_setAccount','UA-16601409-1'],
+    ['_addOrganic','soso','w'],
+    ['_addOrganic','sogou','query'],
+    ['_addOrganic','yodao','q'],
+    ['_addOrganic','bing','q'],
+    ['_addOrganic','360','q'],
+    ['_addOrganic','gougou','search'],
+    ['_setDomainName', '.t.dianping.com'],
+    ['_setCustomVar', 2, 'Login Type', 'Login', 2]
+    ],dpga=function(key){_gaq.push(['_trackPageview', key||''])},pageTracker={_trackPageview:dpga},_hip=[
+    ['_setPageId', 0],
+    ['_setCityId', 1],
+    ['_setShopType', 0],
+    ['_setPVInitData', {p_render:+(new Date)-G_rtop}]
+    ];</script>
+</head>
+<body>
+    <section class='popup-box'>
+        <div class="overlay">
+        </div>
+        <div class="alert-box">
+            <div class="alert-content">
+                <p class='pop-title'>恭喜你获得</p>
+                <p class='prize-name'>500元现金抵用券一张</p>
+                <p class='input-pro'>请输入您的手机号</p>
+                <input class='input-number' type="text">
+                <span class='confirm-button'>确认提交</span>
+                <p class='role-pro'>*请正确填写手机号，具体兑奖方式请查看</p>
+                <span class="close"></span>
+            </div>
+        </div>
+    </section>
+
+    <img src="img/title.png" alt="" class="kss-title">
+    
+    <section class="active-content">
+        <div id="grid">
+        </div>
+    </section>
+    <section class="active-content">
+        <img src="img/logo.png" alt="" class="kss-logo">        
+        <div class="content-text">
+            <p>一、活动时间：2014年6月20日-2014年7月31日</p>
+            <p>二、参与方式：活动期间，每位会员（同一点评账号、手机号、
+                等满足任一条件均视为同一用户）每天都可参与一次活动获
+                得一次抽奖机会</p>
+            <p>
+            三、奖品类型及数量：<br>
+            特等奖：500元现金抵用券一张  （3名）<br>
+            一等奖：200元现金抵用券一张  （10名）<br>
+            二等奖：50元现金抵用券一张  （100名）<br>
+            三等奖：6寸曲奇原味蛋糕一个  （30名）<br>
+            四等奖：长条蛋糕一个3种口味任选  （30名）<br>
+            五等奖：小杯冰淇淋一个   （100名）<br>
+            阳光普照奖：5元抵用券一张    （无限量）<br>
+            </p>
+            <p>四、奖品兑换时间：6月23日~8月19日，只适用上海、北京所有
+        酷圣石门店。</p>
+            <p>五、奖品兑换方式：<br>
+                1、500，200和50元的现金抵用券中奖者请填写真实手机号码，酷圣石工作人员会电话联系，统一发放奖品，使用方式按券背面提示为准。<br>
+                2、蛋糕和小杯冰淇淋中奖者请填写真实手机号码，凭大众点评手机APP中奖信息直接到店兑换，（为避免蛋糕产品备源不足，请尽可能提前进行预订）。<br>
+            3、阳光普照奖（5元抵用券）获奖者凭中奖短信直接到店使用，仅限冰淇淋产品（礼盒，瓶装饮料，包装产品除外），每次限用一张，不可累计使用，不与团购等其他优惠同享。<br></p>
+            <p>六、为保证活动的公正公平，若发现有严重的刷票等违规操作，大众点评网有权取消其参与资格</p>
+        </div>
+    </section>
+</body>
+<script>;(function(){var ga = document.createElement('script');ga.type='text/javascript';ga.async=!0;ga.src='http://t2.dpfile.com/t/res/ga2.min.59bc7df658b3607387141250d2d85447.js';var s=document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();</script>
+    
+    <script type="text/javascript">
+        pageTracker._trackPageview('event/sushi-app/guangzhou');
+        _hip.push(['mv', {module: 'event/sushi-app/guangzhou', action: 'browse'}]);
+    </script>
+    <script src="js/qin.js"></script>
+    <script src="js/prize.js"></script>
+    <script src="js/grid.js"></script>
+    <script>
+
+        a=$.Grid({})
+
+        function popShow(content){
+            $('.popup-box').css('display','block')
+            $('.prize-name').innerHTML = content
+        }
+
+        $('.close').on('click',function(){
+            $('.popup-box').css('display','none')
+        })
+
+        $('.confirm-button').on('click',function(){
+            $.ajaxPrize('/prize/ajax/userInfo?recordId='+a.recordId+'&mobileNo='+$('.input-number').value,function(result){
+                if(result.code == 200){
+                    $('.input-number').setAttribute('disabled','disabled');
+                    alert('发送成功')
+                } else {
+                    alert('发送失败，请重试')
+                }
+            })
+            
+        })
+    </script>
+</html>
+
