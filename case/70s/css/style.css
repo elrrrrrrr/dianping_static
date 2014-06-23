@@ -1,0 +1,112 @@
+@import "base-old.v10.css";
+
+.bg{
+	min-width: 1000px;
+	background: url(../img/bg.jpg) center no-repeat;
+}
+.content{
+  width: 1000px;
+  min-height: 1900px;
+  
+  margin: 0 auto;
+  position: relative;
+}
+
+.rlue-box {
+	width: 830px;
+	height: 680px;
+	position: absolute;
+	top: 1048px;
+	left: 90px;
+}
+
+.prize-button {
+	width: 113px;
+	height: 113px;
+	position: absolute;
+	top: 543px;
+	left: 244px;
+	cursor: pointer;
+}
+
+.rule-anva {
+	float: left;
+	width: 35px;
+	margin-top: 5px;
+}
+.rule-title {
+	font-size: 23px;
+	font-family: 微软雅黑;
+	display: block;
+	width: 220px;
+	height: 40px;
+	color: #732d1d;
+	
+}
+
+.rule-title > p {
+	line-height: 34px;
+	padding-top: 5px;
+	border-bottom: 1px #b8926d solid;
+	float: left;
+}
+
+.sub-title {
+	float: left;
+	font-size: 14px;
+	font-family: 微软雅黑;
+	width: 70px;
+	line-height: 24.3px;
+}
+
+.role-content {
+	font-family: 微软雅黑;
+	float:left;
+	font-size: 15px;
+	line-height: 24.3px;
+	width: 600px;
+}
+
+.rlue-box > div{
+	overflow: hidden;
+	min-height: 220px;
+}
+
+.rule-title > img{
+	width: 30px;
+	height: 30px;
+	display: block;
+	margin-right: 10px;
+}
+
+p > strong {
+	color:#bd6a5f;
+}
+
+.nav {
+	width: 113px;
+	height: 226px;
+	background: url('../img/nav.png') top no-repeat;
+	position: fixed ; 
+	top: 300px;
+	margin-left: 1000px;
+}
+
+.nav ul {
+	padding-top: 30px;
+}
+.nav  li {
+	display: block;
+	height: 40px;
+	width: 100%;
+	text-align: center;
+	line-height: 40px;
+	color: #d4a75c;
+	cursor: pointer;
+	font-size: 17px;
+	font-family: 微软雅黑;
+}
+
+li >a {
+	color: #d4a75c;
+}
